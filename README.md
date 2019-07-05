@@ -35,7 +35,7 @@ Al buscar un usuario por el login de búsqueda de github, acceda a la página de
 ### Requisitos
 
 - Yo, como usuario, quiero buscar un usuario de GitHub;
-- Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, número de seguidores, imagen del avatar, e-mail y bio);
+- Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, imagen del avatar, e-mail y bio);
 - Yo, como usuario, deseo ver la lista de repositorios de aquel usuario que fue buscado, ordenada por el número decreciente de estrellas;
 
 Definición de listo
@@ -70,6 +70,6 @@ El desafío debe ser entregado por GitHub (via Pull request). La aplicación deb
 
 El tiempo de entrega de 4 días.
 
-Si tiene interés en aplicar, por favor envíe un correo electrónico a trabajeconnosotros@concrete.com.br
+Si el equipo de Recursos Humanos no te ha contactado, escribe a trabajeconnosotros@concrete.com.br
 
 ¡Buena suerte!
