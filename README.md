@@ -68,7 +68,13 @@ Cada ítem arriba será evaluado y contará puntos en la evaluación final, por 
 
 ### Entrega
 
-El desafío debe ser entregado por GitHub (via Pull request). La aplicación debe alojarse (Heroku, Netlify, Firebase, Plunker, etc.) y cumplir con los requerimientos. Las direcciones URL deben enviarse por correo electrónico.
+Siga los pasos para implementar y enviar este desafio:
+- Haga un **Fork** a este repositorio. Mira esta guía para mayores informaciones: [Como hacer fork de un repositorio](https://help.github.com/en/articles/fork-a-repo).
+- Implemente el desafio.
+- Después de completar el desafio, realise un **Pull Request** a este repositorio, utilisando la interface de **Github**. [Creando un Pull Request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).
+- Si es posible, deja tu repositorio publico para hacer la revision de codigo mas sencilla.
+
+Ademas de eso, la aplicación debe alojarse (Heroku, Netlify, Firebase, Plunker, etc.) y cumplir con los requerimientos. Las direcciones URL deben ser agregadas a el README del proyecto.
 
 ### Plazo
 
