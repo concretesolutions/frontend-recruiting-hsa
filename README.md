@@ -1,4 +1,4 @@
-# Desafío Front End
+﻿# Desafío Front End
 
 ## Propuesta
 
@@ -83,3 +83,9 @@ El tiempo de entrega de 7 días.
 Si el equipo de Recursos Humanos no te ha contactado, escribe a trabajeconnosotros@concrete.com.br
 
 ¡Buena suerte!
+
+
+##Patrick Vera
+
+Dirección de aplicación en amazon aws-s3: http://angular-concrete-app.s3-website-us-east-1.amazonaws.com
+Dirección de github del repositorio orinal: https://github.com/patrickveram/concrete
