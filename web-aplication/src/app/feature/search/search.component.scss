@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200i&display=swap');
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+
+    .github-search-text1 {
+      font-family: 'Monaco', sans-serif;
+      font-weight: bold;
+    }
+
+    .github-search-text2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-style: italic;
+    }
+  }
+}
