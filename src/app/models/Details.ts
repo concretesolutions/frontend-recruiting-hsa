@@ -3,7 +3,10 @@ export class Details {
     name: string;
     login: string;
     email: string;
+    organization: string;
+    location: string;
     followers: string;
     repos: string;
-    bio: string    
+    bio: string;
+    link: string    
 }

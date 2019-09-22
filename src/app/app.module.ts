@@ -12,8 +12,6 @@ import { DetailsComponent } from './components/details/details.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ReposComponent } from './components/repos/repos.component';
-
 
 @NgModule({
   declarations: [
@@ -22,8 +20,7 @@ import { ReposComponent } from './components/repos/repos.component';
     PageNotFoundComponent,
     ResultComponent,
     SearchComponent,
-    DetailsComponent,
-    ReposComponent
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

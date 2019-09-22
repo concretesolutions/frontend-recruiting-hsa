@@ -1,12 +1,41 @@
-<p>details works!</p>
-<div>
-    <ul *ngIf ="user">
-            <li> {{user.avatar}} </li>
-            <li> {{user.name}} </li>
-            <li> {{user.login}} </li>
-            <li> {{user.email}} </li>
-            <li> {{user.followers}} </li>
-            <li> {{user.repos}} </li>
-            <li> {{user.bio}} </li>
-    </ul>
+<main>
+    <div *ngIf="user">
+        <a [href]="user.link" target="_blank"><img [src]="user.avatar"></a>
+        <a [href]="user.link" target="_blank">
+            <h1>{{ user.name }}</h1>
+        </a>
+        <a [href]="user.link" target="_blank"><span>{{ user.login }}</span></a>
+        <a [href]="user.link" target="_blank"><span>{{ user.email }}</span></a>
+        <a [href]="user.link" target="_blank"><span>{{ user.bio }}</span></a>
+        <div>
+                <img src="../../../assets/img/organization icon.png" class="img">
+                <span>{{ user.organization }}</span>
+        </div>
+        <div>
+                <img src="../../../assets/img/location icon.png" class="img">
+                <span>{{ user.location }}</span>
+        </div>
+        <div>
+                    <img src="../../../assets/img/star icon.png" class="img">
+                    <span>{{ starsTotal }}</span>
+            </div>
+        <div>
+                <img src="../../../assets/img/repositorie icon.png" class="img">
+                <span>{{ user.repos }}</span>
+        </div>
+        <div>
+                <img src="../../../assets/img/followers icon.png" class="img">
+                <span>{{ user.followers }}</span>
+        </div>
+    </div>
+</main>
+<aside>
+    <div *ngFor="let repo of repos">
+    <a [href]="repo.html_url" target="_blank"><h1>{{ repo.name }}</h1></a>
+    <a [href]="repo.html_url" target="_blank"><span>{{ repo.description }}</span></a>
+    <div>
+        <img src="../../../assets/img/star icon.png">
+        <span> {{ repo.stargazers_count }} </span>
+    </div>
 </div>
+</aside>

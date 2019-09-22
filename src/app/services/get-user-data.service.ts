@@ -9,7 +9,14 @@ import { Details } from '../models/Details';
 export class GetUserDataService {
 
   url: string = "https://api.github.com/users/"
+  
+  user: any;
+  public getUserSubject = new Subject<any>();
+  getUserObservable = this.getUserSubject.asObservable();
 
+  repos: [];
+  public getReposSubject = new Subject<[]>();
+  getReposObservable = this.getReposSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -19,20 +26,10 @@ export class GetUserDataService {
   repositories(username: string): Observable<any> {
     return this.http.get<any>(this.url + username + "/repos")
   }
-
-  user: any;
-  public getUserSubject = new Subject<any>();
-  getUserObservable = this.getUserSubject.asObservable();
-
   getDetails(user: Details) {
     this.user = user;
     this.getUserSubject.next(user);
   }
-
-  repos: [];
-  public getReposSubject = new Subject<[]>();
-  getReposObservable = this.getReposSubject.asObservable();
-
   getRepos(repos: any) {
     this.repos = repos;
     this.getReposSubject.next(repos);

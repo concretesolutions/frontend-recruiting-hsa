@@ -9,6 +9,9 @@ import { Details } from '../../models/Details';
 })
 export class DetailsComponent implements OnInit {
   user:Details;
+  repos:any[];
+  stars: number[] = [];
+  starsTotal:number;
 
   constructor(private getUserDataService: GetUserDataService) { }
 
@@ -20,10 +23,21 @@ export class DetailsComponent implements OnInit {
         name: details.name,
         login: details.login,
         email: details.email,
+        organization: details.organization,
+        location: details.location,
         followers: details.followers,
         repos: details.public_repos,
-        bio: details.bio        
+        bio: details.bio,
+        link: details.html_url        
       };
-    }) 
+    })
+    this.getUserDataService.getReposObservable.subscribe(repos => {
+      console.log("repos", repos)
+      this.stars = [];
+      this.repos = repos;
+      this.repos.forEach(a => this.stars.push(a.stargazers_count));
+      this.starsTotal = this.stars.reduce((a,b)=>a+b)
+      console.log(this.stars, this.starsTotal)
+}) 
   }
 }
