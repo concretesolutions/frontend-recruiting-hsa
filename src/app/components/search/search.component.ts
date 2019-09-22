@@ -23,12 +23,14 @@ getDetails (username:string) {
   this.getUserDataService.details(username).subscribe(details => {
     this.details = details;
     console.log("aaaaaaaaa", this.details)
+    this.getUserDataService.getDetails(this.details)
 })
 }
 getRepos(username:string) {
   this.getUserDataService.repositories(username).subscribe(repos => {
     console.log("bbbbb",repos)
     this.repos = repos; 
+    this.getUserDataService.getRepos(this.repos)
 })
 }
 }

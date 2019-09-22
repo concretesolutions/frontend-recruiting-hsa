@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetUserDataService } from 'src/app/services/get-user-data.service';
 
 @Component({
   selector: 'app-repos',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent implements OnInit {
+  repos:[] = [];
 
-  constructor() { }
+  constructor(private getUserDataService: GetUserDataService) { }
 
   ngOnInit() {
+    this.getUserDataService.getReposObservable.subscribe(repos => {
+      console.log("details Comppp", repos)
+      this.repos = repos;
+    }) 
   }
 
 }
