@@ -8,7 +8,7 @@ import { Details } from '../../models/Details';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  user:Details = {};
+  user:Details;
 
   constructor(private getUserDataService: GetUserDataService) { }
 
