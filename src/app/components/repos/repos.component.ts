@@ -13,7 +13,7 @@ export class ReposComponent implements OnInit {
 
   ngOnInit() {
     this.getUserDataService.getReposObservable.subscribe(repos => {
-      console.log("details Comppp", repos)
+      console.log("repos", repos)
       this.repos = repos;
     }) 
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetUserDataService } from 'src/app/services/get-user-data.service';
+import { Details } from '../../models/Details';
 
 @Component({
   selector: 'app-details',
@@ -7,14 +8,13 @@ import { GetUserDataService } from 'src/app/services/get-user-data.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  user:any = {};
+  user:Details = {};
 
   constructor(private getUserDataService: GetUserDataService) { }
 
   ngOnInit() {
-    console.log("details Comp")
     this.getUserDataService.getUserObservable.subscribe(details => {
-      console.log("details Comppp", details)
+      console.log("details", details)
       this.user = {
         avatar: details.avatar_url,
         name: details.name,

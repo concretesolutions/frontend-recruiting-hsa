@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
+import { Details } from '../models/Details';
 
 @Injectable({
   providedIn: 'root'
@@ -23,13 +24,13 @@ export class GetUserDataService {
   public getUserSubject = new Subject<any>();
   getUserObservable = this.getUserSubject.asObservable();
 
-  getDetails(user: any) {
+  getDetails(user: Details) {
     this.user = user;
     this.getUserSubject.next(user);
   }
 
-  repos: any;
-  public getReposSubject = new Subject<any>();
+  repos: [];
+  public getReposSubject = new Subject<[]>();
   getReposObservable = this.getReposSubject.asObservable();
 
   getRepos(repos: any) {
