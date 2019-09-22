@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    background: #ffffff;
+    /* font-family: 'Montserrat', sans-serif; */
+    color: #333333;
+    font-size: 16px;
+    word-spacing: 2px;
+}
+
+/* @media screen and (min-width:1024px) and (max-width:2000px){
+   
+   
+}
+@media screen and (min-width:995px) and (max-width:1024px){
+    
+    
+}
+@media screen and (min-width:320px) and (max-width:995px){
+    
+   
+}
+@media screen and (max-width:320px){
+    
+} */

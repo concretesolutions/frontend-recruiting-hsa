@@ -1,0 +1,14 @@
+.searchInput {
+    width: 650px;
+    height: 50px;
+    padding: 0;
+}
+.btnSearch {
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #ac53f2;
+    border: #ac53f2;
+    padding: 0 16px;
+    margin: 0;
+}
