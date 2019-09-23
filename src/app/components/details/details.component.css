@@ -1,0 +1,51 @@
+.main {
+    margin-top: 50px;
+    font-family: Raleway;
+}
+.details {
+float: left;
+margin-left: 85px;
+}
+.repos {
+    float: left;
+    margin-left: 145px;
+    }
+a {
+    text-decoration: none;
+    color:#333333;
+}
+.icon-containers {
+    margin-bottom: 5px;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.avatar {
+    width: 280px;
+    height: 280px;
+    border-radius: 3px;
+}
+.username {
+    font-size: 35px;
+}
+.login {
+    font-size: 20px;
+}
+
+/* repositories */
+
+.repo-name {
+    font-size: 35px;
+    color:#ac53f2;
+}
+.repo-description {
+    font-size: 20px; 
+}
+.repo-container {
+    margin-bottom: 30px;
+}
+p {
+    max-width: 750px;
+}

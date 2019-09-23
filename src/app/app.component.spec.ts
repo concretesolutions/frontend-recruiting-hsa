@@ -1,12 +1,16 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { ResultComponent } from './components/result/result.component';
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [ AppComponent, HomeComponent, ResultComponent ],
+      imports: [AppRoutingModule]
     }).compileComponents();
   }));
 
