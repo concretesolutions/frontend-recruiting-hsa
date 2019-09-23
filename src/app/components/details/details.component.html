@@ -1,41 +1,43 @@
-<main>
+<main class="main">
+    <section class="details">
     <div *ngIf="user">
-        <a [href]="user.link" target="_blank"><img [src]="user.avatar"></a>
+        <a [href]="user.link" target="_blank"><img [src]="user.avatar" class="avatar"></a>
         <a [href]="user.link" target="_blank">
-            <h1>{{ user.name }}</h1>
+            <p class="username">{{ user.name }}</p>
         </a>
-        <a [href]="user.link" target="_blank"><span>{{ user.login }}</span></a>
+        <a [href]="user.link" target="_blank"><span class="login">{{ user.login }}</span></a>
         <a [href]="user.link" target="_blank"><span>{{ user.email }}</span></a>
         <a [href]="user.link" target="_blank"><span>{{ user.bio }}</span></a>
-        <div>
-                <img src="../../../assets/img/organization icon.png" class="img">
+        <div class="icon-containers" style="margin-top: 25px">
+                <img src="../../../assets/img/organization icon.png" class="icon">
                 <span>{{ user.organization }}</span>
         </div>
-        <div>
-                <img src="../../../assets/img/location icon.png" class="img">
+        <div class="icon-containers">
+                <img src="../../../assets/img/location icon.png" class="icon">
                 <span>{{ user.location }}</span>
         </div>
-        <div>
-                    <img src="../../../assets/img/star icon.png" class="img">
+        <div class="icon-containers">
+                    <img src="../../../assets/img/star icon.png" class="icon">
                     <span>{{ starsTotal }}</span>
             </div>
-        <div>
-                <img src="../../../assets/img/repositorie icon.png" class="img">
+        <div class="icon-containers">
+                <img src="../../../assets/img/repositorie icon.png" class="icon">
                 <span>{{ user.repos }}</span>
         </div>
-        <div>
-                <img src="../../../assets/img/followers icon.png" class="img">
+        <div class="icon-containers">
+                <img src="../../../assets/img/followers icon.png" class="icon">
                 <span>{{ user.followers }}</span>
         </div>
     </div>
-</main>
-<aside>
-    <div *ngFor="let repo of repos">
-    <a [href]="repo.html_url" target="_blank"><h1>{{ repo.name }}</h1></a>
-    <a [href]="repo.html_url" target="_blank"><span>{{ repo.description }}</span></a>
-    <div>
-        <img src="../../../assets/img/star icon.png">
-        <span> {{ repo.stargazers_count }} </span>
+</section>
+<aside class="repos">
+        <div *ngFor="let repo of repos" class="repo-container">
+        <a [href]="repo.html_url" target="_blank"><h1 class="repo-name">{{ repo.name }}</h1></a>
+        <a [href]="repo.html_url" target="_blank"><p class="repo-description">{{ repo.description }}</p></a>
+        <div style="margin-top: 5px">
+            <img src="../../../assets/img/star icon.png" class="icon">
+            <span> {{ repo.stargazers_count }} </span>
+        </div>
     </div>
-</div>
-</aside>
+    </aside>
+</main>

@@ -2,18 +2,11 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-
 }
 body {
-    background: #ffffff;
-    /* font-family: 'Montserrat', sans-serif; */
     color: #333333;
     font-size: 16px;
     word-spacing: 2px;
-}
-.title {
-    font-size: 50px;
-    word-spacing: -20px;
 }
 .githubTitle {
     font-family: 'Monaco', sans-serif;
@@ -23,6 +16,8 @@ body {
     font-style: italic;
     font-weight: 200;
 }
+
+
 /* @media screen and (min-width:1024px) and (max-width:2000px){
    
    

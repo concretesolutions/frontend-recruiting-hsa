@@ -1,0 +1,14 @@
+.home{
+    text-align: center;
+}
+.title {
+    font-size: 50px;
+    word-spacing: -20px;
+}
+p {
+    margin-top: 200px;
+ 
+}
+.search-bar {
+    display: inline-block;
+}
