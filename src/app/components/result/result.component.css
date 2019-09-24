@@ -13,14 +13,6 @@
     font-size: 40px;
     word-spacing: -20px;
 }
-.githubTitle {
-    font-family: 'Monaco', sans-serif;
-}
-.searchTitle {
-    font-family: Raleway;
-    font-style: italic;
-    font-weight: 200;
-}
 
 @media screen and (min-width:995px) and (max-width:1024px){
     .title-container {
