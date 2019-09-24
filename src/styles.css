@@ -8,14 +8,7 @@ body {
     font-size: 16px;
     word-spacing: 2px;
 }
-.githubTitle {
-    font-family: 'Monaco', sans-serif;
-}
-.searchTitle {
-    font-family: Raleway;
-    font-style: italic;
-    font-weight: 200;
-}
+
 
 
 /* @media screen and (min-width:1024px) and (max-width:2000px){

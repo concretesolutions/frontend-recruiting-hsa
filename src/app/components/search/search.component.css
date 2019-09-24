@@ -33,3 +33,31 @@ width: 30px;
 padding: 0;
 margin: -6px;
 }
+
+
+@media screen and (min-width:995px) and (max-width:1200px){
+    .searchInput {
+        width: 500px;
+    }           
+}
+@media screen and (min-width:550px) and (max-width:995px){
+    .searchInput {
+        width: 250px;
+}    
+}
+@media screen and (min-width:400px) and (max-width:550px){
+    .searchInput {
+        width: 300px;
+    }
+    .btnSearch {
+    width: 60px;
+    }  
+}
+@media screen and (max-width:400px){
+    .searchInput {
+        width: 200px;
+    }
+    .btnSearch {
+    width: 60px;
+    }  
+}
