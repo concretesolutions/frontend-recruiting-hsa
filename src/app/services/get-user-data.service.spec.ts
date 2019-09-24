@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient  } from '@angular/common/http';
 
 import { GetUserDataService } from './get-user-data.service';
 
 describe('GetUserDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [ {provide: HttpClient} ]
+    imports: [ HttpClientModule ],
+    providers: [ HttpClient ]
   }));
 
   it('should be created', () => {
