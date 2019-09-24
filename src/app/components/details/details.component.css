@@ -1,15 +1,4 @@
-.main {
-    margin-top: 50px;
-    font-family: Raleway;
-}
-.details {
-float: left;
-margin-left: 85px;
-}
-.repos {
-    float: left;
-    margin-left: 145px;
-    }
+
 a {
     text-decoration: none;
     color:#333333;
@@ -48,4 +37,50 @@ a {
 }
 p {
     max-width: 750px;
+}
+
+@media (min-width:765px){
+    .main {
+        margin-top: 50px;
+        font-family: Raleway;
+        display: flex;
+        margin: 6%;
+    }
+    .details {
+        flex:1;
+    }
+    .repos {
+        flex:2;
+        margin-left: 4%;
+        }
+}
+@media screen and (min-width:400px) and (max-width:765px){
+    .main {
+        font-family: Raleway;
+        margin: 6%;
+    }
+    .details {
+        margin-left: 10vw;
+    }
+    .repos {
+        margin-left: 4%;
+        }
+}
+@media (max-width:400px){
+    .main {
+        font-family: Raleway;
+        margin: 6%;
+    }
+    .details {
+        margin-left: 2%;
+    }
+    .repos {
+        margin-left: 2%;
+        }
+    .repo-name {
+        font-size: 25px;
+    }
+    .repo-description {
+        font-size: 16px; 
+    }
 }
