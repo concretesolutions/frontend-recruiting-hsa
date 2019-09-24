@@ -1,10 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResultComponent } from './result.component';
+import { HomeComponent } from '../home/home.component';
 import { SearchComponent } from '../search/search.component';
 import { DetailsComponent } from '../details/details.component';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
+import { GetUserDataService } from 'src/app/services/get-user-data.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from '../../app-routing.module';
 
 
 describe('ResultComponent', () => {
@@ -13,8 +19,9 @@ describe('ResultComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResultComponent, SearchComponent, DetailsComponent ],
-      imports: [ FormsModule ]
+      declarations: [ HomeComponent, ResultComponent, SearchComponent, DetailsComponent, PageNotFoundComponent ],
+      imports: [ FormsModule, AppRoutingModule, HttpClientModule ],
+      providers: [ GetUserDataService, HttpClient ]
     })
     .compileComponents();
   }));

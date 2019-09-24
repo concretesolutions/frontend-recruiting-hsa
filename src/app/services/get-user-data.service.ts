@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Details } from '../models/Details';
@@ -12,11 +13,11 @@ export class GetUserDataService {
   
   user: any;
   public getUserSubject = new Subject<any>();
-  getUserObservable = this.getUserSubject.asObservable();
+  public getUserObservable = this.getUserSubject.asObservable();
 
   repos: [];
   public getReposSubject = new Subject<[]>();
-  getReposObservable = this.getReposSubject.asObservable();
+  public getReposObservable = this.getReposSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 

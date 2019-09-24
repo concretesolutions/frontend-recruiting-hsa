@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailsComponent } from './details.component';
+import { GetUserDataService } from 'src/app/services/get-user-data.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('DetailsComponent', () => {
   let component: DetailsComponent;
@@ -8,7 +10,9 @@ describe('DetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailsComponent ]
+      declarations: [ DetailsComponent ],
+      imports: [ HttpClientModule ],
+      providers: [ GetUserDataService, HttpClient ]
     })
     .compileComponents();
   }));
