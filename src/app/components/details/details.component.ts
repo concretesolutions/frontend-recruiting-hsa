@@ -12,12 +12,11 @@ export class DetailsComponent implements OnInit {
   repos:any[];
   stars: number[] = [];
   starsTotal:number;
-
+  counter:any[];
   constructor(private getUserDataService: GetUserDataService) { }
 
   ngOnInit() {
     this.getUserDataService.getUserObservable.subscribe(details => {
-      console.log("details", details)
       this.user = {
         avatar: details.avatar_url,
         name: details.name,
@@ -32,12 +31,11 @@ export class DetailsComponent implements OnInit {
       };
     })
     this.getUserDataService.getReposObservable.subscribe(repos => {
-      console.log("repos", repos)
       this.stars = [];
       this.repos = repos;
+      this.counter = this.repos.sort((a,b) => b.stargazers_count - a.stargazers_count )
       this.repos.forEach(a => this.stars.push(a.stargazers_count));
-      this.starsTotal = this.stars.reduce((a,b)=>a+b)
-      console.log(this.stars, this.starsTotal)
+      this.starsTotal = this.stars.reduce((a,b)=>a+b);
 }) 
   }
 }
