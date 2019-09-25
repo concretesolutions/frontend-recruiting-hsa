@@ -14,13 +14,12 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  search(username: string) {
-    if(username !=="" && username !==undefined) {
-    this.getDetails(username);
-    this.getRepos(username);
-    this.router.navigate(['/result']);
-
-    }
+  search(username: string, event:any) {
+      if(username !=="" && username !==undefined) {
+        this.getDetails(username);
+        this.getRepos(username);
+        this.router.navigate(['/result']);
+        }
   }
 
   getDetails(username: string) {
