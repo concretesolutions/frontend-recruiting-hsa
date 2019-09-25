@@ -29,8 +29,10 @@ export class SearchComponent implements OnInit {
       this.getUserDataService.getDetails(details);
       },
       err => {
-        console.log('ERROR:', err.error.message);
-        this.router.navigate(['/**']);
+        if (err.status == 404) {
+          this.router.navigate(['/**']);
+        }
+        
       })
   }
   getRepos(username: string) {
