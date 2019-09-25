@@ -1,5 +1,5 @@
 <div class="search">
-        <input type="text" class="searchInput" id="searchInput" [(ngModel)]="searchInput">
-        <button type="submit" class="btnSearch" (click)="search(searchInput)"><img class="icon" 
+        <input type="text" class="searchInput" id="searchInput" [(ngModel)]="searchInput" (keyup.enter)="search(searchInput)">
+        <button type="submit" class="btnSearch"  (click)="search(searchInput)"><img class="icon" 
         src="../../../assets/img/Search Icon.png"></button>
 </div>
