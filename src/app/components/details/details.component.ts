@@ -10,6 +10,7 @@ import { Details } from '../../models/Details';
 export class DetailsComponent implements OnInit {
   user:Details;
   repos:any[];
+  noRepo: string;
   stars: number[] = [];
   starsTotal:number;
   counter:any[];
@@ -33,9 +34,13 @@ export class DetailsComponent implements OnInit {
     this.getUserDataService.getReposObservable.subscribe(repos => {
       this.stars = [];
       this.repos = repos;
+      if (this.repos.length > 0) {
       this.counter = this.repos.sort((a,b) => b.stargazers_count - a.stargazers_count )
       this.repos.forEach(a => this.stars.push(a.stargazers_count));
       this.starsTotal = this.stars.reduce((a,b)=>a+b);
+    } else {
+      this.noRepo = "0 repositories found"
+    }
 }) 
   }
 }

@@ -31,6 +31,8 @@
     </div>
 </section>
 <aside class="repos">
+        <div *ngIf="noRepo"><p class="repo-name"> {{noRepo}} </p>
+        </div>
         <div *ngFor="let repo of repos" class="repo-container">
         <a [href]="repo.html_url" target="_blank"><h1 class="repo-name">{{ repo.name }}</h1></a>
         <a [href]="repo.html_url" target="_blank"><p class="repo-description">{{ repo.description }}</p></a>
