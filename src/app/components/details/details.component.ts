@@ -35,6 +35,7 @@ export class DetailsComponent implements OnInit {
       this.stars = [];
       this.repos = repos;
       if (this.repos.length > 0) {
+      this.noRepo = "";
       this.counter = this.repos.sort((a,b) => b.stargazers_count - a.stargazers_count )
       this.repos.forEach(a => this.stars.push(a.stargazers_count));
       this.starsTotal = this.stars.reduce((a,b)=>a+b);
