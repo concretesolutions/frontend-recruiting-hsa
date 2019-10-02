@@ -22,7 +22,10 @@ a {
 .login {
     font-size: 20px;
 }
-
+.bio {
+    max-width: 280px;
+    margin-top: 10px;
+}
 /* repositories */
 
 .repo-name {
