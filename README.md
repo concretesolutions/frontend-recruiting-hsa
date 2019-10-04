@@ -1,85 +1,42 @@
 # Desafío Front End
 
-## Propuesta
+## Instalacion dependencias
 
-Implemente una aplicación cliente, visualice la API de GitHub y vea los repositorios de un usuario específico.
+Se debera ejecutar **npm install** para instalar las dependencias basicas
 
-Esta aplicación debe funcionar en los navegadores más recientes del mercado.
+## Levantar proyecto
 
-### API
+Se debe ejecutar **ng serve** por defecto levanta en el puerto 4200
 
-https://developer.github.com/v3/
+## Test
 
-Puntos de Detalles de un usuario:
+Tiene pruebas unitarias por defecto, por ende, en este punto no cumple con lo solicitado
 
-https://api.github.com/users/{username}
+## Desarrollo
 
-Repositorios de un usuario:
+El proyecto esta desarrollado en Angular 6, se divide en
 
-https://api.github.com/users/{username}/repos
+- component : Contiene todos los componentes de la aplicacion, a su vez:
+--   common: Contiene los dos componentes comunes loading-error y mensaje-generico, la primera procesa los mensajes de error enviados por ErrorHandlerService y muestra un cargando mientras espera. La segunda muestra un mensaje pasado segun el tipo (S,E,W,I)
+-- home: Pagina principal
+-- header-search: Contiene la barra de busqueda centralizada y realiza el llamado a la ruta de details cuando tiene un valor
+-- details: Realiza la busqueda en github para obtener la informacion del usuario, si la busqueda arroja un error verifica si es un error 404 muestra el componente "not-found", sino, muestra un mensaje de error en la parte superior. Si la busqueda arroja un status 200, muetras dos componentes "image-details" y "repo-details", el primero muestra la informacion de la parte izquierda, imagen, nombre, estadisticas. El segundo va a buscar los repositorios del usuario y los lista.
 
-### Disposición
+- constant: Contiene los titulos mostrados por pagina
 
-Home
-<img src="./img/home.png">
+- directive: Contiene "only-characters-valid.directive" la cual se encarga de llamar al servicio "UtilCommon" y va limpiando lo que el usuario escribe en el input de busqueda
 
-Details
-<img src="./img/details.png">
+- model: Contiene clases que sirven para mapear los datos enviados por github y asi poder procesar sus valores mas facilmente
 
-Not Found
-<img src="./img/notfound.png">
+- pipe: Contiene "safe.pipe" el cual se encarga de limpiar el HTML pasado, requerido por los componentes comunes
 
-### Navegación
+- service: Contiene:
+-- error-handler.service: Se encarga de procesar los errores de las llamadas, es una version basica
+-- search.service: Realiza las llamadas al github
+-- util-common.service: Contiene funciones comunes, por ahora solo tiene la que se encarga de limpiar el texto del input pasado
 
-Al buscar un usuario por el login de búsqueda de github, acceda a la página de resultados de la búsqueda con los detalles del usuario, de lo contrario, mostrará la página de Not Found (Layout NotFound).
+- app-routing.module: Contiene las rutas del proyecto
 
-### Requisitos
+- app.component: Elemento base que muestra las rutas o componentes actuales
 
-- Yo, como usuario, quiero buscar un usuario de GitHub;
-- Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, imagen del avatar, e-mail y bio);
-- Yo, como usuario, en la pantalla de detalhes puedo hacer una nueva busca;
-- Yo, como usuario, deseo ver la lista de repositorios de aquel usuario que fue buscado, ordenada por el número decreciente de estrellas;
-- Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre de repositorio e ir para pantalla del repositorio en github;
-- Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre usuariio y imagem del perfil, y ir para pantalla de perfil en github;
-
-**Definición de listo**
-
-El proyecto debe ser implementado de acuerdo con las especificaciones de Zeplin, no es obligatorio usar una estructura, pero recomendamos el React.js, Angular, Vue, o algún FW más actual. El uso de rutas es obligatorio (Ex: / users / {username} / repos).
-
-### Criterios de evaluación
-
-Buscamos personas que buscan siempre aprender cosas nuevas y estar actualizadas con el Mercado, disfrutar de buenas prácticas y calidad.
-
-- Organización del proyecto: La estructura del proyecto, documentación y uso del control de versión;
-- Innovación tecnológica: el uso de nuevas tecnologías, siempre que sean estables;
-- Consistencia: Si se cumplen los requisitos;
-- Buenas prácticas: Si el proyecto sigue buenas prácticas de desarrollo, incluyendo seguridad, optimización, código limpio y reutilizable, etc;
-- Control de Calidad: Si el proyecto tiene calidad asegurada por pruebas unitarias (por ejemplo, Jasmine, Mocha, Chai, Jest, etc).
-- No utilice Frameworks CSS (Boostrap, Material Angular, etc). Queremos entender cuál es su conocimiento con CSS.
-- El uso de preprocesador es muy bienvenido (Sass, Less) y ganará puntos.
-- El layout propuesto es bastante simple, pero tiene puntos que pueden ser reutilizados, reflexione sobre lo que se puede crear como componente. Analice bien el diseño y lo que se repite. Monte su biblioteca de componentes. Sugerencia, un término muy utilizado es webcomponent.
-- Documentación del proyecto, en el README.md debe ser creado y explicadar como se puede levantar la aplicacion en ambiente local, ejecutar pruebas unitarias, etc.
-- Git, el control de versión se analizará también, por lo que los commits, descripciones que se hizo en aquel commit también contará en el análisis.
-- Nomenclatura, el idioma para el código base debe estar en inglés y el idioma dirigido para el usuario en Español.
-- Requerimiento obligatorio: la página de busqueda debe pertenecer a un modulo diferente de la página de detalle.
-- El layout que esta en Zeplin se comparte cuando nuestro Recursos Humanos entran en contacto, y el css que es generado por él no debe ser utilizado. El foco es crear algo de cero y pensando en los webcomponentes reutilizables.
-
-Cada ítem arriba será evaluado y contará puntos en la evaluación final, por lo tanto aplique todo su conocimiento.
-
-### Entrega
-
-Siga los siguientes pasos para implementar y enviar este desafío:
-- Haga un **Fork** a este repositorio. Puedes mirar esta guía para mayores informaciones: [Como hacer fork de un repositorio](https://help.github.com/en/articles/fork-a-repo).
-- Implemente el desafío.
-- Después de completar el desafío, realice un **Pull Request** a este repositorio, utilizando la interface de **Github**. [Creando un Pull Request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).
-- Si es posible, deja tu repositorio publico para hacer la revisión de código más sencilla.
-
-Ademas de eso, la aplicación debe alojarse (Heroku, Netlify, Firebase, Plunker, etc.) y cumplir con los requerimientos. Las direcciones URL deben ser agregadas a el README del proyecto.
-
-### Plazo
-
-El tiempo de entrega de 7 días.
-
-Si el equipo de Recursos Humanos no te ha contactado, escribe a trabajeconnosotros@concrete.com.br
-
-¡Buena suerte!
+- assets: Contiene una carpeta de "images" donde estan las imagenes ocupadas
