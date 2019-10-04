@@ -1,0 +1,43 @@
+
+.repo-details {
+    float: right;
+    width: 65%;
+}
+
+@media (max-width: 767px) {
+    .repo-details {
+        float: none;        
+        width: 100%;
+    }
+
+    .repo-details .repo {
+        margin-top: 2em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .repo-details {
+        width: auto;
+    }
+}
+
+.repo-details .repo h2 a {
+    color: #ac53f2;
+    font-family: 'Raleway-Regular';
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.repo-details .repo p {
+    margin-bottom: .3em;
+}
+
+.repo-details .repo .star {
+    margin-bottom: 1.2em;
+}
+
+.repo-details .repo .star p {
+    line-height: 30px;
+    margin-left: 32px;
+    margin-bottom: 0;
+}

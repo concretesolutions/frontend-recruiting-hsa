@@ -1,0 +1,29 @@
+
+<div class="details">
+
+  <!-- Header Search -->
+  <app-header-search [texto]="texto"></app-header-search>
+
+  <!-- Message Error -->
+  <ang-mensaje-generico [data]="mensajeResulBusqueda"></ang-mensaje-generico>
+
+  <!-- Loading -->
+  <ang-loading-error [data]="objSubmit"></ang-loading-error>
+
+  <!-- Details -->
+  <ng-container *ngIf="!objSubmit.isLoading && !objSubmit.error">
+    <div class="float-left">
+      <app-image-details [details]="details"></app-image-details>
+    </div>
+
+    <div class="">
+      <app-repo-details  [details]="details"></app-repo-details>
+    </div>
+  </ng-container>
+
+  <!-- Not Found -->
+  <ng-container *ngIf="!objSubmit.isLoading && objSubmit.error">
+    <app-not-found></app-not-found>
+  </ng-container>
+
+</div>

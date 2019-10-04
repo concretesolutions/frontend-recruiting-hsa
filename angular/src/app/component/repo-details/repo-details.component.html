@@ -1,0 +1,21 @@
+
+<div class="repo-details">
+  <!-- Loading -->
+  <ang-loading-error [data]="objSubmit"></ang-loading-error>
+
+  <ng-container *ngIf="!objSubmit.isLoading && repository.length === 0">
+      <div class="message-info">
+          <h1>No repositories :/</h1>
+      </div>
+  </ng-container>
+
+  <ng-container *ngIf="!objSubmit.isLoading && repository.length > 0">
+
+      <div class="repo" *ngFor="let repo of repository">
+        <h2><a href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
+        <p>{{ repo.description }}</p>
+        <div class="star"><span class="ico-span ico-star"></span> <p>{{ repo.stargazers_count }}</p></div>
+      </div>
+  </ng-container>
+  
+</div>

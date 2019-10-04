@@ -1,0 +1,20 @@
+
+<div class="image-details width-300">
+
+    <div class="images">
+      <a href="{{ details.html_url }}"><img src="{{ details.avatar_url }}" alt="{{ details.name }}"></a>
+
+      <div class="info">
+        <h2>{{ details.name }}</h2>
+        <p><a href="{{ details.html_url }}">{{ details.login }}</a></p>
+      </div>
+    </div>
+
+    <div class="resumen">
+        <div><span class="ico-span ico-organization"></span> <p>{{ details.company }}</div>
+        <div><span class="ico-span ico-location"></span> <p>{{ details.location }}</p></div>
+        <div><span class="ico-span ico-star"></span> <p>0</p></div>
+        <div><span class="ico-span ico-respositories"></span> <p>{{ details.public_repos }}</p></div>
+        <div><span class="ico-span ico-followers"></span> <p>{{ details.followers }}</p></div>
+    </div>
+</div>

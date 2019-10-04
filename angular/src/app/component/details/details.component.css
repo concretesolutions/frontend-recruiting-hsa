@@ -1,0 +1,7 @@
+
+
+@media (max-width: 767px) {
+    .details .float-left {
+        float: none;
+    }
+}

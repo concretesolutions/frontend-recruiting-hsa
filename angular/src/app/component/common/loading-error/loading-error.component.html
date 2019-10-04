@@ -1,0 +1,12 @@
+
+  <div class="text-center" *ngIf="data?.isLoading">
+    <div class="spinner-border" role="status" [ngClass]="classLoad">
+      <img src="../../../../assets/images/loading.gif" alt="Loading..." width="32" height="32">
+    </div>
+  </div>
+
+  <div class="alert alert-danger" 
+    *ngIf="!data?.isLoading && data?.error && data.error.mensaje"
+    [ngClass]="classError"
+    [innerHtml]="data.error.mensaje | angSafe: 'html'">
+</div>

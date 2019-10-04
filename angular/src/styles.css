@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  
+   margin: 0;  
+   padding: 0;  
+   border: 0;  
+   font-size: 100%;  
+   font: inherit;  
+   vertical-align: baseline; 
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Custom */
+.home {
+    height: 100%;
+}
+
+.home .header-search {
+    height: 100% !important;
+    margin: 0 auto;
+    padding-top: 10em;
+    width: 70% !important;
+}
+
+.home .header-search .float-left {
+    text-align: center;
+}
+
+.home .header-search .float-left h1 {
+    font-size: 60px !important; 
+}
+
+.home .header-search .float-left,
+.home .header-search .float-right {
+    display: block;
+    float: none;
+    width: auto !important;
+}
+
+.home .search input {
+    width: 80%;
+}
+
+
+.display-inline {
+    display: inline;
+}
+
+/* Ico */
+
+.ico-span {
+    position: relative;    
+}
+
+.ico-followers::before,
+.ico-location::before,
+.ico-organization::before,
+.ico-respositories::before,
+.ico-search::before,
+.ico-star::before {
+    background-image: url(assets/images/icon.png);
+    content: " ";    
+    height: 30px;    
+    left: 0;
+    position: absolute;
+    top: 0;    
+    width: 40px;
+}
+
+.ico-search::before {
+    top: -15px;
+    left: -15px;
+    background-position: 0 0;
+}
+.ico-organization::before {
+    background-position: -38px -3px;
+}
+.ico-star::before {
+    background-position: -76px -3px;
+}
+.ico-location::before {
+    background-position: -113px -3px;
+}
+.ico-respositories::before {
+    background-position: -148px -3px;
+}
+.ico-followers::before {
+    background-position: -186px -3px;
+}
+
+
+/* General */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-lila {
+    color: #ac53f2;
+}
+
+/* Message */
+
+.message-info  {
+    margin: 6em;
+    text-align: center;
+}
+
+.message-info h1 {
+    color: #ac53f2;
+    font-size: 2.5em;
+}
+
+/* Width */
+
+.width-300 {
+    width: 300px;
+}

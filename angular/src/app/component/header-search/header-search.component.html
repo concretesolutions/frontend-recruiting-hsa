@@ -1,0 +1,19 @@
+
+<div class="header-search">
+
+  <div class="float-left width-300">
+    <h1>Github <em>Search</em></h1>
+  </div>
+
+  <div class="float-right">
+
+    <div class="search">
+      <input type="text" name="texto" [(ngModel)]="texto" appOnlyCharactersValid autocomplete="off">
+      <button type="button" (click)="onSubmit()" [disabled]="objSubmit.isLoading"><span class="ico-span ico-search"></span></button>
+    </div>
+  
+    <ang-loading-error [data]="objSubmit"></ang-loading-error>
+
+  </div>
+
+</div>

@@ -1,0 +1,40 @@
+
+<!-- Existe un mensaje? -->
+<ng-container *ngIf="data?.mensaje">
+  <!-- Segun el tipo -->
+  <ng-container [ngSwitch]="data?.tipo">
+
+    <!-- Exito -->
+    <div *ngSwitchCase="'S'"
+      id="{{ idElement }}"
+      class="alert alert-success"
+      [ngClass]="data?.addClase"
+      [innerHtml]="data?.mensaje | angSafe: 'html'">
+    </div>
+
+    <!-- Info -->
+    <div *ngSwitchCase="'I'"
+      id="{{ idElement }}"
+      class="alert alert-info"
+      [ngClass]="data?.addClase"
+      [innerHtml]="data?.mensaje | angSafe: 'html'">
+    </div>
+
+    <!-- Warning -->
+    <div *ngSwitchCase="'W'"
+      id="{{ idElement }}"
+      class="alert alert-warning"
+      [ngClass]="data?.addClase"
+      [innerHtml]="data?.mensaje | angSafe: 'html'">
+    </div>
+
+    <!-- default: Error -->
+    <div *ngSwitchDefault
+      id="{{ idElement }}"
+      class="alert alert-danger"
+      [ngClass]="data?.addClase"
+      [innerHtml]="data?.mensaje | angSafe: 'html'">
+    </div>
+    
+  </ng-container>
+</ng-container>
