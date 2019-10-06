@@ -11,7 +11,8 @@ import { GithubUserDetails, UserProfile } from './repositories.model';
 export class RepositoriesResolver implements Resolve<GithubUserDetails> {
 
   constructor(
-    private repositories: RepositoriesService
+    private repositories: RepositoriesService,
+    private router: Router
   ) { }
 
   resolve(
@@ -29,6 +30,8 @@ export class RepositoriesResolver implements Resolve<GithubUserDetails> {
         repositories: repos
       })),
       catchError(() => {
+        this.router.navigate(['/not-found']);
+
         return of(null);
       })
     );

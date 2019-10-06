@@ -1,0 +1,11 @@
+@import "variables";
+
+.not-found {
+  padding-top: 10rem;
+  font-size: 4rem;
+  color: $primary-color;
+
+  p {
+    text-align: center;
+  }
+}

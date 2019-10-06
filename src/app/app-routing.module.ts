@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LayoutComponent } from 'app/core';
+import { LayoutComponent, NotFoundComponent } from 'app/core';
 
 const routes: Routes = [
   {
@@ -11,6 +11,10 @@ const routes: Routes = [
       {
         path: 'users',
         loadChildren: './repositories/repositories.module#RepositoriesModule'
+      },
+      {
+        path: 'not-found',
+        component: NotFoundComponent
       }
     ]
   },
