@@ -1,0 +1,44 @@
+.layout {
+  padding: 2rem;
+  height: 95vh;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10rem;
+
+    .title {
+      font-size: 4rem;
+      font-weight: 200;
+      font-style: italic;
+      margin-right: 4.5rem;
+      
+      &-highlight {
+        font-family: Monaco;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+      }
+    }
+  }  
+
+  &.layout-home {
+    
+    .header {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .title {
+        font-size: 6rem;
+        margin: 0;
+      }
+    }    
+  }
+
+  .wrapper {
+    padding-top: 2.5rem;
+  }
+}
