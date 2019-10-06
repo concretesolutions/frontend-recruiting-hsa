@@ -1,0 +1,14 @@
+@import "variables";
+
+.repository {
+  margin-bottom: 2rem;
+
+  &__name {
+    font-size: 3.5rem;
+    color: $primary-color;
+  }
+
+  &__starts {
+    margin-top: 0.5rem;
+  }
+}

@@ -15,4 +15,15 @@ export class SearchBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  searchUser(): void {
+    const userName = this.userNameControl.value;
+
+    if (!userName) {
+      return;
+    }
+
+    this.userNameControl.setValue('');
+    this.route.navigate(['/users', userName]);
+  }
+
 }

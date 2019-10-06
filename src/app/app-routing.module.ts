@@ -6,7 +6,13 @@ import { LayoutComponent } from 'app/core';
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'users',
+        loadChildren: './repositories/repositories.module#RepositoriesModule'
+      }
+    ]
   },
   {
     path: '**',
