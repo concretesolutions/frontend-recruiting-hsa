@@ -1,0 +1,33 @@
+.header {
+    padding: 2rem;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.row {
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* side user info */
+.side {
+    flex: 0 1 30%;
+    background-color: white;
+    padding: 20px;
+}
+  
+/* Main column repos*/
+.main {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}

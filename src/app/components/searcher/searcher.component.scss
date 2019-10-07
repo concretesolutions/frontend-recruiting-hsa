@@ -1,0 +1,30 @@
+.searchgroup {
+    text-align: center;
+}
+
+input {
+    width: 650px;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 765px) {
+    input {
+      width: calc(100vw - 116px);
+    }
+}
+
+.btnSearch  {
+    height: 50px;
+    width: 100px;
+    display: inline-block;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: #ac53f2;
+    vertical-align: bottom;
+}
