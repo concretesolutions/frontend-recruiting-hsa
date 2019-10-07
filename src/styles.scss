@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* fonts */
+@font-face { 
+    font-family: monaco;
+    src: url(./assets/fonts/Monaco.ttf);
+}
+
+* {
+    font-family: Raleway;
+    font-weight: normal;
+}
+* .fontMonaco {
+    font-family: monaco;
+    font-weight: normal;
+}
+/* color */
+$theme-colors: ( 'purple': #ac53f2, 'gray': #5c5c5c, 'white': #ffffff );
+
+@each $color,
+$value in $theme-colors {
+    // colores para textos
+    .color-#{$color} {
+       color: $value;
+    }
+    // background
+    .bg-#{$color} {
+        background-color: $value;
+    }
+    // text
+    .text-#{$color} {
+        background-color: $value;
+    }
+}
+
+/* padding */
+@for $i from 1 through 5 {
+    .pt-#{$i} { padding-top: 0.5em + 0.25 * ($i - 1); }
+    .pr-#{$i} { padding-right: 0.5em + 0.25 * ($i - 1); }
+    .pb-#{$i} { padding-bottom: 0.5em + 0.25 * ($i - 1); }
+    .pl-#{$i} { padding-left: 0.5em + 0.25 * ($i - 1); }
+    .p-#{$i} { padding: 0.5em + 0.25 * ($i - 1); }
+}
+
+/* margin */
+@for $i from 1 through 5 {
+    .mt-#{$i} { margin-top: 0.5em + 0.25 * ($i - 1); }
+    .mr-#{$i} { margin-right: 0.5em + 0.25 * ($i - 1); }
+    .mb-#{$i} { margin-bottom: 0.5em + 0.25 * ($i - 1); }
+    .ml-#{$i} { margin-left: 0.5em + 0.25 * ($i - 1); }
+    .m-#{$i} { margin: 0.5em + 0.25 * ($i - 1); }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header {
+    padding: 2rem;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.row {
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* side user info */
+.side {
+    flex: 0 1 30%;
+    background-color: white;
+    padding: 20px;
+}
+  
+/* Main column repos*/
+.main {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+.brand {
+    font-size: 3em;
+}
+.search {
+    font-family: Raleway;
+    font-weight: 200;
+    font-style: italic;     
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+.verticalAlignM {
+    vertical-align: middle;
+}
+
+.noPadding {
+    padding: 0;
+}
+.noMargin {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
