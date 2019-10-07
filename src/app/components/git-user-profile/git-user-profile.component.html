@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="side">
+        <div class="text-center brand" routerLink="/home" routerLinkActive="active">
+            <span class="fontMonaco">Github</span><small class="search"> Search</small>
+        </div>
+    </div>
+    <div class="main">
+        <app-searcher></app-searcher>
+    </div>
+</div>
+<!-- The flexible grid (content) -->
+
+<div class="row">
+    <div class="side" *ngIf="user">
+        <a href="{{user.html_url}}" target="_blank">
+            <img src="{{user.avatar_url}}" alt="avatar image" height="260" width="260">
+        </a> 
+        <a href="{{user.html_url}}" target="_blank">
+            <p class="h2">{{user.name}}</p>
+        </a>
+        <p>
+            <img src="../../../assets/images/organization_icon3x.png" alt="star" class="icon verticalAlignM">
+            <span>&nbsp;{{user.login}}</span>
+        </p>
+        <p>
+            <img src="../../../assets/images/location_icon3x.png" alt="star" class="icon verticalAlignM">
+            <span>&nbsp;{{user.email}}</span>
+        </p>
+        <p >
+            <img src="../../../assets/images/star_icon3x.png" alt="star" class="icon verticalAlignM">
+            <span>&nbsp;{{ user.bio }}</span>
+        </p>
+        <p>
+            <img src="../../../assets/images/repositorie_icon3x.png" alt="star" class="icon verticalAlignM">
+            <span>&nbsp;{{user.followers}}</span>
+        </p>
+        <p >
+            <img src="../../../assets/images/followers_icon3x.png" alt="star" class="icon verticalAlignM">
+            <span>&nbsp;{{user.public_repos}}</span>
+        </p>
+    </div>
+    <div class="main" *ngIf="(userGitHubRepo | async).length else notPublicRepos">
+        <div class="mb-3" *ngFor='let repo of userGitHubRepo | async'>
+            <div class="mb-1">
+                <h1 class="noMargin"><a class="color-purple" href="{{repo.html_url}}" target="_blank"> {{repo.name}} </a></h1> 
+                <span *ngIf="repo.description">{{repo.description}}</span>
+            </div>
+            <div>
+                <img src="../../../assets/images/star_icon3x.png" alt="star" class="icon verticalAlignM">
+                <span>&nbsp;{{repo.stargazers_count}}</span>
+            </div>
+        </div>
+    </div>
+    <ng-template #notPublicRepos>
+        <p>
+            Este usuario no tiene repositorios públicos
+        </p>
+    </ng-template>
+</div>
