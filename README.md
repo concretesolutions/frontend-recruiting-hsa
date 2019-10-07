@@ -1,27 +1,63 @@
-# ConcreteChallenge
+# Search Github users and repos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+Esta app-web permite de acuerdo al nickname de un usuario en git, buscar sus datos de perfil y sus repositorios públicos si los hubiese.
 
-## Development server
+## Checkout
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* [App en firebase]https://github-user-search-3cef3.firebaseapp.com/home
 
-## Code scaffolding
+## Trabajando localmente
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clona el repositorio desde git o haz un fork:
+  Línea de comandos
+  ```
+  git clone https://github.com/ReleaseTheCode/frontend-recruiting-hsa.git
+  ```
+  
+  
+  Descarga el zip del proyecto
+  *[ZIP]https://github.com/ReleaseTheCode/frontend-recruiting-hsa/archive/master.zip
 
-## Build
+### Pre-requisitos 📋
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* [Node.Js]https://nodejs.org/es/ versión 10.9.0 en adelante
 
-## Running unit tests
+Instalar el Angular CLI (globalmente) 
+```
+npm install -g @angular/cli
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para el control de versiones puedes ayudarte con estos Git GUI
+* [Git Kraken]https://www.gitkraken.com
+* [Sourcetree]https://www.sourcetreeapp.com
 
-## Running end-to-end tests
+### Instalación 
+Una vez listo los Pre-requisitos hacemos lo siguiente
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+En el terminal que ocupemos ir a la capeta donde copiamos el proyecto 
+Windows
+```
+DIR User\Proyect\...\frontend-recruiting-hsa
+```
+Systemas basados en Unix
+```
+cd User/Proyect/.../frontend-recruiting-hsa
+```
 
-## Further help
+Corre el proyecto en tu navegador predeterminado
+```
+ng serve --open
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Construido con 
+
+Para el control de versiones puedes ayudarte con estos Git GUI
+* [Sourcetree]https://www.sourcetreeapp.com
+
+IDE o editor de text
+
+* [VSCODE]https://code.visualstudio.com
+
+Framework utilizado
+* [Angular Framework]https://angular.io
+* [Sass preprocesador]https://sass-lang.com
