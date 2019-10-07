@@ -1,0 +1,6 @@
+<div class="searchgroup">
+    <input id="search" type="text" name="gitUserSearch" [(ngModel)]="searchInp" (keyup.enter)="searchGitUser($event.target.value)">
+    <button type="submit" class="btnSearch bg-purple"  (click)="searchGitUser()">
+        <img class="icon" src="../../../assets/images/search_icon3x.png">
+    </button>    
+</div>
