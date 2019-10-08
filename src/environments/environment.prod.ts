@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  ENDPOINT_GH: 'https://api.github.com/users/'
 };
