@@ -1,1 +1,6 @@
-<p>search works!</p>
+<div class="search-container">
+    <input class="search" matInput [(ngModel)]="textToSearch" (keyup.enter)="search(textToSearch)">
+    <button class="button-search" (click)="onClickSearch(textToSearch)">
+        <img src="../../assets/icons/search-icon.png">
+    </button>
+</div>
