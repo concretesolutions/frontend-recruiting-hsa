@@ -10,7 +10,7 @@ import { MESSAGE } from 'src/app/constants/constants-util';
 })
 export class SearchComponent implements OnInit {
 
-  private textToSearch: string;
+  public textToSearch: string;
 
   constructor(private githubSearchService: GithubSearchService,
               private router: Router) {
@@ -21,7 +21,6 @@ export class SearchComponent implements OnInit {
   }
 
   onClickSearch(textToSearch: string) {
-    debugger;
     if (textToSearch && textToSearch !== '' && textToSearch !== undefined) {
       const user = textToSearch.trim();
       this.getDetailsUser(user);
