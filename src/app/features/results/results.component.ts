@@ -11,9 +11,13 @@ export class ResultsComponent implements OnInit {
 
   public userDetails: UserDetails;
   public userRepositories = [];
-  public withoutDescription = 'Without Description';
+  public withoutDescription: string;
+  public starsTotal: number;
 
-  constructor(private githubSearchService: GithubSearchService) { }
+  constructor(private githubSearchService: GithubSearchService) {
+    this.starsTotal = 0;
+    this.withoutDescription = 'Without Description';
+   }
 
   ngOnInit() {
     this.chargeDataUser();
