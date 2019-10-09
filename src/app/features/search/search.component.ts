@@ -32,12 +32,11 @@ export class SearchComponent implements OnInit {
   getDetailsUser(user: string) {
     this.githubSearchService.getDetailsUser(user)
       .toPromise().then( res => {
-        if (res && res.message !== MESSAGE && res.length !== 0) {
+        if (res) {
           this.githubSearchService.setDetailsUser(res);
         } else {
           this.router.navigate(['/notfound']);
         }
-
       }, error => {
         if (error.status === 404) {
           this.router.navigate(['/**']);

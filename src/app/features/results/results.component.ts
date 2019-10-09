@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { UserDetails } from 'src/app/models/user-details.model';
+import { GithubSearchService } from 'src/app/services/github-search.service';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  public userDetails: UserDetails;
+  public userRepositories = [];
+  public withoutDescription = 'Without Description';
+
+  constructor(private githubSearchService: GithubSearchService) { }
 
   ngOnInit() {
+    this.chargeDataUser();
+  }
+
+  chargeDataUser(): void {
+    this.githubSearchService.detailsObservable.subscribe( res => {
+      this.userDetails = res;
+    });
+    this.githubSearchService.repositoriesObservable.subscribe( res => {
+      if (res && res.length > 0) {
+        this.userRepositories = res;
+      }
+    });
   }
 
 }

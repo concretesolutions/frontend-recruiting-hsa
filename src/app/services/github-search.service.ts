@@ -9,8 +9,10 @@ import { environment } from 'src/environments/environment';
 })
 export class GithubSearchService {
 
-  private details: BehaviorSubject<UserDetails> = new BehaviorSubject<UserDetails>(null);
-  private repositories: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  public details = new BehaviorSubject<UserDetails>(null);
+  public detailsObservable = this.details.asObservable();
+  public repositories = new BehaviorSubject<any>(null);
+  public repositoriesObservable = this.repositories.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -60,15 +62,8 @@ export class GithubSearchService {
     this.repositories.next(res);
   }
 
-  getDataUser() {
-    return this.details;
-  }
-
   getRepositories(user: string): Observable<any> {
   return this.http.get<any>(environment.ENDPOINT_GH + user + '/repos');
   }
 
-  getRepositoriesUser() {
-    return this.repositories;
-  }
 }
