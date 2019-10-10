@@ -13,12 +13,6 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  options = {
-    headers: {
-      'User-Agent': 'request'
-    }
-  };
-
   getUserProfile(username: string): Observable<User> {
     return (
       this.http.get(environment.apiUrl + username, {})
