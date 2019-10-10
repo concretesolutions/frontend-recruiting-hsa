@@ -1,0 +1,74 @@
+.searchPage {
+  display: flex;
+  @media screen and (max-width: 992px) {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .title-content {
+    display: flex;
+    padding: 0 150px 0 20px;
+    font-size: 40px;
+    text-align: center;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      margin: 0 auto;
+      font-size: 30px;
+    }
+    .github-title {
+      display: inline-block;
+      font-family: Monaco;
+      font-weight: 500;
+    }
+    .search-title {
+      display: inline-block;
+      font-family: Raleway;
+      font-weight: 200;
+      font-style: italic;
+      margin-left: 5px;
+    }
+  }
+  .input-content {
+    display: flex;
+    width: 60%;
+    padding-top: 40px;
+    @media screen and (max-width: 992px) {
+      margin: 0 auto;
+      width: 100%;
+    }
+    .input-search {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      height: 55px;
+      width: 60%;
+      font-size: 30px;
+      @media screen and (max-width: 992px) {
+        width: 50%;
+      }
+    }
+    .btn-search {
+      position: relative;
+      background-color: #ac53f2;
+      height: 60px;
+      margin-left: -3px;
+      width: 60px;
+      .lens {
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+.aux-class {
+  display: block !important;
+  padding: 0 !important;
+  text-align: center !important;
+  width: auto !important;
+}
+.aux-input-search {
+  vertical-align: top;
+}
+

@@ -1,0 +1,24 @@
+<div class="information-content" [ngClass]="{'notFound-content':!informationUser}">
+    <div *ngIf="informationUser; else notFound">
+        <div class="profile-content">
+            <img src="{{informationUser.avatar_url}}" alt="imageProfile" class="imageProfile">
+            <p class="username">{{informationUser.login}}</p>
+            <p class="bio">{{informationUser.bio}}</p>
+        </div>
+        <div class="repos-content">
+            <ul>
+                <li *ngFor="let repo of repos" class="repo-name">
+                    <div class="information-content">
+                        <h3>
+                            {{repo.name}}
+                        </h3>
+                        <p>{{repo.description}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ng-template #notFound>
+        <h1 class="notFound">User not found :(</h1>
+    </ng-template>
+</div>

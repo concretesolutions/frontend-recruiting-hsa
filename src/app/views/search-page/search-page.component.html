@@ -1,0 +1,15 @@
+<div class="searchPage" [ngClass]="{'aux-class':!searchActive}">
+    <div class="title-content" [ngClass]="{'aux-class':!searchActive}">
+        <p class="github-title">Github<span class="search-title">Search</span>  
+        </p>
+    </div>
+    <div class="input-content" [ngClass]="{'aux-class':!searchActive}">   
+        <input type="text" class="input-search" [ngClass]="{'aux-input-search':!searchActive}" [(ngModel)]="userName" (keydown)="searchKeyDown($event)">
+        <button class="btn-search" (click)="searchUser()">
+            <img src="./assets/lens.png" alt="lens" class="lens">
+        </button>
+    </div>
+</div>
+<div *ngIf="searchActive" class="profile-content">
+    <app-user-profile [repos]="repos" [error]="notFound" [informationUser]="informationUser"></app-user-profile>
+</div>
