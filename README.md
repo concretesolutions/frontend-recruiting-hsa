@@ -1,27 +1,18 @@
-# ChallengeFrontend
+# Challenge FrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+Este proyecto fue implementado con [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0, alojado en Heroku para su demo.
 
-## Development server
+## Deployment server Heroku
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Demo App url: https://challenge-frontend-web.herokuapp.com
 
-## Code scaffolding
+## Development server local
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clonar o descargar el proyecto, para luego instalar las dependencias del archivo package.json mediante la terminal ejecutando el comando `npm install`.
 
-## Build
+Para ejecutar la app en servidor local, ejecutar el comando en la terminal `ng serve`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para ejecutar las pruebas unitarias, ejecutar comando `ng test` via [Karma](https://karma-runner.github.io).

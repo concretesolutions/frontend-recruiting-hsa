@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubSearchService } from 'src/app/services/github-search.service';
 import { Router } from '@angular/router';
-import { MESSAGE } from 'src/app/constants/constants-util';
 
 @Component({
   selector: 'app-search',
@@ -24,8 +23,6 @@ export class SearchComponent implements OnInit {
     if (textToSearch && textToSearch !== '' && textToSearch !== undefined) {
       const user = textToSearch.trim();
       this.getDetailsUser(user);
-      this.getRepositories(user);
-      this.router.navigate(['/details']);
     }
   }
 
@@ -34,21 +31,23 @@ export class SearchComponent implements OnInit {
       .toPromise().then( res => {
         if (res) {
           this.githubSearchService.setDetailsUser(res);
+          this.getRepositories(user);
         } else {
-          this.router.navigate(['/notfound']);
+          this.router.navigate(['/**']);
         }
       }, error => {
         if (error.status === 404) {
           this.router.navigate(['/**']);
         }
-      });
+      }).catch( msj => {this.router.navigate(['/**']); });
   }
 
   getRepositories(user: string) {
     this.githubSearchService.getRepositories(user)
-      .toPromise().then( res => {
-        if (res) {
-          this.githubSearchService.setRepositoriesUser(res);
+      .toPromise().then( response => {
+        if (response) {
+          this.githubSearchService.setRepositoriesUser(response);
+          this.router.navigate(['/details']);
         }
       });
   }

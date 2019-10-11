@@ -6,42 +6,45 @@
                 <p class="username">{{ userDetails.name || withoutDescription}}</p>
             </a>
             <p class="login">{{ userDetails.login || withoutDescription}}</p>
-            <p>{{ userDetails.email || withoutDescription}}</p>
+            <p class="email">{{ userDetails.email || withoutDescription}}</p>
             <p class="bio">{{ userDetails.bio || withoutDescription}}</p>
-            <div class="icon-containers" style="margin-top: 25px">
+            <div class="icon-container">
                 <img src="../../../assets/icons/organization-icon.png" class="icon">
                 <span>{{ userDetails.company || withoutDescription}}</span>
             </div>
-            <div class="icon-containers">
+            <div class="icon-container">
                 <img src="../../../assets/icons/location-icon.png" class="icon">
                 <span>{{ userDetails.location || withoutDescription}}</span>
             </div>
-            <div class="icon-containers">
+            <div class="icon-container">
                 <img src="../../../assets/icons/star-icon.png" class="icon">
-                <span>{{ starsTotal || withoutDescription }}</span>
+                <span>{{ allStars || withoutDescription }}</span>
             </div>
-            <div class="icon-containers">
+            <div class="icon-container">
                 <img src="../../../assets/icons/repositorie-icon.png" class="icon">
                 <span>{{ userDetails.public_repos || withoutDescription}}</span>
             </div>
-            <div class="icon-containers">
+            <div class="icon-container">
                 <img src="../../../assets/icons/followers-icon.png" class="icon">
                 <span>{{ userDetails.followers || withoutDescription }}</span>
             </div>
         </div>
     </div>
     <div class="repositories-container">
-        <div *ngFor="let repositories of userRepositories" class="list-container">
+        <div *ngFor="let repositories of userRepositories">
             <a [href]="repositories.html_url" target="_blank">
                 <h1 class="name">{{ repositories.name }}</h1>
             </a>
             <a [href]="repositories.html_url" target="_blank">
                 <p class="description">{{ repositories.description }}</p>
             </a>
-            <div style="margin-top: 5px">
+            <div>
                 <img src="../../../assets/icons/star-icon.png" class="icon">
                 <span> {{ repositories.stargazers_count }} </span>
             </div>
+        </div>
+        <div *ngIf="hasRepositories">
+            <p class="name">{{noRepositories}}</p>
         </div>
     </div>
 </div>

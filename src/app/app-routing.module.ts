@@ -1,30 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
-import { SearchComponent } from './features/search/search.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { DetailsComponent } from './features/details/details.component';
+import { SearchComponent } from './features/search/search.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: '',
-    component: HomeComponent
+    path: 'home', component: HomeComponent
   },
   {
-    path: 'search',
-    component: SearchComponent
+    path: 'search', component: SearchComponent
   },
   {
-    path: 'notfound',
-    component: NotFoundComponent
+    path: 'notfound', component: NotFoundComponent
   },
   {
-    path: 'details',
-    component: DetailsComponent
+    path: 'details',  component: DetailsComponent
   },
-  { path: '**',
-    component: NotFoundComponent
+  {
+    path: '**',  redirectTo: 'notfound'
   }
 ];
 

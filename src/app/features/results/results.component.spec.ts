@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResultsComponent } from './results.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { GithubSearchService } from 'src/app/services/github-search.service';
 
 describe('ResultsComponent', () => {
   let component: ResultsComponent;
@@ -8,7 +10,9 @@ describe('ResultsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResultsComponent ]
+      declarations: [ ResultsComponent ],
+      imports: [ HttpClientModule ],
+      providers: [ GithubSearchService, HttpClient ]
     })
     .compileComponents();
   }));

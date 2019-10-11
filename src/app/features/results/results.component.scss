@@ -1,11 +1,28 @@
+.details-container {
+    float: left;
+    width: 375px;
+    margin: 5px 50px 0 28px;
+}
+
 .photo {
     width: 280px;
     height: 280px;
     border-radius: 3px;
+    border-style: solid;
+    border-color: beige;
 }
 
 .username {
+    width: 280px;
+    height: 40px;
     font-size: 35px;
+    font-weight: 300;
+    color: #000000; 
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .login {
@@ -17,3 +34,37 @@
     height: 20px;
     margin-right: 5px;
 }
+
+.email {
+    font-size: 20px;
+    height: 20px;
+}
+
+.bio {
+    font-size: 20px;
+}
+
+.icon-container {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.repositories-container {
+    float: left;
+    width: 750px;
+}
+
+.name {
+    color: #ac53f2;
+    width: 700px;
+    height: 40px;
+    font-size: 35px;
+    margin: 0%;
+}
+
+.description {
+    width: 100%;
+    font-size: 20px;
+    margin: 0%;
+}
+
