@@ -1,0 +1,36 @@
+.search-container{
+    display: flex;
+    align-items: center;
+}
+.search{
+    width: 650px;
+    height: 50px;
+    font-family: Raleway;
+    font-size: 20px;
+}
+
+.button-search{
+    width: 100px;
+    height: 54px;
+    border-radius: 2px;
+    background-color: #b168ea;
+    border: none;
+}
+
+@media (min-width: 768px) and (max-width: 1450px) {
+    .search{
+        width: 800px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .search{
+        width: 370px;
+    }
+}
+  
+@media (min-width: 320px) and (max-width: 480px) {
+    .search{
+        width: 230px;
+    }
+}
