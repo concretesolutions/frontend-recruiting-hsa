@@ -1,0 +1,49 @@
+.information-content {
+    display: inline-block;
+    padding: 30px;
+    .profile-content {
+        display: inline-block;
+        width: 30%;
+        .imageProfile {
+            width: 100%;
+        }
+        .username {
+            font-family: Raleway;
+            font-size: 35px;
+        }
+        .bio {
+            font-family: Raleway;
+            font-size: 25px;
+        }
+    }
+    .repos-content {
+        display: inline-block;
+        vertical-align: top;
+        width: 60%;
+        .repo-name {
+            font-family: Raleway;
+            font-weight: 300;
+            h3 {
+                font-size: 35px;
+                color: #ac53f2;
+                margin: 0;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        ul {
+            margin: 0;
+            li {
+                list-style: none;
+            }
+        }
+    }
+}
+.notFound-content {
+    display: block;
+    .notFound {
+        color: #ac53f2;
+        text-align: center;
+    }
+}
