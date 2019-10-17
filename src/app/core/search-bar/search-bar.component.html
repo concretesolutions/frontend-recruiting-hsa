@@ -1,0 +1,8 @@
+<div class="search-bar">
+  <div class="search-bar__input">
+    <input [formControl]="userNameControl" type="text">
+  </div>
+  <button class="search-bar__button" [disabled]="userNameControl.invalid" (click)="searchUser()">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+</div>

@@ -1,0 +1,25 @@
+<div class="user-profile" *ngIf="profile">
+  <a class="user-profile__avatar" [href]="profile.url" target="_blank">
+    <img [src]="profile.avatarUrl">
+  </a>
+
+  <a [href]="profile.url" target="_blank" class="user-profile__name">{{profile.name}}</a>
+  <div class="user-profile__username">{{profile.userName}}</div>
+
+  <div class="user-profile__details">
+    <div class="details-item icon-text-inline">
+      <i class="fa fa-users" aria-hidden="true"></i>
+      {{profile.followers}}
+    </div>
+
+    <div class="details-item icon-text-inline">
+      <i class="fa fa-envelope-o"></i>
+      {{profile.email || 'Sin especificar'}}
+    </div>
+
+    <div class="details-item icon-text-inline">
+      <i class="fa fa-address-book-o" aria-hidden="true"></i>
+      {{profile.bio || 'Sin especificar'}}
+    </div>
+  </div>
+</div>
