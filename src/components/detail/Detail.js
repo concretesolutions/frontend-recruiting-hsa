@@ -15,22 +15,24 @@ class Detail extends React.Component {
                 <h1>{this.props.detailProps.login}</h1>
                 <label id="txt-name">{this.props.detailProps.name}</label>
                 <div id="detail-icon-content">
-                    <div className="detail-item">
-                        <h6><img src= {companyIcon} className="sub-detail"></img>Compañia:</h6>
-                        <p className="sub-detail-text">{this.props.detailProps.company}</p>
-                    </div>
-                    <div className="detail-item">
-                        <h6><img src= {bioIcon} className="sub-detail"></img>Bio:</h6>
-                        <p className="sub-detail-text">{this.props.detailProps.bio}</p>
-                    </div>
-                    <div className="detail-item">
-                        <h6><img src= {emailIcon} className="sub-detail"></img>Correo:</h6>
-                        <p className="sub-detail-text">{this.props.detailProps.email}</p>
-                    </div>
-                    <div className="detail-item">
-                        <h6><img src= {follwerIcon} className="sub-detail"></img>Seguidores:</h6>
-                        <p className="sub-detail-text">{this.props.detailProps.followers}</p>
-                    </div>
+                    <table>
+                        <tr>
+                            <td><h6><img src= {companyIcon} className="sub-detail"></img>Compañia:</h6></td>
+                            <td><p className="sub-detail-text">{this.props.detailProps.company}</p></td>
+                        </tr>
+                        <tr>
+                            <td><h6><img src= {bioIcon} className="sub-detail"></img>Biografía:</h6></td>
+                            <td><p className="sub-detail-text">{this.props.detailProps.bio}</p></td>
+                        </tr>
+                        <tr>
+                            <td><h6><img src= {emailIcon} className="sub-detail"></img>Correo:</h6></td>
+                            <td><p className="sub-detail-text">{this.props.detailProps.email}</p></td>
+                        </tr>
+                        <tr>
+                            <td><h6><img src= {follwerIcon} className="sub-detail"></img>Seguidores:</h6></td>
+                            <td><p className="sub-detail-text">{this.props.detailProps.followers}</p></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         );
