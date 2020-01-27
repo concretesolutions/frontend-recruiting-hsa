@@ -1,0 +1,26 @@
+#search {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#search-txt {
+    border-radius: 2px;
+    width: 316px;
+    height: 25px;
+    padding: 4px;
+    margin: 7px;
+    float: right;
+}
+
+#search-content {
+    width: 100%;
+}
+
+#search-content td {
+    width: 50%;
+}
+
+#search-img {
+    float: left;
+    width: 30px;
+}
