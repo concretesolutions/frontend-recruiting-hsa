@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import Home from './home/Home';
-import Details from './details/Details';
+import S from './notfound/NotFound'
 
-ReactDOM.render(<Details />, document.getElementById('root'));
+ReactDOM.render(<S />, document.getElementById('root'));

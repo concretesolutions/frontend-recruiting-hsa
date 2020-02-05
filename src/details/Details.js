@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import GitHubSearTitle from '../components/GitHubSearchTitle';
+import GitHubSearchTitle from '../components/GitHubSearchTitle';
 import SearchButton from '../components/SearchButton';
 import Profile from '../components/Profile';
+import Repository from '../components/Repository';
 
 export default class Details extends Component{
 
@@ -9,18 +10,33 @@ export default class Details extends Component{
         return (
             <div>
                 <div style={header}>
-                    <GitHubSearTitle/>
+                    <GitHubSearchTitle/>
                     <SearchButton/>
                 </div>
                 <table>
                     <thead></thead>
                     <tbody>
                         <tr>
-                            <td style={columnProfile}>
+                            <td valign="top" style={columnProfile}>
                                 <Profile/>
                             </td>
                             <td style={columnPulls}>
-
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
+                                <Repository/>
                             </td>
                         </tr>
                     </tbody>
@@ -38,11 +54,12 @@ const header = {
 }
 
 const columnProfile = {
-    width: "20%",
+    width: "30%",
     paddingLeft: "20px"
 }
 
 const columnPulls = {
-    width: "80%",
-    paddingRight: "20px"
+    width: "70%",
+    paddingLeft: "30px",
+    paddingRight: "30px"
 }

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-export default class NotFound extends Component{
+export default class NotFoundComp extends Component{
     render(){
         return(
             <div style={notFoundContainer}>
