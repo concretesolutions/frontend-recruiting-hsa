@@ -23,4 +23,5 @@
 #search-img {
     float: left;
     width: 30px;
+    cursor: pointer;
 }

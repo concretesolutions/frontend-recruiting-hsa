@@ -44,6 +44,11 @@
 
 #avatar-image {
     width: 190px;
+    cursor: pointer;
+}
+
+#txt-user-name {
+    cursor: pointer;
 }
 
 

@@ -7,12 +7,22 @@ import follwerIcon from './image/follower.png';
 
 class Detail extends React.Component {
 
+    constructor(props) {
+        super(props);
+        
+        this.goProfileUser = this.goProfileUser.bind(this);
+    }
+
+    goProfileUser = () => {
+        window.location = 'https://github.com/' + this.props.detailProps.login;
+    }
+
     render() {
         
         return (
             <div style={{display: this.props.showDetail}} id="detail">
-                <img id="avatar-image" src={this.props.detailProps.avatar_url}></img>
-                <h1>{this.props.detailProps.login}</h1>
+                <img id="avatar-image" src={this.props.detailProps.avatar_url} onClick={this.goProfileUser}></img>
+                <h1 id="txt-user-name" onClick={this.goProfileUser}>{this.props.detailProps.login}</h1>
                 <label id="txt-name">{this.props.detailProps.name}</label>
                 <div id="detail-icon-content">
                     <table>
