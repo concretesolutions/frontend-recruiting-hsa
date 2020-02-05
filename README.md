@@ -1,4 +1,4 @@
-##Instalación Ambiente Local
+## Instalación Ambiente Local
 
 - Se instalan dependencias
 
@@ -12,7 +12,7 @@ $ npm install
 $ npm start
 ```
 
-##URL Heroku
+## URL Heroku
 
 http://frontend-recruting-app.herokuapp.com/
 
