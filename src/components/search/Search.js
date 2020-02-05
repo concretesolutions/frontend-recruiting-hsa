@@ -24,7 +24,7 @@ class Search extends React.Component {
 
     searchDetailUser = () => {
 
-        let url = process.env.REACT_APP_API_DETAIL + this.state.user;
+        let url = process.env.REACT_APP_GITHUB_API + this.state.user;
 
         fetch(url, {
                 method: 'GET'
@@ -49,7 +49,7 @@ class Search extends React.Component {
     }
 
     searchRepositoryUser = () => {
-        let url = process.env.REACT_APP_API_REPOSITORY + this.state.user + '/repos';
+        let url = process.env.REACT_APP_GITHUB_API + this.state.user + process.env.REACT_APP_REPOSITORY_MODULE;
 
         fetch(url, {
                 method: 'GET'
