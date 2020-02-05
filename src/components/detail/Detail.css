@@ -1,0 +1,55 @@
+#detail {
+    margin: 0;
+    width: 30%;
+    float: left;
+}
+
+#detail h1 {
+    margin: 0;
+}
+
+#detail label {
+    margin: 0;
+}
+
+#detail-icon-content {
+    margin-top: 15px;
+    width: 80%;
+    margin-left: 20px;
+}
+
+.detail-item {
+    width: 100%;
+    float: left;
+}
+
+.detail-item h6 {
+    text-align: left;
+    margin: 0;
+}
+
+.sub-detail {
+    width: 16px;
+    margin-left: 10%;
+    margin-top: 9px;
+    margin-right: 7px;
+}
+
+.sub-detail-text {
+    font-size: 11px;
+    text-align: justify;
+    margin-left: 10%;
+    padding: 0;
+}
+
+#avatar-image {
+    width: 190px;
+    cursor: pointer;
+}
+
+#txt-user-name {
+    cursor: pointer;
+}
+
+
+

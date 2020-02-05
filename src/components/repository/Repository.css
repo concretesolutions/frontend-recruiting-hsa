@@ -1,0 +1,27 @@
+#repository-container {
+    float: left;
+    width: 70%;
+}
+
+.repository-block {
+    height: 150px;
+    float: left;
+    width: 90%;
+    margin-bottom: 10px;
+    border: solid #B6AEAC;
+}
+
+.repository-paragraph{
+    font-size: 13px;
+    text-align: justify;
+    margin-left: 10%;
+    padding: 0;
+}
+
+.stargazers-icon {
+    width: 13px;
+}
+
+.repository-name {
+    cursor: pointer;
+}
