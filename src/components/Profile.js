@@ -2,24 +2,27 @@ import React, {Component} from 'react';
 
 export default class Profile extends Component{
     render(){
+        const profile = this.props.profile
         return (
             <div>
-                <img 
-                    alt="Avatar" 
-                    style={avatar} 
-                    src="https://avatars2.githubusercontent.com/u/176295?v=4">
-                </img>
+                <a href={profile.html_url}>
+                    <img 
+                        alt="Avatar" 
+                        style={avatar} 
+                        src={profile.avatar_url}>
+                    </img>
+                </a>
                 <br/>
-                <label style={name}>Jon Gjengset</label>
+                <label style={name} >{profile.name}</label>
                 <br/>
-                <label style={login}>jonhoo</label>
+                <a style={login}  href={profile.html_url}>{profile.login}</a>
                 <br/>
                 <div style={row}>
                     <img 
                         alt="Contacto" 
                         style={icon} 
                         src={ require('../resources/images/contact-email-icon.png')}/>
-                    <label>correo@correo.cl</label>
+                    <label>{profile.email}</label>
                     <br/>
                 </div>
                 <div style={row}>
@@ -27,7 +30,7 @@ export default class Profile extends Component{
                         alt="Seguidores" 
                         style={icon} 
                         src={ require('../resources/images/followers-icon.png')}/>
-                    <label>1943</label>
+                    <label>{profile.followers}</label>
                     <br/>
                 </div>                
                 <div style={row}>
@@ -35,7 +38,7 @@ export default class Profile extends Component{
                         alt="Compañia" 
                         style={icon} 
                         src={ require('../resources/images/company-icon.png')}/>
-                    <label>Massachusetts Institute of Technology</label>
+                    <label>{profile.company}</label>
                     <br/>
                 </div>                
                 <div style={row}>
@@ -43,7 +46,7 @@ export default class Profile extends Component{
                         alt="Ubicacion" 
                         style={icon} 
                         src={ require('../resources/images/location-icon.png')}/>
-                    <label>Cambridge, MA</label>
+                    <label>{profile.location}</label>
                     <br/>
                 </div>                
                 <div style={row}>
@@ -51,10 +54,10 @@ export default class Profile extends Component{
                         alt="Blog" 
                         style={icon} 
                         src={ require('../resources/images/blog-icon.png')}/>
-                    <a href="https://thesquareplanet.com">https://thesquareplanet.com</a>
+                    <a href={profile.blog}>{profile.blog}</a>
                     <br/>                
                 </div>
-                <p>PhD student in MIT's Parallel and Distributed Operating Systems Group. Rustacean. A fan of making things secure, fast, scalable, and well-documented.</p>
+                <p>{profile.bio}</p>
                 <br/>
             </div>
         );
@@ -82,7 +85,8 @@ const name = {
 
 const login = {
     fontSize: "1.5em",
-    color: "gray"
+    color: "gray",
+    textDecorationLine: "none"
 }
 
 const row = {

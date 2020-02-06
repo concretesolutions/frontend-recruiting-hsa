@@ -3,10 +3,17 @@ import GitHubSearchTitle from '../components/GitHubSearchTitle';
 import SearchButton from '../components/SearchButton';
 import Profile from '../components/Profile';
 import Repository from '../components/Repository';
+import {Redirect} from "react-router-dom";
 
 export default class Details extends Component{
 
     render(){
+        if(this.props.location.state === undefined){
+            return <Redirect to="/"/>
+        }
+
+        const profile = this.props.location.state.profile
+        const repositoryList = this.props.location.state.repositoryList
         return (
             <div>
                 <div style={header}>
@@ -18,25 +25,14 @@ export default class Details extends Component{
                     <tbody>
                         <tr>
                             <td valign="top" style={columnProfile}>
-                                <Profile/>
+                                <Profile profile={profile}/>
                             </td>
                             <td style={columnPulls}>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
-                                <Repository/>
+                            {
+                                repositoryList.map(repository =>{
+                                    return <Repository key={repository.id} repository={repository}/>
+                                })
+                            }
                             </td>
                         </tr>
                     </tbody>
