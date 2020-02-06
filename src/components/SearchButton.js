@@ -79,11 +79,11 @@ export default class SearchButton extends Component{
 
 const searchButton = {
     background: "#607d8b",
-    border : "none",
     borderRadius: "50%",
-    width: "55px",
-    height: "55px",
-    cursor: "pointer"
+    width: "60px",
+    height: "60px",
+    cursor: "pointer",
+    border: "3px solid #37474f"
 };
 
 const searchIcon = {

@@ -74,8 +74,7 @@ const avatar = {
     width: "250px",
     height: "250px",
     borderRadius: "50%",
-    border: "5px solid #37474f",
-    boxShadow: "inset 0px 0px 10px #37474f"
+    border: "5px solid #37474f"
 }
 
 const name = {

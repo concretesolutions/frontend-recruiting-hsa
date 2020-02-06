@@ -51,7 +51,7 @@ const header = {
 
 const columnProfile = {
     width: "30%",
-    paddingLeft: "20px"
+    paddingLeft: "5%"
 }
 
 const columnPulls = {
