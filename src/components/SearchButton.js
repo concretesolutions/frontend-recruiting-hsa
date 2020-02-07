@@ -11,20 +11,9 @@ export default class SearchButton extends Component{
     }
 
     render(){
-        if(this.state.redirect){
-            const path = this.state.redirect
-            this.setState({redirect:null})
-            return <Redirect 
-                to={{
-                pathname: path,
-                state: { 
-                    profile: this.state.dataProfile,
-                    repositoryList: this.state.dataRepositoryList
-                }
-              }}/>
-        }
         return (
             <div>
+                {this.redirectToPage()}
                 <table>
                     <thead></thead>
                     <tbody>
@@ -47,6 +36,19 @@ export default class SearchButton extends Component{
                 </table>
             </div>
         );
+    }
+
+    redirectToPage = () => {        
+        if(this.state.redirect){
+            return <Redirect 
+              to={{
+              pathname: this.state.redirect,
+              state: { 
+                  profile: this.state.dataProfile,
+                  repositoryList: this.state.dataRepositoryList
+              }
+            }}/>            
+        }
     }
 
     onChange = e =>{
@@ -83,7 +85,8 @@ const searchButton = {
     width: "60px",
     height: "60px",
     cursor: "pointer",
-    border: "3px solid #37474f"
+    border: "3px solid #37474f",
+    marginLeft: "10%"
 };
 
 const searchIcon = {
@@ -95,7 +98,8 @@ const searchInput = {
     width: "600px",
     height: "40px",
     borderRadius: "5px",
-    border: "1px solid #607d8b"
+    border: "1px solid #607d8b",
+    paddingLeft: "1%"
 }
 
 const repos="/repos"

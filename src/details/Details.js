@@ -20,7 +20,7 @@ export default class Details extends Component{
                     <GitHubSearchTitle/>
                     <SearchButton/>
                 </div>
-                <table>
+                <table style={table}>
                     <thead></thead>
                     <tbody>
                         <tr>
@@ -56,6 +56,10 @@ const columnProfile = {
 
 const columnPulls = {
     width: "70%",
-    paddingLeft: "30px",
-    paddingRight: "30px"
+    paddingLeft: "5%",
+    paddingRight: "5%"
+}
+
+const table = {
+    width: "100%"
 }
