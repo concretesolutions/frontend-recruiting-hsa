@@ -1,0 +1,14 @@
+.home__container{
+    margin: 190px auto auto auto;
+    width: 435px;
+}
+
+.search__container{
+    display: flex;
+    margin: auto;
+    width: 367px;
+}
+
+.error__message{
+    text-align: center;
+}

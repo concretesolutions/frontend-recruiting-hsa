@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.biography__container {
+    margin-top: 60px;
+    width: 500px;
+}
+
+.biography__avatar {
+    margin: auto;
+    width: 190px;
+}
+
+.avatar__img {
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    max-width: 185px;
+}
+
+.biograpphy__infos > h2, .biograpphy__infos > p {
+    text-align: center;
+    padding: 10px;
+}
+
+.github__infos {
+    margin: 20px auto auto auto;
+    width: 200px;
+}
+
+.location__container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    width: 177px;
+}
+
+.repositorie__container, .followers__container, .following__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 54px;
+}
+
+.location__container > p, .repositorie__container > p, .followers__container > p, .following__container > p {
+    font-size: 20px;
+}
+
+.repos__container {
+    margin-top: 50px;
+    width: 500px;
+}
+
+
+.repos__container > div > h4 {
+    color: rgb(248, 177, 227);
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+}
+
+.repos__container--stars{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    width: 55px;
+}
+
+.repos__container--stars > p{
+    font-size: 20px;
+    margin-top: 3px;
+}
