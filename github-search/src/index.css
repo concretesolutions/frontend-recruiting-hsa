@@ -1,13 +1,64 @@
+/* <---------------IMPORT VARIABLES---------------> */
+/* <---------------IMPORT COMPONENTS--------------> */
+/* <---------------IMPORT VIEWS-------------------> */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  margin: 220px 50px 50px 50px;
+  box-sizing: border-box; }
+
+.home-containerTittle {
+  display: flex;
+  justify-content: center; }
+
+.home-partOneTitle {
+  padding-right: 8px;
+  font-family: 'Miriam Libre', sans-serif;
+  font-size: 60px;
+  margin: 0; }
+
+.home-partTwoTitle {
+  padding-left: 8px;
+  font-family: 'Quicksand';
+  font-size: 58px;
+  margin: 0; }
+
+.home-containerInput {
+  display: flex;
+  justify-content: center; }
+
+.home-borderInput {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  width: 700px;
+  height: 40px; }
+
+.home-input {
+  border: 0px;
+  width: 80%;
+  padding-left: 10px; }
+
+.home-btnInput {
+  background: #AB5AEF;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: none;
+  cursor: pointer; }
+
+.home-imgInput {
+  height: 30px; }
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
