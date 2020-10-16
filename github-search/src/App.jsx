@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { Nav } from './Components/Nav';
 import { Home } from './Views/Home';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <Switch>
 
         <Route path="/" exact>
-          <Home />
+          {/* <Home /> */}
+          <Nav />
         </Route>
 
         {/* <Route path="/detalles">
