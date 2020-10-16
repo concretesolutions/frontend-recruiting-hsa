@@ -7,13 +7,20 @@ import { Observable } from "rxjs";
 })
 export class ServicioService {
   private user:string;
-  private ChuckUrl = "https://api.github.com/users/"; // URL to web api
-
+  private UrlUser = "https://api.github.com/users/"; // URL to web api
+  private urlRepos = "https://api.github.com/users/"+this.user+"/repos"
+  
   constructor(private http: HttpClient) { }
 
   public obtenerUsuario(usuario): Observable<any> {
     this.user = usuario
-    return this.http.get<any>(this.ChuckUrl+this.user);
+    return this.http.get<any>(this.UrlUser+this.user);
+  }
+
+  public obtenerRepos(usuario): Observable<any> {
+    this.user = usuario
+    this.urlRepos = "https://api.github.com/users/"+this.user+"/repos"
+    return this.http.get<any>(this.urlRepos);
   }
 }
 
