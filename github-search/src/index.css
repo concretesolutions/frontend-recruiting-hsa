@@ -54,6 +54,19 @@
 .home-imgInput {
   height: 30px; }
 
+/* <---------------------MEDIA QUERY---------------------> */
+@media all and (max-width: 500px) {
+  .home-partOneTitle {
+    font-size: 50px; }
+  .home-partTwoTitle {
+    font-size: 48px; } }
+
+@media all and (max-width: 420px) {
+  .home-partOneTitle {
+    font-size: 38px; }
+  .home-partTwoTitle {
+    font-size: 36px; } }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
