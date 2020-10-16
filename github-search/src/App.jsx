@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { UserProvider } from './Context/UserContext'
 import { Nav } from './Components/Nav';
 import { Home } from './Views/Home';
 
@@ -13,8 +14,10 @@ function App() {
       <Switch>
 
         <Route path="/" exact>
-          {/* <Home /> */}
-          <Nav />
+          <UserProvider>
+            {/* <Home /> */}
+            <Nav />
+          </UserProvider>
         </Route>
 
         {/* <Route path="/detalles">

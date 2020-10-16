@@ -1,29 +1,12 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
+import React, { useContext } from 'react'
+import { UserContext } from '../Context/UserContext'
+import { ResultUsers } from './ResultUsers';
+
 
 export const Nav = () => {
-    const [search, setSearch] = useState('')
-    const [users, setUsers] = useState([])
-    const [repos, setRepos] = useState([])
-
-
-    const searchUser = async () => {
-        console.log(search)
-
-        try {
-            const dataUsers = await axios(`https://api.github.com/users/${search}`)
-            const dataRepos = await axios(`https://api.github.com/users/${search}/repos`)
-            setUsers(dataUsers)
-            setRepos(dataRepos)
-        } catch (error) {
-            console.log(error)
-        }
-
-    }
+    let { setSearch, search, users, searchUser } = useContext(UserContext)
 
     console.log(users)
-    console.log(repos)
-    
     return (
         <>
             <div className="nav-container">
@@ -40,6 +23,7 @@ export const Nav = () => {
                     </div>
                 </div>
             </div>
+            <ResultUsers />
         </>
     )
 }
