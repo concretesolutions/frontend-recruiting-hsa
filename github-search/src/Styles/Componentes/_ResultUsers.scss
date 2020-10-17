@@ -45,20 +45,35 @@
 .resultUsers-repos{
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: 10px 10px 10px 60px;
 }
-    .resultUsers-reposName{
-        
+    .resultUsers-oneRepo{
+        margin-bottom: 35px;
     }
-    .resultUsers-reposDescription{
-        
-    }
-    .resultUsers-container-Stars{
-        display: flex;
-        align-items: center;
-    }
-        .resultUsers-userImg{
-            
+        .resultUsers-reposName{
+            font-family: 'Quicksand';
+            font-size: 30px;
+            color: #AB5AEF;
+            margin: 0px;
+            margin-top: 15px;
+            margin: 0;
         }
-        .resultUsers-numberStart{
-            
+        .resultUsers-reposDescription{
+            font-family: 'Quicksand';
+            font-size: 18px;
+            margin: 0px;
         }
+        .resultUsers-container-Stars{
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+            .resultUsers-userImg-repos{
+                height: 20px;
+                width: 20px;
+                margin-right: 8px;
+            }
+            .resultUsers-numberStart{
+                margin: 0px;
+            }

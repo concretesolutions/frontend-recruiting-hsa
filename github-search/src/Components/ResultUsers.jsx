@@ -4,7 +4,7 @@ import { UserContext } from '../Context/UserContext'
 
 export const ResultUsers = () => {
 
-    let { users, repos } = useContext(UserContext)
+    let { users, repos, search } = useContext(UserContext)
     let totalStars = 0
 
     const starCounter = () => {
@@ -15,7 +15,11 @@ export const ResultUsers = () => {
     starCounter()
 
     return (
-        <div className="resultUsers-container">
+        <>
+        { search !== users.login ? 
+            <h3>No hay repoo</h3>
+         :  
+            <div className="resultUsers-container">
             <div className="resultUsers-user">
                 <div>
                     <a target="blank" href={users.html_url}>
@@ -29,23 +33,23 @@ export const ResultUsers = () => {
 
                 <div className="resultUsers-container-infoIcons">
                     <div className="resultUsers-icons">
-                        <img className="resultUsers-userImg" src="https://i.ibb.co/F6nQTyq/circles.png" alt="Imágen de perfil"/>
-                        <p className="resultUsers-userLogin">{users.login}</p>
+                        <img className="resultUsers-userImg" src="https://i.ibb.co/vzmyq3y/circles.png" alt="ícono biografía"/>
+                        <p className="resultUsers-userLogin">{users.bio}</p>
                     </div>
                     <div className="resultUsers-icons">
-                        <img className="resultUsers-userImg" src="https://i.ibb.co/yNVhgdH/circle.png" alt="Imágen de perfil"/>
-                        <p className="resultUsers-userLogin">{users.type}</p>
+                        <img className="resultUsers-userImg" src="https://i.ibb.co/yNVhgdH/circle.png" alt="ícono email"/>
+                        <p className="resultUsers-userLogin">{users.email}</p>
                     </div>
                     <div className="resultUsers-icons">
-                        <img className="resultUsers-userImg" src="https://i.ibb.co/svyC4pB/star.png" alt="Imágen de perfil"/>
+                        <img className="resultUsers-userImg" src="https://i.ibb.co/svyC4pB/star.png" alt="ícono estrella"/>
                         <p className="resultUsers-userLogin">{totalStars}</p>
                     </div>
                     <div className="resultUsers-icons">
-                        <img className="resultUsers-userImg" src="https://i.ibb.co/6JdDJmn/box.png" alt="Imágen de perfil"/>
+                        <img className="resultUsers-userImg" src="https://i.ibb.co/6JdDJmn/box.png" alt="ícono repositorios"/>
                         <p className="resultUsers-userLogin">{users.public_repos}</p>
                     </div>
                     <div className="resultUsers-icons">
-                        <img className="resultUsers-userImg" src="https://i.ibb.co/TPLKfgS/followers.png" alt="Imágen de perfil"/>
+                        <img className="resultUsers-userImg" src="https://i.ibb.co/TPLKfgS/followers.png" alt="ícono seguidores"/>
                         <p className="resultUsers-userLogin">{users.followers}</p>
                     </div>
                 </div>
@@ -54,11 +58,11 @@ export const ResultUsers = () => {
             <div className="resultUsers-repos">
                 {
                     repos.map((item) => (
-                        <div key={item.id} className="">
-                            <h1 className="resultUsers-reposName">{item.name}</h1>
+                        <div key={item.id} className="resultUsers-oneRepo">
+                            <h6 className="resultUsers-reposName">{item.name}</h6>
                             <p className="resultUsers-reposDescription">{item.description}</p>
                             <div className="resultUsers-container-Stars">
-                                <img className="resultUsers-userImg" src="https://i.ibb.co/svyC4pB/star.png" alt="Estrellas"/>
+                                <img className="resultUsers-userImg-repos" src="https://i.ibb.co/svyC4pB/star.png" alt="Estrellas"/>
                                 <p className="resultUsers-numberStart">{item.stargazers_count}</p>
                             </div>
                         </div>
@@ -67,5 +71,7 @@ export const ResultUsers = () => {
             </div>
 
         </div>
+        }
+        </>
     )
 }
