@@ -21,6 +21,9 @@ function UserProvider({ children }) {
         }
     }
 
+//  Orden de repos por estrellas
+    repos.sort((a,b) => (a.stargazers_count  > b.stargazers_count  ? -1 : a.stargazers_count  < b.stargazers_count  ? 1 : 0)) 
+
   return (
     <Provider value={{ setSearch, users, repos, searchUser, search
     }}>
