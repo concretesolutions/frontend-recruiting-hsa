@@ -4,10 +4,8 @@ import { ResultUsers } from './ResultUsers';
 
 
 export const Nav = () => {
-    let { setSearch, search, repos, users, searchUser } = useContext(UserContext)
+    let { setSearch, search, searchUser } = useContext(UserContext)
 
-    console.log(users)
-    console.log(repos)
     return (
         <>
             <div className="nav-container">

@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../Context/UserContext'
+import { withRouter } from "react-router-dom";
 
-export const Home = () => {
+const Home = (props) => {
+    let { setSearch, search, searchUser } = useContext(UserContext)
+
+    const ups = () => {
+        searchUser()
+        props.history.push('/detalles')
+    }
+
     return (
         <div className="home-container">
             <div className="home-containerTittle">
@@ -9,8 +18,8 @@ export const Home = () => {
             </div>
             <div className="home-containerInput">
                 <div className="home-borderInput">
-                    <input className="home-input" type="text"/>
-                    <button className="home-btnInput">
+                    <input className="home-input" value={search} type="text" onChange={ (e) => setSearch(e.target.value)}/>
+                    <button className="home-btnInput" onClick={() => ups() }>
                         <img className="home-imgInput" src="https://i.ibb.co/QD0q88v/lupa.png" alt="Lupa de búsqueda"/>
                     </button>
                 </div>
@@ -18,3 +27,5 @@ export const Home = () => {
         </div>
     )
 }
+
+export default withRouter(Home)

@@ -10,10 +10,7 @@ function UserProvider({ children }) {
     const [users, setUsers] = useState([])
     const [repos, setRepos] = useState([])
 
-
     const searchUser = async () => {
-        console.log(search)
-
         try {
             const dataUsers = await axios(`https://api.github.com/users/${search}`)
             const dataRepos = await axios(`https://api.github.com/users/${search}/repos`)
@@ -22,7 +19,6 @@ function UserProvider({ children }) {
         } catch (error) {
             console.log(error)
         }
-
     }
 
   return (

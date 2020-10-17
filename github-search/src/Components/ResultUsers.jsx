@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { UserContext } from '../Context/UserContext'
 import UserNotFound from './UserNotFound';
 
@@ -10,7 +10,7 @@ export const ResultUsers = () => {
 
     const starCounter = () => {
         repos.map((item) => {
-            totalStars += item.stargazers_count
+            return totalStars += item.stargazers_count
         })
     } 
     starCounter()

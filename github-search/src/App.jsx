@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { UserProvider } from './Context/UserContext'
 import { Nav } from './Components/Nav';
-import { Home } from './Views/Home';
+import Home from './Views/Home';
 
 function App() {
   return (
@@ -15,16 +15,15 @@ function App() {
 
         <Route path="/" exact>
           <UserProvider>
-            {/* <Home /> */}
-            <Nav />
+            <Home />
           </UserProvider>
         </Route>
 
-        {/* <Route path="/detalles">
+        <Route path="/detalles">
+          <UserProvider>
+            <Nav />
+          </UserProvider>
         </Route>
-
-        <Route path="/noEncontrado">
-        </Route> */}
 
       </Switch>
     </Router>
