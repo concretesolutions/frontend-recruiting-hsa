@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../Context/UserContext'
+import UserNotFound from './UserNotFound';
 
 
 export const ResultUsers = () => {
@@ -17,7 +18,7 @@ export const ResultUsers = () => {
     return (
         <>
         { search !== users.login ? 
-            <h3>No hay repoo</h3>
+            <UserNotFound />
          :  
             <div className="resultUsers-container">
             <div className="resultUsers-user">

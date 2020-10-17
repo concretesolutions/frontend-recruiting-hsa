@@ -126,8 +126,7 @@
   font-size: 30px;
   color: #AB5AEF;
   margin: 0px;
-  margin-top: 15px;
-  margin: 0; }
+  margin-top: 15px; }
 
 .resultUsers-reposDescription {
   font-family: 'Quicksand';
@@ -146,6 +145,17 @@
 
 .resultUsers-numberStart {
   margin: 0px; }
+
+.userNotFound-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 170px; }
+
+.userNotFound-title {
+  font-family: 'Quicksand';
+  font-size: 40px;
+  color: #AB5AEF;
+  margin-top: 15px; }
 
 /* <---------------IMPORT VIEWS-------------------> */
 .home-container {
