@@ -72,6 +72,54 @@
     flex-direction: column;
     margin: 30px; } }
 
+.resultUsers-container {
+  display: flex;
+  margin: 0px 50px 50px 50px; }
+
+.resultUsers-user a {
+  text-decoration: none; }
+
+.resultUsers-user {
+  display: flex;
+  flex-direction: column;
+  width: 21%;
+  margin: 10px 10px 10px 0px; }
+
+.resultUsers-userImgProfile {
+  height: 260px;
+  width: 260px; }
+
+.resultUsers-userName {
+  font-family: 'Quicksand';
+  font-size: 25px;
+  margin: 0px;
+  margin-top: 15px; }
+
+.resultUsers-userLogin {
+  font-family: 'Quicksand';
+  font-size: 18px;
+  margin: 0px; }
+
+.resultUsers-container-infoIcons {
+  margin-top: 25px; }
+
+.resultUsers-icons {
+  display: flex;
+  margin-top: 10px; }
+
+.resultUsers-userImg {
+  height: 23px;
+  width: 23px;
+  margin-right: 8px; }
+
+.resultUsers-repos {
+  display: flex;
+  flex-direction: column; }
+
+.resultUsers-container-Stars {
+  display: flex;
+  align-items: center; }
+
 /* <---------------IMPORT VIEWS-------------------> */
 .home-container {
   display: flex;
