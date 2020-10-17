@@ -5,56 +5,39 @@
     box-sizing: border-box;
 }
     .nav-containerTittle{
-        display: flex;
-        justify-content: center;
+        @extend %Flex-center;
         width: 20%;
         padding-right: 20px;
     }
         .nav-link{
             text-decoration: none;
-            color: black;
+            color: $Color1;
         }
         .nav-partOneTitle{
-            padding-right: 8px;
-            font-family: 'Miriam Libre', sans-serif;
+            @extend %PartOne-title;
             font-size: 35px;
-            margin: 0;
         }
         .nav-partTwoTitle{
-            padding-left: 8px;
-            font-family: 'Quicksand';
+            @extend %PartTwo-title;
             font-size: 33px;
-            margin: 0;
         }
 
     .nav-containerInput{
-        display: flex;
-        justify-content: center;
+        @extend %Flex-center;
         width: 100%;
     }
         .nav-borderInput{
-            display: flex;
-            justify-content: space-between;
-            background: #FFFFFF;
-            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-            border-radius: 3px;
+            @extend %BorderInput;
             height: 35px;
             width: 100%;
         }
             .nav-input{
-                border: 0px;
-                width: 80%;
-                padding-left: 10px;  
+                @extend %Input;
+                width: 100%;
             }
             .nav-btnInput{
-                background: #AB5AEF;
+                @extend %BtnInput;
                 width: 15%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 0;
-                outline: none;
-                cursor: pointer;
             }
                 .nav-imgInput{
                     height: 30px;

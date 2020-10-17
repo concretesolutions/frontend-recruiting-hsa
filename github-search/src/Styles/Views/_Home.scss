@@ -5,50 +5,32 @@
     box-sizing: border-box;
 }
     .home-containerTittle{
-        display: flex;
-        justify-content: center;
+        @extend %Flex-center;
     }
         .home-partOneTitle{
-            padding-right: 8px;
-            font-family: 'Miriam Libre', sans-serif;
+            @extend %PartOne-title;
             font-size: 60px;
-            margin: 0;
         }
         .home-partTwoTitle{
-            padding-left: 8px;
-            font-family: 'Quicksand';
+            @extend %PartTwo-title;
             font-size: 58px;
-            margin: 0;
         }
 
     .home-containerInput{
-        display: flex;
-        justify-content: center;
+        @extend %Flex-center;
     }
         .home-borderInput{
-            display: flex;
-            justify-content: space-between;
-            background: #FFFFFF;
-            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-            border-radius: 3px;
+            @extend %BorderInput;
             width: 700px;
             height: 40px;
         }
             .home-input{
-                border: 0px;
+                @extend %Input;
                 width: 80%;
-                padding-left: 10px;
-                
             }
             .home-btnInput{
-                background: #AB5AEF;
+                @extend %BtnInput;
                 width: 20%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 0;
-                outline: none;
-                cursor: pointer;
             }
                 .home-imgInput{
                     height: 30px;

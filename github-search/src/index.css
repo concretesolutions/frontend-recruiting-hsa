@@ -1,4 +1,40 @@
 /* <---------------IMPORT VARIABLES---------------> */
+/* <---------------FONTS------------------------------> */
+/* <--------------COLORS------------------------------> */
+/* <--------------SHADOWS-----------------------------> */
+/* <--------------BUTTONS-----------------------------> */
+.nav-btnInput, .home-btnInput, .nav-containerTittle, .nav-containerInput, .userNotFound-container, .home-containerTittle, .home-containerInput {
+  display: flex;
+  justify-content: center; }
+
+.nav-partOneTitle, .home-partOneTitle {
+  padding-right: 8px;
+  font-family: "Miriam Libre", sans-serif;
+  margin: 0; }
+
+.nav-partTwoTitle, .home-partTwoTitle {
+  padding-right: 8px;
+  font-family: "Quicksand";
+  margin: 0; }
+
+.nav-borderInput, .home-borderInput {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 3px; }
+
+.nav-input, .home-input {
+  border: 0px;
+  padding-left: 10px; }
+
+.nav-btnInput, .home-btnInput {
+  background: #AB5AEF;
+  align-items: center;
+  border: 0;
+  outline: none;
+  cursor: pointer; }
+
 /* <---------------IMPORT COMPONENTS--------------> */
 .nav-container {
   display: flex;
@@ -7,8 +43,6 @@
   box-sizing: border-box; }
 
 .nav-containerTittle {
-  display: flex;
-  justify-content: center;
   width: 20%;
   padding-right: 20px; }
 
@@ -17,45 +51,23 @@
   color: black; }
 
 .nav-partOneTitle {
-  padding-right: 8px;
-  font-family: 'Miriam Libre', sans-serif;
-  font-size: 35px;
-  margin: 0; }
+  font-size: 35px; }
 
 .nav-partTwoTitle {
-  padding-left: 8px;
-  font-family: 'Quicksand';
-  font-size: 33px;
-  margin: 0; }
+  font-size: 33px; }
 
 .nav-containerInput {
-  display: flex;
-  justify-content: center;
   width: 100%; }
 
 .nav-borderInput {
-  display: flex;
-  justify-content: space-between;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 3px;
   height: 35px;
   width: 100%; }
 
 .nav-input {
-  border: 0px;
-  width: 80%;
-  padding-left: 10px; }
+  width: 100%; }
 
 .nav-btnInput {
-  background: #AB5AEF;
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0;
-  outline: none;
-  cursor: pointer; }
+  width: 15%; }
 
 .nav-imgInput {
   height: 30px; }
@@ -94,13 +106,13 @@
   width: 100%; }
 
 .resultUsers-userName {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 25px;
   margin: 0px;
   margin-top: 15px; }
 
 .resultUsers-userLogin {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 18px;
   margin: 0px; }
 
@@ -129,13 +141,13 @@
   text-decoration: none; }
 
 .resultUsers-reposName {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 30px;
   color: #AB5AEF;
   margin: 0px; }
 
 .resultUsers-reposDescription {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 18px;
   margin: 0px; }
 
@@ -193,12 +205,10 @@
     margin: 0px 30px 50px 30px; } }
 
 .userNotFound-container {
-  display: flex;
-  justify-content: center;
   margin: 130px 50px 0px 50px; }
 
 .userNotFound-title {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 40px;
   color: #AB5AEF;
   margin-top: 15px;
@@ -211,49 +221,21 @@
   margin: 220px 50px 50px 50px;
   box-sizing: border-box; }
 
-.home-containerTittle {
-  display: flex;
-  justify-content: center; }
-
 .home-partOneTitle {
-  padding-right: 8px;
-  font-family: 'Miriam Libre', sans-serif;
-  font-size: 60px;
-  margin: 0; }
+  font-size: 60px; }
 
 .home-partTwoTitle {
-  padding-left: 8px;
-  font-family: 'Quicksand';
-  font-size: 58px;
-  margin: 0; }
-
-.home-containerInput {
-  display: flex;
-  justify-content: center; }
+  font-size: 58px; }
 
 .home-borderInput {
-  display: flex;
-  justify-content: space-between;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 3px;
   width: 700px;
   height: 40px; }
 
 .home-input {
-  border: 0px;
-  width: 80%;
-  padding-left: 10px; }
+  width: 80%; }
 
 .home-btnInput {
-  background: #AB5AEF;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0;
-  outline: none;
-  cursor: pointer; }
+  width: 20%; }
 
 .home-imgInput {
   height: 30px; }

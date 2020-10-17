@@ -15,13 +15,13 @@
             width: 100%;
         }
         .resultUsers-userName{
-            font-family: 'Quicksand';
+            font-family: $Font2;
             font-size: 25px;
             margin: 0px;
             margin-top: 15px;
         }
         .resultUsers-userLogin{
-            font-family: 'Quicksand';
+            font-family: $Font2;
             font-size: 18px;
             margin: 0px;
         }
@@ -39,8 +39,6 @@
                 margin-right: 8px;
             }
 
-
-
 .resultUsers-repos{
     display: flex;
     flex-direction: column;
@@ -54,13 +52,13 @@
         text-decoration: none;
     }
         .resultUsers-reposName{
-            font-family: 'Quicksand';
+            font-family: $Font2;
             font-size: 30px;
-            color: #AB5AEF;
+            color: $Color3;
             margin: 0px;
         }
         .resultUsers-reposDescription{
-            font-family: 'Quicksand';
+            font-family: $Font2;
             font-size: 18px;
             margin: 0px;
         }
@@ -102,7 +100,7 @@
     .resultUsers-userName { margin-top: 0px; }
     .resultUsers-userLogin{ margin-bottom: 20px; }
     .line{
-        background: #AB5AEF;
+        background: $Color3;
         width: 100%;
         height: 1px;
         margin: 20px 0px 40px 0px;
