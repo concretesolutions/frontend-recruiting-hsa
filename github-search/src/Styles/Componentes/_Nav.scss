@@ -68,7 +68,7 @@
     .nav-containerTittle { width: 40%; }
 }
 @media all and (max-width: 650px){
-    .nav-containerTittle { width: 100%; }
+    .nav-containerTittle { width: 100%; justify-content: start; }
     .nav-container{
         flex-direction: column;
         margin: 30px;
