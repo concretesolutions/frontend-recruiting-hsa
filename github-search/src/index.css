@@ -156,13 +156,14 @@
 .userNotFound-container {
   display: flex;
   justify-content: center;
-  margin-top: 170px; }
+  margin: 130px 50px 0px 50px; }
 
 .userNotFound-title {
   font-family: 'Quicksand';
   font-size: 40px;
   color: #AB5AEF;
-  margin-top: 15px; }
+  margin-top: 15px;
+  text-align: center; }
 
 /* <---------------IMPORT VIEWS-------------------> */
 .home-container {
