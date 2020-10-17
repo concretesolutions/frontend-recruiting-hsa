@@ -14,7 +14,7 @@ export const ResultUsers = () => {
         })
     } 
     starCounter()
-
+console.log(repos)
     return (
         <>
         { search !== users.login ? 
@@ -60,7 +60,9 @@ export const ResultUsers = () => {
                 {
                     repos.map((item) => (
                         <div key={item.id} className="resultUsers-oneRepo">
-                            <h6 className="resultUsers-reposName">{item.name}</h6>
+                            <a target="blank" href={item.html_url}>
+                                <h6 className="resultUsers-reposName">{item.name}</h6>
+                            </a>
                             <p className="resultUsers-reposDescription">{item.description}</p>
                             <div className="resultUsers-container-Stars">
                                 <img className="resultUsers-userImg-repos" src="https://i.ibb.co/svyC4pB/star.png" alt="Estrellas"/>
