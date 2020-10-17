@@ -14,7 +14,7 @@ export const ResultUsers = () => {
         })
     } 
     starCounter()
-console.log(repos)
+
     return (
         <>
         { search !== users.login ? 

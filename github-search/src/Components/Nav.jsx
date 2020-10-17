@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../Context/UserContext'
 import { ResultUsers } from './ResultUsers';
+import { Link } from "react-router-dom";
 
 
 export const Nav = () => {
@@ -8,10 +9,14 @@ export const Nav = () => {
 
     return (
         <>
-            <div className="nav-container">
+            <nav className="nav-container">
                 <div className="nav-containerTittle">
-                    <h3 className="nav-partOneTitle">Github</h3>
-                    <h3 className="nav-partTwoTitle">Search</h3>
+                    <Link to="/" className="nav-link">
+                        <h3 className="nav-partOneTitle">Github</h3>
+                    </Link>
+                    <Link to="/" className="nav-link">
+                        <h3 className="nav-partTwoTitle">Search</h3>
+                    </Link>
                 </div>
                 <div className="nav-containerInput">
                     <div className="nav-borderInput">
@@ -21,7 +26,7 @@ export const Nav = () => {
                         </button>
                     </div>
                 </div>
-            </div>
+            </nav>
             <ResultUsers />
         </>
     )
