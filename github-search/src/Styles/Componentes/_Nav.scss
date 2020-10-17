@@ -1,0 +1,59 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 50px 20px 50px;
+    box-sizing: border-box;
+}
+    .nav-containerTittle{
+        @extend %Flex-center;
+        width: 20%;
+        padding-right: 20px;
+    }
+        .nav-link{
+            text-decoration: none;
+            color: $Color1;
+        }
+        .nav-partOneTitle{
+            @extend %PartOne-title;
+            font-size: 35px;
+        }
+        .nav-partTwoTitle{
+            @extend %PartTwo-title;
+            font-size: 33px;
+        }
+
+    .nav-containerInput{
+        @extend %Flex-center;
+        width: 100%;
+    }
+        .nav-borderInput{
+            @extend %BorderInput;
+            height: 35px;
+            width: 100%;
+        }
+            .nav-input{
+                @extend %Input;
+                width: 100%;
+            }
+            .nav-btnInput{
+                @extend %BtnInput;
+                width: 15%;
+            }
+                .nav-imgInput{
+                    height: 30px;
+                }
+
+/* <---------------------MEDIA QUERY---------------------> */
+@media all and (max-width: 1180px){
+    .nav-containerTittle { width: 30%; }
+}
+@media all and (max-width: 830px){
+    .nav-containerTittle { width: 40%; }
+}
+@media all and (max-width: 650px){
+    .nav-containerTittle { width: 100%; justify-content: start; }
+    .nav-container{
+        flex-direction: column;
+        margin: 30px;
+    }
+}

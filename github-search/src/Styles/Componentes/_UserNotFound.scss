@@ -1,0 +1,11 @@
+.userNotFound-container{
+    @extend %Flex-center;
+    margin: 130px 50px 0px 50px;
+}
+    .userNotFound-title{
+        font-family: $Font2;
+        font-size: 40px;
+        color: $Color3;
+        margin-top: 15px;
+        text-align: center;
+    }

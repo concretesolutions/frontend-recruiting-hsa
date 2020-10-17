@@ -1,0 +1,122 @@
+.resultUsers-container{
+    display: flex;
+    margin: 0px 50px 50px 50px;
+}
+.resultUsers-user a{
+    text-decoration: none;
+}
+    .resultUsers-user{
+        display: flex;
+        flex-direction: column;
+        width: 21%;
+        margin: 10px 10px 10px 0px;
+    }
+        .resultUsers-userImgProfile{
+            width: 100%;
+        }
+        .resultUsers-userName{
+            font-family: $Font2;
+            font-size: 25px;
+            margin: 0px;
+            margin-top: 15px;
+        }
+        .resultUsers-userLogin{
+            font-family: $Font2;
+            font-size: 18px;
+            margin: 0px;
+        }
+
+    .resultUsers-container-infoIcons{
+        margin-top: 25px;
+    }
+        .resultUsers-icons{
+            display: flex;
+            margin-top: 10px;
+        }
+            .resultUsers-userImg{
+                height: 23px;
+                width: 23px;
+                margin-right: 8px;
+            }
+
+.resultUsers-repos{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 10px 10px 10px 60px;
+}
+    .resultUsers-oneRepo{
+        margin-bottom: 45px;
+    }
+    .resultUsers-oneRepo a{
+        text-decoration: none;
+    }
+        .resultUsers-reposName{
+            font-family: $Font2;
+            font-size: 30px;
+            color: $Color3;
+            margin: 0px;
+        }
+        .resultUsers-reposDescription{
+            font-family: $Font2;
+            font-size: 18px;
+            margin: 0px;
+        }
+        .resultUsers-container-Stars{
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+            .resultUsers-userImg-repos{
+                height: 20px;
+                width: 20px;
+                margin-right: 8px;
+            }
+            .resultUsers-numberStart{
+                margin: 0px;
+            }
+
+
+/* <---------------------MEDIA QUERY---------------------> */
+@media all and (max-width: 1024px){
+    .resultUsers-container{ flex-direction: column; }
+    .resultUsers-repos {
+        width: 100%;
+        margin: 0px;
+    }
+    .resultUsers-user {
+        flex-direction: row;
+        width: 100%;
+    }
+    .resultUsers-container-infoIcons {
+        margin-top: 65px;
+        margin-left: 25px;
+        width: 50%;
+    }
+    .resultUsers-container-user{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .resultUsers-userName { margin-top: 0px; }
+    .resultUsers-userLogin{ margin-bottom: 20px; }
+    .line{
+        background: $Color3;
+        width: 100%;
+        height: 1px;
+        margin: 20px 0px 40px 0px;
+    }
+}
+@media all and (max-width: 725px){
+    .resultUsers-user { flex-direction: column; }
+    .resultUsers-container-infoIcons {
+        margin-top: 30px;
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+@media all and (max-width: 650px){
+    .resultUsers-container{
+        display: flex;
+        margin: 0px 30px 50px 30px;
+    }
+}

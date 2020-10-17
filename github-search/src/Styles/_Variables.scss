@@ -1,0 +1,51 @@
+/* <---------------FONTS------------------------------> */
+$Font1: 'Miriam Libre', sans-serif;
+$Font2: 'Quicksand';
+
+/* <--------------COLORS------------------------------> */
+$Color1: black;
+$Color2: #FFFFFF;
+$Color3: #AB5AEF;
+
+/* <--------------SHADOWS-----------------------------> */
+$ShadowButton1: 0px 0px 6px rgba(0, 0, 0, 0.16);
+
+/* <--------------OTHERS------------------------------> */
+%Flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+%PartOne-title {
+    padding-right: 8px;
+    font-family: $Font1;
+    margin: 0;
+}
+
+%PartTwo-title {
+    padding-right: 8px;
+    font-family: $Font2;
+    margin: 0;
+}
+
+%BorderInput {
+    display: flex;
+    justify-content: space-between;
+    background: $Color2;
+    box-shadow: $ShadowButton1;
+    border-radius: 3px;
+}
+
+%Input {
+    border: 0px;
+    padding-left: 10px;
+}
+
+%BtnInput {
+    @extend %Flex-center;
+    background: $Color3;
+    align-items: center;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
