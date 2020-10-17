@@ -90,8 +90,7 @@
   margin: 10px 10px 10px 0px; }
 
 .resultUsers-userImgProfile {
-  height: 260px;
-  width: 260px; }
+  width: 100%; }
 
 .resultUsers-userName {
   font-family: 'Quicksand';
@@ -123,7 +122,7 @@
   margin: 10px 10px 10px 60px; }
 
 .resultUsers-oneRepo {
-  margin-bottom: 35px; }
+  margin-bottom: 45px; }
 
 .resultUsers-oneRepo a {
   text-decoration: none; }
@@ -132,8 +131,7 @@
   font-family: 'Quicksand';
   font-size: 30px;
   color: #AB5AEF;
-  margin: 0px;
-  margin-top: 15px; }
+  margin: 0px; }
 
 .resultUsers-reposDescription {
   font-family: 'Quicksand';
@@ -152,6 +150,46 @@
 
 .resultUsers-numberStart {
   margin: 0px; }
+
+/* <---------------------MEDIA QUERY---------------------> */
+@media all and (max-width: 1024px) {
+  .resultUsers-container {
+    flex-direction: column; }
+  .resultUsers-repos {
+    width: 100%;
+    margin: 0px; }
+  .resultUsers-user {
+    flex-direction: row;
+    width: 100%; }
+  .resultUsers-container-infoIcons {
+    margin-top: 65px;
+    margin-left: 25px;
+    width: 50%; }
+  .resultUsers-container-user {
+    display: flex;
+    flex-direction: column-reverse; }
+  .resultUsers-userName {
+    margin-top: 0px; }
+  .resultUsers-userLogin {
+    margin-bottom: 20px; }
+  .line {
+    background: #AB5AEF;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0px 40px 0px; } }
+
+@media all and (max-width: 725px) {
+  .resultUsers-user {
+    flex-direction: column; }
+  .resultUsers-container-infoIcons {
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 100%; } }
+
+@media all and (max-width: 650px) {
+  .resultUsers-container {
+    display: flex;
+    margin: 0px 30px 50px 30px; } }
 
 .userNotFound-container {
   display: flex;

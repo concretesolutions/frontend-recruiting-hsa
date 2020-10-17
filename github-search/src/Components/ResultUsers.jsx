@@ -22,15 +22,19 @@ export const ResultUsers = () => {
          :  
             <div className="resultUsers-container">
             <div className="resultUsers-user">
-                <div>
-                    <a target="blank" href={users.html_url}>
-                        <img className="resultUsers-userImgProfile" src={users.avatar_url} alt="Imágen de perfil"/>
-                    </a>
+                <div className="resultUsers-container-user">
+                    <div>
+                        <a target="blank" href={users.html_url}>
+                            <img className="resultUsers-userImgProfile" src={users.avatar_url} alt="Imágen de perfil"/>
+                        </a>
+                    </div>
+                    <div>
+                        <p className="resultUsers-userName"><b>{users.name}</b></p>
+                        <a target="blank" href={users.html_url}>
+                            <p className="resultUsers-userLogin">{users.login}</p>
+                        </a>
+                    </div>
                 </div>
-                <p className="resultUsers-userName"><b>{users.name}</b></p>
-                <a target="blank" href={users.html_url}>
-                    <p className="resultUsers-userLogin">{users.login}</p>
-                </a>
 
                 <div className="resultUsers-container-infoIcons">
                     <div className="resultUsers-icons">
@@ -55,6 +59,8 @@ export const ResultUsers = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="line"></div>
 
             <div className="resultUsers-repos">
                 {
