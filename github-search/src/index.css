@@ -2,7 +2,7 @@
 /* <---------------FONTS------------------------------> */
 /* <--------------COLORS------------------------------> */
 /* <--------------SHADOWS-----------------------------> */
-/* <--------------BUTTONS-----------------------------> */
+/* <--------------OTHERS------------------------------> */
 .nav-btnInput, .home-btnInput, .nav-containerTittle, .nav-containerInput, .userNotFound-container, .home-containerTittle, .home-containerInput {
   display: flex;
   justify-content: center; }

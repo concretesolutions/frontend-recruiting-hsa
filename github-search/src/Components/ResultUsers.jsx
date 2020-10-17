@@ -4,10 +4,10 @@ import UserNotFound from './UserNotFound';
 
 
 export const ResultUsers = () => {
-
     let { users, repos, search } = useContext(UserContext)
     let totalStars = 0
 
+//  Contador total de estrellas
     const starCounter = () => {
         repos.map((item) => {
             return totalStars += item.stargazers_count

@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+
 import { UserProvider } from './Context/UserContext'
 import { Nav } from './Components/Nav';
 import Home from './Views/Home';

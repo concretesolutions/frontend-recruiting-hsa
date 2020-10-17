@@ -5,7 +5,8 @@ import { withRouter } from "react-router-dom";
 const Home = (props) => {
     let { setSearch, search, searchUser } = useContext(UserContext)
 
-    const ups = () => {
+//  Búsqueda y cambio en la ruta
+    const serchAndChangeRoute = () => {
         searchUser()
         props.history.push('/detalles')
     }
@@ -19,7 +20,7 @@ const Home = (props) => {
             <div className="home-containerInput">
                 <div className="home-borderInput">
                     <input className="home-input" value={search} type="text" onChange={ (e) => setSearch(e.target.value)}/>
-                    <button className="home-btnInput" onClick={() => ups() }>
+                    <button className="home-btnInput" onClick={() => serchAndChangeRoute() }>
                         <img className="home-imgInput" src="https://i.ibb.co/QD0q88v/lupa.png" alt="Lupa de búsqueda"/>
                     </button>
                 </div>
