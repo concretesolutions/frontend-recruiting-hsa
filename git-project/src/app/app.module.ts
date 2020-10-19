@@ -9,13 +9,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { ServicioService } from './services/servicio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BuscarComponent } from './buscar/buscar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DetailsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BuscarComponent
     
   ],
   imports: [

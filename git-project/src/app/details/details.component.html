@@ -1,10 +1,16 @@
 Github Search &nbsp;
-<form (submit)="buscar()">
-    <input type="text" name="search" [(ngModel)]="usuario">
-    <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
 
-  imagen
-  nombre
-  tag
+  <app-buscar></app-buscar>
+
+
+  <img src={{usuario.avatar_url}} width="300"  height="300">
+  <br>
+  {{usuario.login}}
+
+  <H2>REPOS</H2>
   
+
+    <div *ngFor="let rep of usuario.repos">
+      <a href="{{rep.html_url}}">{{ rep.full_name }}</a>
+      
+    </div>
