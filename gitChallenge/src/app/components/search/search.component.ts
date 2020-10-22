@@ -18,7 +18,9 @@ export class SearchComponent implements OnInit {
   }
 
   public Search(){
-    this.router.navigate(['user/' + this.user]);
+    if (this.user) {
+      this.router.navigate(['user/' + this.user]);
+    }
     
   }
 }

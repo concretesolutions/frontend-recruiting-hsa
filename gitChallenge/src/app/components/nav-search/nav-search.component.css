@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container2{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 55px;
+    margin: 0px;
+    margin-right: 40px;
+  }
+  .item {
+    height: 30px;
+    width: 600px;
+    align-items: center;
+    margin: 0px;
+    border-right: none;
+    border-color: lightgray;
+  }
+
+  .button{
+    width: 70px;
+    height: 37px;
+    background-color: #AB53F1;
+    outline: none;
+    border-left: none;
+    border-color: lightgray;
+}
+
+.icon{
+    color: white;
+  }

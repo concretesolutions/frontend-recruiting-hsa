@@ -8,12 +8,14 @@ import { UserComponent } from './components/user/user.component';
 import { GithubApiService } from './sevices/github-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavSearchComponent } from './components/nav-search/nav-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    UserComponent
+    UserComponent,
+    NavSearchComponent
   ],
   imports: [
     BrowserModule,
