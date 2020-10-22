@@ -1,9 +1,16 @@
 .container{
+    float: left;
     margin-top: 50px;
+
+}
+.repo-container{
+    margin-top: 50px;
+    width: 1300px;
+    float: right;
 }
 
 .profile-img{
-    
+    border-radius: 15px;
     margin-left: 15px;
     height: 300px;
     width: 300px;
@@ -30,7 +37,25 @@
     color:  #AB53F1
 }
 
+.repo-title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blueviolet;
+
+}
+
+.repo-desc{
+    color:gray;
+}
+
+.star{
+    color: black;
+}
+
 span{
     font-family: 'Courier New', Courier, monospace;
     color: darkgray;
 }
+
+a{
+    text-decoration: none;
+  }

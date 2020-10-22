@@ -1,6 +1,6 @@
 <app-nav-search></app-nav-search>
 <br>
-<hr>
+
 <div class="container" *ngIf="userdetail">
     <div >
         <a href="{{userdetail.html_url}}">
@@ -23,6 +23,19 @@
        </div>
        
     </div>
+    
 </div>
+<div class="repo-container">
+    <div *ngFor="let item of listrepo" class="repo">
+        <a href="{{item.url_repo}}">
+            <h1 class="repo-title">{{item.name}}</h1>
+        </a>
+        <span class="repo-desc">{{item.subname}}</span>
+        <br>
+        <br>
+        <span class="star"><i class="far fa-star star"></i> {{item.stars}}</span>
+    </div>
+    
 
+</div>
 

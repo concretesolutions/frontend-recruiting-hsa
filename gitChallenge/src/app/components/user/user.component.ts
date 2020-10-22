@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/class/User';
+import { Repo } from 'src/app/class/Repo';
 import { GithubApiService } from 'src/app/sevices/github-api.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { GithubApiService } from 'src/app/sevices/github-api.service';
 export class UserComponent implements OnInit {
   userdetail: User;
   user: string;
+  listrepo: Repo [] = [];
 
 
   constructor(private route: ActivatedRoute, private service: GithubApiService) { }
@@ -35,18 +37,28 @@ export class UserComponent implements OnInit {
         this.userdetail.followers = data.followers;
         this.userdetail.name = data.name;
         this.userdetail.login = data.login;
-        this.userdetail.html_url = data.html_url;
-        console.log("el detalle del usuario es: ");
-        console.log(this.userdetail);
-      
+        this.userdetail.html_url = data.html_url; 
     })
   }
 
   private getRepoDetail(user:string){
     this.service.Searchrepo(user).subscribe(
       data => {
+        this.listrepo = [];
+        for (let i = 0; i < data.length; i++) {
+          let repo = new Repo();
+          repo.name = data[i].name;
+          repo.subname = data[i].description;
+          repo.stars = data[i].stargazers_count;
+          repo.url_repo = data[i].html_url;
+          this.listrepo.push(repo);
+        }
+        this.listrepo.sort(function (a, b){
+          return (b.stars - a.stars)
+      })
+
         console.log("el detalle de los repos es: ");
-        console.log(data);
+        console.log(this.listrepo);
         
       }
     )
