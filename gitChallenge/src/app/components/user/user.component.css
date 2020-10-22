@@ -1,12 +1,14 @@
 .container{
     float: left;
     margin-top: 50px;
-
+    display: block;
+    
 }
 .repo-container{
+    margin-left: 500px;
     margin-top: 50px;
-    width: 1300px;
-    float: right;
+    width: 1000px;
+    
 }
 
 .profile-img{
