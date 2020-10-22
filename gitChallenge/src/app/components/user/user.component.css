@@ -11,18 +11,18 @@
 
 .content{
     margin-left: 15px;
-    width: 500px;
+    width: 450px;
 }
 
 .profile-name{
     margin-bottom: 8px;
-    color: cadetblue;
+    color: gray;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .profile-subname{
     margin-top: auto;
-    color: gray;
+    color: darkgray;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -32,5 +32,5 @@
 
 span{
     font-family: 'Courier New', Courier, monospace;
-    color: gray;
+    color: darkgray;
 }
