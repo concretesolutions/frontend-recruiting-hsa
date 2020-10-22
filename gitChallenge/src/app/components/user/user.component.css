@@ -1,0 +1,36 @@
+.container{
+    margin-top: 50px;
+}
+
+.profile-img{
+    
+    margin-left: 15px;
+    height: 300px;
+    width: 300px;
+}
+
+.content{
+    margin-left: 15px;
+    width: 500px;
+}
+
+.profile-name{
+    margin-bottom: 8px;
+    color: cadetblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.profile-subname{
+    margin-top: auto;
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.icon{
+    color:  #AB53F1
+}
+
+span{
+    font-family: 'Courier New', Courier, monospace;
+    color: gray;
+}

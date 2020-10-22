@@ -1,2 +1,28 @@
 <app-nav-search></app-nav-search>
-<p>user works!</p>
+<br>
+<hr>
+<div class="container" *ngIf="userdetail">
+    <div >
+        <a href="{{userdetail.html_url}}">
+            <img class="profile-img" [src]="userdetail.avatar_url" [alt]="user.login">
+        </a>
+    </div>
+
+    <div class="content">
+       <h1 class="profile-name">{{userdetail.name}}</h1>
+       <h2 class="profile-subname">{{userdetail.login}}</h2>
+       <br>
+       <span>{{userdetail.bio}}</span>
+       <br>
+       <br>
+       <span><i class="fas fa-users icon"></i> {{userdetail.followers}}</span>
+       <br>
+       <br>
+       <div *ngIf="userdetail.email">
+         <span><i class="fas fa-at icon"></i> {{userdetail.email}}</span>
+       </div>
+       
+    </div>
+</div>
+
+
