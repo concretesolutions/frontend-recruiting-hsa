@@ -11,8 +11,13 @@ export class GithubApiService {
 
   constructor(private _http: HttpClient) { }
 
-  public Searchuser(user: string): Observable<any>{
+  public Searchuser(username: string): Observable<any>{
 
-    return this._http.get<any>(this.urlbase + user);
+    return this._http.get<any>(this.urlbase + username);
+  }
+
+  public Searchrepo(username: string): Observable<any>{
+
+    return this._http.get<any>(this.urlbase + username + this.repodetail);
   }
 }
