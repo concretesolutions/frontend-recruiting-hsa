@@ -4,7 +4,7 @@
     </a>
     
     <div class="container2">
-        <input class="item" placeholder="Usuario" [(ngModel)]="user" type="text">
+        <input (keyup.enter)="Search()" class="item" placeholder="Usuario" [(ngModel)]="user" type="text">
         <button class="button" (click)="Search()"><i class="fas fa-search icon"></i></button> 
     </div>
     
