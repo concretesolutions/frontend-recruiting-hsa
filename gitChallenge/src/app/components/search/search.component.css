@@ -29,10 +29,15 @@
   }
 
   .button{
-      width: 50px;
+      width: 70px;
       height: 37px;
       background-color: #AB53F1;
       outline: none;
+      border-left: none;
      
+  }
+
+  .icon{
+    color: white;
   }
 
