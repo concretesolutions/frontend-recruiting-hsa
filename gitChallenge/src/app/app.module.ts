@@ -7,6 +7,7 @@ import { SearchComponent } from './components/search/search.component';
 import { UserComponent } from './components/user/user.component';
 import { GithubApiService } from './sevices/github-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [GithubApiService],
   bootstrap: [AppComponent]
