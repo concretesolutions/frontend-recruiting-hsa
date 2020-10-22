@@ -14,9 +14,13 @@ export class UserComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: GithubApiService) { }
 
   ngOnInit(): void {
-    this.user = this.route.snapshot.paramMap.get('user');
-    this.getUserDetail(this.user);
-    this.getRepoDetail(this.user);
+    this.route.params.subscribe(
+      params => {
+      this.user = params["user"];
+      this.getUserDetail(this.user);
+      this.getRepoDetail(this.user);
+      })
+
   }
 
   private getUserDetail(user: string){
