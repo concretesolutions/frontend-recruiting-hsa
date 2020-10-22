@@ -9,13 +9,15 @@ import { GithubApiService } from './sevices/github-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NavSearchComponent } from './components/nav-search/nav-search.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     UserComponent,
-    NavSearchComponent
+    NavSearchComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

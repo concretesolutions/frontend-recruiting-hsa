@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   userdetail: User;
   user: string;
   listrepo: Repo [] = [];
-
+  notfound: boolean = false;
 
   constructor(private route: ActivatedRoute, private service: GithubApiService) { }
 
@@ -38,6 +38,10 @@ export class UserComponent implements OnInit {
         this.userdetail.name = data.name;
         this.userdetail.login = data.login;
         this.userdetail.html_url = data.html_url; 
+        this.notfound = false;
+    }, err=>{
+        this.notfound = true;
+
     })
   }
 

@@ -1,7 +1,7 @@
 <app-nav-search></app-nav-search>
 <br>
 
-<div class="container" *ngIf="userdetail">
+<div class="container" *ngIf="userdetail && !notfound">
     <div >
         <a href="{{userdetail.html_url}}">
             <img class="profile-img" [src]="userdetail.avatar_url" [alt]="user.login">
@@ -25,7 +25,7 @@
     </div>
     
 </div>
-<div class="repo-container">
+<div class="repo-container" *ngIf="userdetail && !notfound">
     <div *ngFor="let item of listrepo" class="repo">
         <a href="{{item.url_repo}}">
             <h1 class="repo-title">{{item.name}}</h1>
@@ -35,7 +35,12 @@
         <br>
         <span class="star"><i class="far fa-star star"></i> {{item.stars}}</span>
     </div>
-    
 
 </div>
+
+<div *ngIf="notfound">
+    <app-not-found></app-not-found>
+</div>
+
+
 
