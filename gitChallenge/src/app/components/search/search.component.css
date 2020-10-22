@@ -1,0 +1,38 @@
+
+.container {
+    margin-top: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 80px;
+    width: 500px;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .container2 {
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item {
+    height: 30px;
+    width: 500px;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .button{
+      width: 50px;
+      height: 37px;
+      background-color: #AB53F1;
+      outline: none;
+     
+  }
+
