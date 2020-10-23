@@ -1,0 +1,11 @@
+<div class="container">
+    <a href="/">
+        <h1 class="text">GithubSearch</h1> 
+    </a>
+    
+    <div class="container2">
+        <input (keyup.enter)="Search()" class="item" placeholder="Usuario" [(ngModel)]="user" type="text">
+        <button class="button" (click)="Search()"><i class="fas fa-search icon"></i></button> 
+    </div>
+    
+</div>

@@ -1,0 +1,63 @@
+.container{
+    float: left;
+    margin-top: 50px;
+    display: block;
+    
+}
+.repo-container{
+    margin-left: 500px;
+    margin-top: 50px;
+    width: 1000px;
+    
+}
+
+.profile-img{
+    border-radius: 15px;
+    margin-left: 15px;
+    height: 300px;
+    width: 300px;
+}
+
+.content{
+    margin-left: 15px;
+    width: 450px;
+}
+
+.profile-name{
+    margin-bottom: 8px;
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.profile-subname{
+    margin-top: auto;
+    color: darkgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.icon{
+    color:  #00ACAC
+}
+
+.repo-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+
+}
+
+.repo-desc{
+    color:gray;
+}
+
+.star{
+    color: black;
+}
+
+span{
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgray;
+}
+
+a{
+    text-decoration: none;
+  }
