@@ -1,1 +1,3 @@
-<p>user works!</p>
+<div *ngIf="info$ | async as info">
+  {{ info | json }}
+</div>
