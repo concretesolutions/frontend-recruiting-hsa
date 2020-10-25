@@ -1,0 +1,41 @@
+@import "~src/app/styles/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  padding: 5px 10px;
+  border: 1px solid #acacac;
+  min-width: 300px;
+  width: calc(100% - 70px);
+  height: 40px;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  color: $lightgray;
+  font-size: 12px;
+
+  &:focus {
+    outline: none;
+    border-color: $purple;
+  }
+}
+
+button {
+  height: 40px;
+  width: 70px;
+  background-color: $purple;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  color: white;
+  padding: 10px 0;
+  cursor: pointer;
+
+  img {
+    height: 20px;
+    margin: 0 auto;
+    transform: scaleX(-1);
+  }
+}
