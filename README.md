@@ -14,6 +14,9 @@ Open (http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.
 
+### `yarn export`
+Creates a static version of the app.
+
 ### `yarn build`
 Builds the app for production to the `.next` folder.\
 
