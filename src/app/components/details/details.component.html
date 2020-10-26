@@ -1,0 +1,42 @@
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <app-search (getName)='findUser($event)'></app-search>
+        </div>
+    </div>
+    <section *ngIf="result == 'yes'">
+        <div class=" container ">
+            <nav>
+                <ul>
+                    <li>
+                        <div class="col-md-5 image-end ">
+                            <img src="{{ users.avatar_url }} ">
+                        </div>
+                    </li>
+                    <li>{{ users.followers}}</li>
+                    <!-- <li>Email {{ users.email }}</li> -->
+                    <li>{{ users.login }}</li>
+                </ul>
+            </nav>
+        </div>
+
+        <article>
+            <table class="table ">
+                <tbody>
+                    <tr *ngFor='let repository of userRepos.newRepository'>
+                        <td>
+                            <a href="{{repository.html_url}} " target="_blank ">{{repository.name}}</a>
+                            <p class="desc ">{{repository.description}}</p>
+                            <p>Estrellas:</p>
+                            <br> <br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <section *ngIf="result == 'error'">
+        Page No Found!
+    </section>
+</body>

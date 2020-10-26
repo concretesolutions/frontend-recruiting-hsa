@@ -1,0 +1,18 @@
+<form (ngSubmit)="searchFor(searchForm)" #searchForm="ngForm">
+    <div style="padding:20px;">
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <span class="title1">{{ label }} </span>
+                    <span class="subtitle">{{ label2 }}</span>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" class="form-control" name="find" placeholder="Usuario de GitHub" [(ngModel)]="searchInfo.find" #find='ngModel'>
+                    <button type="submit" class="btn btn-group"><img src="../../../assets/search-icon.png"/></button>
+                </th>
+            </tr>
+        </table>
+    </div>
+</form>
