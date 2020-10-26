@@ -17,7 +17,13 @@ export class GithubService {
 
   getRepos(username: string) {
     const url = `https://api.github.com/users/${username}/repos`;
-    return this.http.get<Repo[]>(url);
+    return this.http
+      .get<Repo[]>(url)
+      .pipe(
+        map((repos) =>
+          [...repos].sort((a, b) => b.stargazers_count - a.stargazers_count)
+        )
+      );
   }
 
   getInfo(username: string) {
