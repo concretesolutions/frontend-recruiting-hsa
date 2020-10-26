@@ -18,6 +18,6 @@ From GitHub:
 		$ ng serve -o
 	10.- In the browser path: http: //localhost:4200 you will see the raised project
 	
-	Functionalities:
+	Functionalities
 	Search for existing users on GitHub with access token.
 	In the case of non-existent users, it was pending to finish handling the errors in the service that consumes the GitHub Api

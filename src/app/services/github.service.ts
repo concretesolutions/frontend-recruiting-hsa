@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class GithubService {
-  private urlBase = environment.urlServicios;
+ 
 
   constructor(private http: HttpClient) { }
   // getUser(name: string): Observable<User> {

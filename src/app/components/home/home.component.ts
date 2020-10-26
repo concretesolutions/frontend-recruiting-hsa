@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
- 
+  public searchMe = '';
+  public githubUser: string;
+
   constructor() { }
   ngOnInit() { }
+
+  findUser(username) {
+    this.githubUser = '';
+    this.searchMe  = username;
+}
 }
