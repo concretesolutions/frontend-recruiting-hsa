@@ -1,3 +1,8 @@
-<div *ngIf="info$ | async as info">
-  {{ info | json }}
+<div class="flex-container" *ngIf="info$ | async as info">
+  <app-title></app-title>
+  <app-search></app-search>
+  <app-details [user]="info.user"></app-details>
+  <div class="repos-container">
+    <app-repo *ngFor="let repo of info.repos" [repo]="repo"></app-repo>
+  </div>
 </div>

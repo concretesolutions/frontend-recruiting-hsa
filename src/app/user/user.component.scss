@@ -1,0 +1,22 @@
+.flex-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  app-title,
+  app-details {
+    width: 300px;
+  }
+
+  app-search,
+  .repos-container {
+    width: calc(100% - 350px);
+  }
+
+  app-title,
+  app-search {
+    margin-bottom: 50px;
+  }
+}
