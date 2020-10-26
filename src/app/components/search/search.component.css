@@ -1,0 +1,83 @@
+input {
+    width: 40%;
+    padding: 12px;
+    /* border: 1px solid #ccc; */
+    border: 2px solid #D5DBDB;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+input[type=button] {
+    /* background-color: #af7ac5; */
+    color: #af7ac5;
+    text-align: center;
+    width: 6%;
+    background: url('../../../assets/search-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    border: 2px solid #D5DBDB;
+}
+
+button {
+    background-color: #af7ac5;
+    color: white;
+    text-align: center;
+    width: 4%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    /* width: 100%; */
+    opacity: 0.9;
+}
+
+span.title1 {
+    font-weight: bold;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 40px;
+}
+
+span.subtitle {
+    font-weight: normal;
+    font-style: oblique;
+    font-size: 40px;
+}
+
+td.title1 {
+    font-style: normal;
+    font-size: 40px;
+}
+
+td.subtitle {
+    font-style: normal;
+    font-size: 20px;
+}
+
+.contenedor {
+    width: 700px;
+}
+
+.cabecera {}
+
+.menu {
+    float: left;
+    width: 150px;
+}
+
+.contenido {
+    float: left;
+    width: 550px;
+}
+
+.pie {
+    clear: both;
+}
+
+.td {
+    font-size: 32px;
+}
