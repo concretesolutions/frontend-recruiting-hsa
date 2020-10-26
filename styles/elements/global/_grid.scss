@@ -1,0 +1,38 @@
+.page {
+    padding: 35px 25px 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .container-static {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 750px;
+    }
+    .container-full {
+        display: flex;
+    }
+    .side-bar {
+        width: 280px;
+        margin-right: 70px;
+    }
+    .side-container {
+        flex-grow: 1;
+    }
+    @media only screen and (max-width: 767px) {
+        .container-full {
+            flex-wrap: wrap;
+        }
+        .side-bar {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .side-container {
+            width: 100%;
+        }
+    }
+}

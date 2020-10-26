@@ -1,0 +1,19 @@
+button,
+a.btnLink {
+    height: 50px;
+    padding: 10px 35px;
+    border: none;
+    color: $light-color;
+    display: flex;
+    &.primaryBtn {
+        background-color: $primary-color;
+    }
+    &.neutroBtn {
+        background-color: $neutro-color;
+    }
+}
+a,
+a:active,
+a:focus {
+    text-decoration: none;
+}

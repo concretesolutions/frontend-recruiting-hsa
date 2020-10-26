@@ -1,0 +1,10 @@
+input {
+    color: $neutro-color;
+    padding: 10px;
+    height: 50px;
+    border: none;
+    width: 100%;
+    &:focus {
+        outline: none;
+    }
+}
