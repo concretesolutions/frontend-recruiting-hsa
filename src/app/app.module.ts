@@ -10,10 +10,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { RepoComponent } from './repo/repo.component';
 import { DetailsComponent } from './details/details.component';
 import { TitleComponent } from './title/title.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, UserComponent, SearchComponent, RepoComponent, DetailsComponent, TitleComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    UserComponent,
+    SearchComponent,
+    RepoComponent,
+    DetailsComponent,
+    TitleComponent,
+  ],
+  imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

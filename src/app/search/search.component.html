@@ -1,2 +1,9 @@
-<input type="text" />
-<button><img src="../../assets/img/Search-icon.svg" alt="" /></button>
+<input
+  type="text"
+  [(ngModel)]="username"
+  #ctrl="ngModel"
+  (keydown.enter)="search()"
+/>
+<button (click)="search()">
+  <img src="../../assets/img/Search-icon.svg" alt="" />
+</button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { catchError, switchMap } from 'rxjs/operators';
 import { GithubService } from '../core/github.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class UserComponent implements OnInit {
   info$ = this.route.params.pipe(
     switchMap((params) => {
       const username = params.username;
-      return this.githubSvc.getInfo(username);
+      return this.githubSvc.getInfo(username).pipe(catchError(() => of(null)));
     })
   );
 

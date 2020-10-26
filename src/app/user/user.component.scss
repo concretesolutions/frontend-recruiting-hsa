@@ -1,3 +1,5 @@
+@import "~src/app/styles/variables";
+
 .flex-container {
   padding: 10px;
   display: flex;
@@ -18,5 +20,19 @@
   app-title,
   app-search {
     margin-bottom: 50px;
+  }
+
+  app-search {
+    margin-top: 10px;
+  }
+
+  > h1 {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    color: $purple;
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+    margin: 100px auto;
   }
 }
