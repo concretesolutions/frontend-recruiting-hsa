@@ -1,0 +1,55 @@
+  @each $i, $size in $type {
+    .fs-#{$i} {
+     font-size: $size;
+    }
+  }
+.ta-l {
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
+}
+.ta-c {
+  text-align: center;
+}
+.ta-j {
+  text-align: justify;
+}
+.tt-l {
+  text-transform: lowercase;
+}
+.tt-u {
+  text-transform: uppercase;
+}
+.tt-c {
+  text-transform: capitalize;
+}
+.fw-l {
+  font-family: $font-light;
+  font-weight: 300;
+}
+.fw-r {
+  font-family: $font-regular;
+  font-weight: 400;
+}
+.td-n {
+  text-decoration: none;
+}
+.td-u {
+  text-decoration: underline;
+}
+.text-break {
+  word-break: break-word; // IE & < Edge 18
+  overflow-wrap: break-word;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ws-normal {
+  white-space: normal;
+}
+.ws-nowrap {
+  white-space: nowrap;
+}

@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body {
+    font-family: $font-regular;
+    font-weight: 400;
+    font-size: $type-2;
+    margin: 0;
+    color: #000000;
+    @media only screen and (max-width: 767px) {
+        text-align: center;
+    }
+}
