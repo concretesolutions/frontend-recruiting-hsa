@@ -1,0 +1,24 @@
+<a href="{{ user.html_url }}"><img src="{{ user.avatar_url }}" alt="" /></a>
+<div class="user">
+  <a href="{{ user.html_url }}">{{ user.name }}</a>
+  <p>{{ user.login }}</p>
+  <p *ngIf="user.bio">{{ user.bio }}</p>
+</div>
+<div class="other-details">
+  <p *ngIf="user.company">
+    <img src="../../assets/img/company-icon.svg" alt="" />
+    {{ user.company }}
+  </p>
+  <p *ngIf="user.location">
+    <img src="../../assets/img/location-icon.svg" alt="" />
+    {{ user.location }}
+  </p>
+  <p>
+    <img src="../../assets/img/repositorie-icon.svg" alt="" />
+    {{ user.public_repos }}
+  </p>
+  <p>
+    <img src="../../assets/img/followers-icon.svg" alt="" />
+    {{ user.followers }}
+  </p>
+</div>

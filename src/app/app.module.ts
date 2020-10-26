@@ -7,9 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RepoComponent } from './repo/repo.component';
+import { DetailsComponent } from './details/details.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, UserComponent, SearchComponent],
+  declarations: [AppComponent, HomeComponent, UserComponent, SearchComponent, RepoComponent, DetailsComponent, TitleComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
