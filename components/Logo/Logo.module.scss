@@ -1,0 +1,20 @@
+@import "../../styles/partials";
+.logo {
+    font-size: $type-5;
+    display: flex;
+    flex-wrap: nowrap;
+    .brand {
+        font-family: $font-alternative;
+        margin-right: $spacing-2;
+    }
+    .feat {
+        font-family: $font-extralight-italic;
+        font-weight: $extralight;
+    }
+    &.small {
+        font-size: $type-4;
+        .brand {
+            margin-right: $spacing-1;
+        }
+    }
+}
