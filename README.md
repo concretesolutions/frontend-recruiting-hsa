@@ -1,20 +1,20 @@
 # Desafío Front End
 
-###Deploy del Proyecto:
+### Deploy del Proyecto:
 
 El demo del proyecto se encuentra [aquí](https://frontend-recruiting-hsa.web.app/)
 
-###Tecnologías Utilizada
+### Tecnologías Utilizada
 
 * Angular 10
 * Sass
 
-###Instalación local
+### Instalación local
 
-#####Requerimientos del sistema
+##### Requerimientos del sistema
 * [nodejs](https://nodejs.org/)
 
-#####Instalación y ejecución
+##### Instalación y ejecución
 
 * abrir la consola y ubicarse en la carpeta raíz del proyecto
 * ejecutar ```npm install``` para instalar las dependencias
