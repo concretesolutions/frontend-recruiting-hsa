@@ -23,5 +23,5 @@ Builds the app for production to the `.next` folder.\
 ### `yarn format`
 Uses prettier to format all the files in the project.
 
-### Check on Netlify
-You can check live app at https://search-github-tefap1993.netlify.app/
+### Check on Vercel
+You can check live app at https://search-github-tefap1993.vercel.app/search
