@@ -5,9 +5,10 @@ img {
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   color: $lightgray;
   margin: 0 0 10px;
+  font-weight: 300;
 
   img {
     margin-right: 8px;
@@ -18,7 +19,7 @@ p {
 a {
   text-decoration: none;
   display: block;
-  font-size: 28px;
+  font-size: 35px;
   margin-bottom: 10px;
   color: black;
 }

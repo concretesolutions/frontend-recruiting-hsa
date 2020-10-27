@@ -10,12 +10,12 @@ input {
   padding: 5px 10px;
   border: 1px solid #acacac;
   min-width: 300px;
-  width: calc(100% - 70px);
-  height: 40px;
+  width: calc(100% - 100px);
+  height: 50px;
   border-radius: 2px 0 0 2px;
   box-sizing: border-box;
   color: $lightgray;
-  font-size: 12px;
+  font-size: 20px;
 
   &:focus {
     outline: none;
@@ -24,8 +24,8 @@ input {
 }
 
 button {
-  height: 40px;
-  width: 70px;
+  height: 50px;
+  width: 100px;
   background-color: $purple;
   border: none;
   border-radius: 0 2px 2px 0;
@@ -34,7 +34,7 @@ button {
   cursor: pointer;
 
   img {
-    height: 20px;
+    height: 30px;
     margin: 0 auto;
     transform: scaleX(-1);
   }

@@ -1,7 +1,7 @@
 @import "~src/app/styles/variables";
 
 .flex-container {
-  padding: 20px;
+  padding: 35px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -14,7 +14,7 @@
 
   app-search,
   .repos-container {
-    width: calc(100% - 350px);
+    width: calc(100% - 370px);
   }
 
   app-title,
@@ -22,17 +22,13 @@
     margin-bottom: 50px;
   }
 
-  app-search {
-    margin-top: 10px;
-  }
-
   > h1 {
     width: 100%;
     font-family: "Raleway", sans-serif;
     color: $purple;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: normal;
     text-align: center;
-    margin: 100px auto;
+    margin: 120px auto;
   }
 }
