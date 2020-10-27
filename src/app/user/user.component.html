@@ -1,0 +1,15 @@
+<div class="flex-container" *ngIf="info$ | async as info; else notFound">
+  <app-title></app-title>
+  <app-search></app-search>
+  <app-details [user]="info.user"></app-details>
+  <div class="repos-container">
+    <app-repo *ngFor="let repo of info.repos" [repo]="repo"></app-repo>
+  </div>
+</div>
+<ng-template #notFound>
+  <div class="flex-container">
+    <app-title></app-title>
+    <app-search></app-search>
+    <h1>Usuario no encontrado :'(</h1>
+  </div>
+</ng-template>

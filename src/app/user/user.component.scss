@@ -1,0 +1,34 @@
+@import "~src/app/styles/variables";
+
+.flex-container {
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  app-title,
+  app-details {
+    width: 300px;
+  }
+
+  app-search,
+  .repos-container {
+    width: calc(100% - 370px);
+  }
+
+  app-title,
+  app-search {
+    margin-bottom: 50px;
+  }
+
+  > h1 {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    color: $purple;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    margin: 120px auto;
+  }
+}

@@ -1,0 +1,29 @@
+@import "~src/app/styles/variables";
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 20px;
+  color: $lightgray;
+  margin: 0 0 10px;
+  font-weight: 300;
+
+  img {
+    margin-right: 8px;
+    width: 18px;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.user {
+  margin-bottom: 20px;
+}

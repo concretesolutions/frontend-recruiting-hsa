@@ -1,0 +1,32 @@
+@import "~src/app/styles/variables";
+
+:host {
+  display: block;
+  margin-bottom: 35px;
+}
+
+a {
+  font-size: 35px;
+  color: $purple;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+p {
+  font-size: 20px;
+  margin: 0 0 15px;
+  font-weight: 300;
+}
+
+span {
+  font-size: 20px;
+  color: $lightgray;
+  font-weight: 300;
+  display: flex;
+
+  img {
+    margin-right: 8px;
+    width: 25px;
+  }
+}
