@@ -1,0 +1,6 @@
+.list-item {
+  display: flex;
+  @media only screen and (max-width: 767px) {
+    display: inline-flex;
+  }
+}
