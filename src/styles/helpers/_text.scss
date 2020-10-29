@@ -1,8 +1,8 @@
-  @each $i, $size in $type {
-    .fs-#{$i} {
-     font-size: $size;
-    }
+@each $i, $size in $type {
+  .fs-#{$i} {
+    font-size: $size;
   }
+}
 .ta-l {
   text-align: left;
 }

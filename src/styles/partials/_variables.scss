@@ -19,11 +19,11 @@ $spacing-3: 30px;
 $spacing-4: 50px;
 $spacing-5: 120px;
 $spacing: (
-    0: $spacing-0,
-    1: $spacing-1,
-    2: $spacing-2,
-    3: $spacing-3,
-    4: $spacing-4,
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4
 );
 
 $type-1: 1rem;
@@ -32,11 +32,11 @@ $type-3: 35px;
 $type-4: 40px;
 $type-5: 60px;
 $type: (
-    1: $type-1,
-    2: $type-2,
-    3: $type-3,
-    4: $type-4,
-    5: $type-5,
+  1: $type-1,
+  2: $type-2,
+  3: $type-3,
+  4: $type-4,
+  5: $type-5
 );
 
 // ** Radius:
@@ -45,6 +45,6 @@ $radius-1: 2px;
 $radius-pill: 99999px;
 $radius-circle: 50%;
 $radius: (
-    0: $radius-0,
-    1: $radius-1
+  0: $radius-0,
+  1: $radius-1
 );

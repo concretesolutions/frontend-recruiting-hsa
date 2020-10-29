@@ -1,19 +1,19 @@
 button,
 a.btn-link {
-    height: 50px;
-    padding: 10px 35px;
-    border: none;
-    color: $light-color;
-    display: flex;
-    &.primary-btn {
-        background-color: $primary-color;
-    }
-    &.neutro-btn {
-        background-color: $neutro-color;
-    }
+  height: 50px;
+  padding: 10px 35px;
+  border: none;
+  color: $light-color;
+  display: flex;
+  &.primary-btn {
+    background-color: $primary-color;
+  }
+  &.neutro-btn {
+    background-color: $neutro-color;
+  }
 }
 a,
 a:active,
 a:focus {
-    text-decoration: none;
+  text-decoration: none;
 }
