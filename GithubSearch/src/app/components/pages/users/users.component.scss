@@ -1,0 +1,251 @@
+.user-avatar {
+    width: 280px;
+    height: 280px;
+    border-radius: 2px;
+    box-shadow: 0 0 4px NaNpx var(--black-40);
+  }
+
+  .user-name {
+    width: 280px;
+    height: 40px;
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    text-decoration: none;
+    
+  }
+
+  .user-login {
+    width: 280px;
+    height: 25px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+.Not-found-message {
+    width: 315px;
+    height: 41px;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ac53f2;
+  }
+
+  .organization-name {
+    width: 240px;
+    height: 22px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+  .location-name {
+    width: 240px;
+    height: 22px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+  .star-count {
+    width: 240px;
+    height: 22px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+  .repositories-count {
+    width: 240px;
+    height: 22px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+  .followers-count {
+    width: 240px;
+    height: 22px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+  .Github-Search {
+    width: 280px;
+    height: 50px;
+    font-family: Monaco;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+  }
+  .Github-Search .text-style-1 {
+    font-family: Raleway;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .Github-Search p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+
+  .header {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  .container {
+    display: flex;
+    
+  }
+
+  .subcontainer {
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .subcontainer2 {
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 70px;
+  }
+
+  .container2 {
+   
+    justify-content:center;
+    text-align:center;
+    align-items: center;
+    margin-top: 124px;
+  }
+
+  .subcontainer3 {
+    justify-content: center;
+ 
+  }
+
+
+  .repo-name {
+    width: 375.5px;
+    height: 40.8px;
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ac53f2;
+    text-decoration: none;
+  }
+
+  .repo-description {
+    width: 600px;
+    height: 25.5px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+  }
+
+  .user-1 {
+    margin-top: 12px;
+  }
+
+  .user-1-1 {
+    margin-top: 7px;
+  }
+
+  .user-3 {
+    margin-top: 33px;
+  }
+
+  .user-3 {
+    margin-top: 14px;
+  }
+
+  .star-count2 {
+    width: 255.3px;
+    height: 22.4px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c5c5c;
+  }
+
+  .rep-dev {
+    margin-top: 11.2px;
+  }
+
+  .refer {
+    text-decoration: none;
+  }
+
+  .rep-dev2 {
+    margin-bottom: 30px;
+  }
