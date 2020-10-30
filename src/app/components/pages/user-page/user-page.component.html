@@ -1,0 +1,65 @@
+<div class="page">
+  <app-header [searchValue]="user"></app-header>
+  <div *ngIf="userData && !loading" class="container-full mt-4">
+    <div class="side-bar">
+      <a [href]="userData.html_url" target="_blank">
+        <img [src]="userData.avatar_url" [alt]="userData.login" />
+        <h1>{{ userData.name || userData.login }}</h1>
+        <h2 class="fw-l c-neutro">{{ userData.login }}</h2>
+      </a>
+      <app-list-item
+        *ngIf="userData.company"
+        icon="assets/svg/organization-icon.svg"
+        altImg="Empresa"
+        [text]="userData.company"
+      >
+      </app-list-item>
+      <app-list-item
+        *ngIf="userData.location"
+        icon="assets/svg/location-icon.svg"
+        altImg="Ubicación"
+        [text]="userData.location"
+      >
+      </app-list-item>
+      <app-list-item
+        icon="assets/svg/star-icon.svg"
+        altImg="Favoritos"
+        [text]="stars"
+      >
+      </app-list-item>
+      <app-list-item
+        icon="assets/svg/repositories-icon.svg"
+        altImg="Repositorios"
+        [text]="userData.public_repos"
+      >
+      </app-list-item>
+      <app-list-item
+        class="mb-3"
+        icon="assets/svg/followers-icon.svg"
+        altImg="Seguidores"
+        [text]="userData.followers"
+      >
+      </app-list-item>
+    </div>
+    <div class="side-container">
+      <div class="mb-3" *ngFor="let repo of userRepos">
+        <a [href]="repo.html_url" rel="noreferrer" target="_blank">
+          <h3 class="c-primary">{{ repo.name }}</h3>
+        </a>
+        <p *ngIf="repo.description" class="fw-l mb-1">{{ repo.description }}</p>
+        <app-list-item
+          icon="assets/svg/star-icon.svg"
+          altImg="Favoritos"
+          [text]="repo.stargazers_count"
+        >
+        </app-list-item>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!userData && !loading" class="container-static ta-c">
+    <h4 class="c-primary mt-5 fs-4">Usuario no encontrado :(</h4>
+  </div>
+  <div *ngIf="loading" class="container-static ta-c">
+    <h4 class="c-primary mt-5 fs-4">Buscando..</h4>
+  </div>
+</div>

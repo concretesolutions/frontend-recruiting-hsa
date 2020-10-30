@@ -1,0 +1,42 @@
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $i, $length in $spacing {
+    .#{$abbrev}a-#{$i} {
+      #{$prop}: $length;
+    }
+    .#{$abbrev}t-#{$i},
+    .#{$abbrev}y-#{$i} {
+      #{$prop}-top: $length;
+    }
+    .#{$abbrev}r-#{$i},
+    .#{$abbrev}x-#{$i} {
+      #{$prop}-right: $length;
+    }
+    .#{$abbrev}b-#{$i},
+    .#{$abbrev}y-#{$i} {
+      #{$prop}-bottom: $length;
+    }
+    .#{$abbrev}l-#{$i},
+    .#{$abbrev}x-#{$i} {
+      #{$prop}-left: $length;
+    }
+  }
+}
+.ma-auto {
+  margin: auto;
+}
+.mt-auto,
+.my-auto {
+  margin-top: auto;
+}
+.mr-auto,
+.mx-auto {
+  margin-right: auto;
+}
+.mb-auto,
+.my-auto {
+  margin-bottom: auto;
+}
+.ml-auto,
+.mx-auto {
+  margin-left: auto;
+}

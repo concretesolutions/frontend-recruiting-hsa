@@ -1,0 +1,50 @@
+$primary-color: #ac53f2;
+$neutro-color: #5c5c5c;
+$light-color: #ffffff;
+$shadow: 0 0 4px #00000066;
+
+$font-regular: 'RalewayRegular';
+$font-light: 'RalewayLight';
+$font-extralight-italic: 'RalewayExtraLightItalic';
+$font-alternative: 'Monaco';
+$extralight: 200;
+$light: 300;
+$regular: 400;
+
+// ** Spacings (Margin y Paddings):
+$spacing-0: 0;
+$spacing-1: 7px;
+$spacing-2: 15px;
+$spacing-3: 30px;
+$spacing-4: 50px;
+$spacing-5: 120px;
+$spacing: (
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4
+);
+
+$type-1: 1rem;
+$type-2: 20px;
+$type-3: 35px;
+$type-4: 40px;
+$type-5: 60px;
+$type: (
+  1: $type-1,
+  2: $type-2,
+  3: $type-3,
+  4: $type-4,
+  5: $type-5
+);
+
+// ** Radius:
+$radius-0: 0;
+$radius-1: 2px;
+$radius-pill: 99999px;
+$radius-circle: 50%;
+$radius: (
+  0: $radius-0,
+  1: $radius-1
+);

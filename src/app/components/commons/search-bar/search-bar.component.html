@@ -1,0 +1,17 @@
+<div class="d-flex main-shadow">
+  <div class="fg-1">
+    <input
+      type="text"
+      (keypress)="handleEnter($event)"
+      [(ngModel)]="searchValue"
+    />
+  </div>
+  <div>
+    <a
+      class="btn-link primary-btn"
+      routerLink="{{ validateRoute(searchValue) }}"
+    >
+      <img src="assets/svg/search-icon.svg" alt="Búsqueda" />
+    </a>
+  </div>
+</div>
