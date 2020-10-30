@@ -52,6 +52,13 @@ export interface OwnerInterface {
   type?: string;
   site_admin?: boolean;
 }
+export interface LicenceInterface {
+  key?: string;
+  name?: string;
+  spdx_id?: string;
+  url?: string;
+  node_id?: string;
+}
 export interface ReposInterface {
   id?: number;
   node_id?: string;
@@ -121,14 +128,9 @@ export interface ReposInterface {
   archived?: boolean;
   disabled?: boolean;
   open_issues_count?: number;
-  license?: string;
+  license?: LicenceInterface;
   forks?: number;
   open_issues?: number;
   watchers?: number;
   default_branch?: string;
-}
-export interface UserResponseInterface {
-  userData: UserDataInterface;
-  userRepos: [ReposInterface];
-  userHasInfo?: boolean;
 }

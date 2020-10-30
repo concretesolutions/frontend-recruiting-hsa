@@ -12,8 +12,8 @@ export class UserService {
   getDataUser(user: string): Observable<UserDataInterface> {
     return this.httpClient.get<UserDataInterface>(this.URL_API + user);
   }
-  getReposUser(user: string): Observable<[ReposInterface]> {
-    return this.httpClient.get<[ReposInterface]>(
+  getReposUser(user: string): Observable<ReposInterface[]> {
+    return this.httpClient.get<ReposInterface[]>(
       this.URL_API + `${user}/repos`
     );
   }

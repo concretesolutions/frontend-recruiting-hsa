@@ -11,7 +11,7 @@ import { Route } from '@angular/compiler/src/core';
 export class UserPageComponent implements OnInit {
   public user: string;
   public userData: UserDataInterface | undefined;
-  public userRepos: [ReposInterface];
+  public userRepos: ReposInterface[];
   public stars = 0;
   public loading = true;
   constructor(private route: ActivatedRoute, private service: UserService) {}
@@ -29,7 +29,7 @@ export class UserPageComponent implements OnInit {
         this.userData = user;
         this.service
           .getReposUser(this.user)
-          .subscribe((repos: [ReposInterface]) => {
+          .subscribe((repos: ReposInterface[]) => {
             this.userRepos = repos.sort((a, b) =>
               a.stargazers_count < b.stargazers_count ? 1 : -1
             );
@@ -43,5 +43,5 @@ export class UserPageComponent implements OnInit {
         this.loading = false;
       }
     );
-  }
+  };
 }
