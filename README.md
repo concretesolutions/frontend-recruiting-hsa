@@ -22,7 +22,7 @@ The page will reload if you make edits.
 
 ### `ng test`
 
-Executes unit test with [Karma](https://karma-runner.github.io).
+Executes unit test with [Karma](https://karma-runner.github.io). Use the `--code-coverage` flag To check the test coverage.
 
 ### `ng e2e`
 
