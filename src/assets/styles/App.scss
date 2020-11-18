@@ -3,8 +3,15 @@
     margin:0;
     padding: 0;
 }
+/* Color Definition */
+$color-black : #202020;
+$color-dark: #3F3F3F;
+$color-grey: #707070;
+$color-yellow: #FFDF6C;
+$color-white: #ffffff;
+/* Size Parameters */
+$header-height: 60px;
 
-$color-dark : #000000;
 
 @mixin titleText {
     font-family: Monaco;
@@ -20,8 +27,41 @@ $color-dark : #000000;
 .App{
     height: 40vmin;
     pointer-events: none;
+    background-color: $color-yellow;
     h1 {
         @include titleText()
+    }
+}
+.appWidth{
+    max-width: 1400px;
+    margin: auto;
+}
+.headerCtn{
+    width: 100%;
+    height: $header-height;
+    padding: 20px;
+    background-color: $color-black;
+    .appWidth{
+        display: flex;
+        justify-content: space-between;
+        .brandLogo{
+            max-height: $header-height;
+        }
+    }
+}
+.homeLogoCtn{
+    background-color: $color-black;
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    .brandLogoBig{
+        max-width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%) translateY(-50%);
     }
 }
 
