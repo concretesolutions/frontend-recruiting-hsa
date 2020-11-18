@@ -1,0 +1,41 @@
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+$color-dark : #000000;
+
+@mixin titleText {
+    font-family: Monaco;
+    font-size: 60px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $color-dark;
+}
+
+.App{
+    height: 40vmin;
+    pointer-events: none;
+    h1 {
+        @include titleText()
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
