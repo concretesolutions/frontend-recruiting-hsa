@@ -9,8 +9,10 @@ $color-dark: #3F3F3F;
 $color-grey: #707070;
 $color-yellow: #FFDF6C;
 $color-white: #ffffff;
-/* Size Parameters */
+
+/* Size or Shape Parameters */
 $header-height: 60px;
+$border-radius: 0.4rem;
 
 
 @mixin titleText {
@@ -25,18 +27,25 @@ $header-height: 60px;
 }
 
 .App{
-    height: 40vmin;
-    pointer-events: none;
-    background-color: $color-yellow;
+    height: fit-content;
+    min-height: 100vh;
+    overflow-x: hidden;
     h1 {
         @include titleText()
     }
 }
+/* container to set the size of the webpage, specially for big screens */
+
 .appWidth{
     max-width: 1400px;
     margin: auto;
 }
+
+/* header CSS */
+
 .headerCtn{
+    left: 0px;
+    margin-bottom: 10px;
     width: 100%;
     height: $header-height;
     padding: 20px;
@@ -49,20 +58,104 @@ $header-height: 60px;
         }
     }
 }
-.homeLogoCtn{
-    background-color: $color-black;
-    clip-path: circle(50% at 50% 50%);
+
+/* home view container CSS */
+
+.homeViewCtn{
     position: relative;
-    height: 600px;
-    width: 600px;
-    margin: auto;
-    .brandLogoBig{
-        max-width: 70%;
+    .homeYellowBackground{
+        top: -30px;
+        left: -100vh;
+        height: 330px;
+        width: 278vh;
+        background-color: $color-yellow;
+        z-index: 0;
         position: absolute;
-        left: 50%;
-        top: 45%;
-        transform: translateX(-50%) translateY(-50%);
     }
+
+    .homeLogoCtn{
+        background-color: $color-black;
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+        height: 600px;
+        width: 600px;
+        margin: auto;
+        margin-top: 30px;
+
+        .brandLogoBig{
+            max-width: 70%;
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+    .homeSearchBar{
+        padding: 50px;
+        background-color: $color-grey;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        max-width: 60%;
+    }
+}
+
+/* Search Bar CSS */
+
+.searchBarCtn{
+    border: 3px solid $color-yellow;
+    max-width: 50%;
+    min-width: 300px;
+    border-radius: $border-radius;
+    padding: px 0px 0px 15px;
+    display: flex;
+    width: 300px;
+    transition: all 1s ease-out;
+
+    &:hover{
+        max-width: 80%;
+        width: 700px;
+        transition: all 1s ease-out;
+    }
+
+    .searchBarInput{
+        max-width: 800px;
+        min-width: 40%;
+        border: none;
+        outline: 0;
+        padding: 5px 10px 10px 20px;
+        font-size: 15px;
+        flex: 1 1 70%;
+    }
+
+    .searchBarBtn{
+        font-size: 15px;
+        max-width: 100px;
+        height: 40px;
+        color: black;
+        flex: 1 1 30%;
+    }
+}
+
+/* Footer CSS*/
+.FooterCtn{
+    position: absolute;;
+    height: 150px;
+    background-color:$color-black;
+    width: 100%;
+    bottom: 0px;
+}
+
+/* User Summary CSS*/
+.userSummaryCtn{
+
+    .userSummaryAvatar{
+        border-radius: 50%;
+        max-width: 350px;
+    }
+
 }
 
 @media (prefers-reduced-motion: no-preference) {

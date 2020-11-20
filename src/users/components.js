@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getUserData, getUserRepos } from './lookup'
+import { UserSummary } from '../webcomponents'
 
 export class UserDetail extends Component {
 
@@ -8,8 +9,8 @@ export class UserDetail extends Component {
     constructor(props){
         super(props)
         this.state = {
-            userData: null,
-            userRepos:null,
+            userData: false,
+            userRepos:false,
             isFetching: true,
         }
     }
@@ -17,6 +18,7 @@ export class UserDetail extends Component {
     async componentDidMount(){
         const user = await getUserData(this.props.match.params.id)
         const userRepos = await getUserRepos(this.props.match.params.id)
+        console.log(user)
         if (user.status === 200 && userRepos.status === 200){
             this.setState({ userData:user.data, userRepos:userRepos.data, isFetching:false })
         }
@@ -43,8 +45,11 @@ export class UserDetail extends Component {
             <div>
                 <p>LOCACION {this.props.location.pathname}</p>
                 <h1>Usuario!</h1>
-                {this.state.userData && !this.state.loading &&
-                    <p>{this.state.userData.login}</p>
+                {this.state.userData && !this.state.isFetching &&
+                    <div>
+                        <p>{this.state.userData.login}</p>
+                        <UserSummary userData={this.state.userData}/>
+                    </div>
                 }
             </div>
         );

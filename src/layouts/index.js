@@ -1,5 +1,6 @@
-import {Header} from './components'
+import {Header, Footer} from './components'
 
 export {
-   Header
+   Header,
+   Footer
 }
