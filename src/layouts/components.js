@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from "../assets/images/brandlogo.png";
 import { useLocation } from 'react-router-dom';
+import { SearchBar } from '../webcomponents'
 
 /* Header Component - top of the page */
 export function Header () {
@@ -13,6 +14,7 @@ export function Header () {
                         <a href = "/">
                             <img src={logo} className="brandLogo"/>
                         </a>
+                        <SearchBar/>
                     </div>
                 </div>
             }

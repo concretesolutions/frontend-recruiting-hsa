@@ -43,11 +43,8 @@ export class UserDetail extends Component {
     render () {
         return (
             <div>
-                <p>LOCACION {this.props.location.pathname}</p>
-                <h1>Usuario!</h1>
                 {this.state.userData && !this.state.isFetching &&
                     <div>
-                        <p>{this.state.userData.login}</p>
                         <UserSummary userData={this.state.userData}/>
                     </div>
                 }

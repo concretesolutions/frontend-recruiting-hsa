@@ -4,6 +4,7 @@ import { Home } from "./home"
 import { UserDetail } from "./users"
 import { Header, Footer } from "./layouts"
 import './assets/styles/App.scss';
+import "font-awesome/css/font-awesome.min.css";
 
 function App() {
   return (
