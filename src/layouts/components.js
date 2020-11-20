@@ -24,8 +24,11 @@ export function Header () {
 export class Footer extends Component {
     render(){
         return (
-            <div className="FooterCtn">
-            </div>
+            <footer className="footerCtn">
+                <div className="footer">
+
+                </div>
+            </footer>
         )
     }
 }
