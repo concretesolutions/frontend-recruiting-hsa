@@ -1,6 +1,11 @@
-import {SearchBar, UserSummary} from './components'
+import {SearchBar,
+        UserCard,
+        UserPhotoAndName,
+        RepoCard, } from './components'
 
 export {
     SearchBar,
-    UserSummary
+    UserCard,
+    UserPhotoAndName,
+    RepoCard,
 }

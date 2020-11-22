@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch} from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faUser, faUserFriends, faEye, faExclamationCircle, faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
 
 
 export function SearchBar () {
@@ -25,28 +25,85 @@ export function SearchBar () {
     )
 }
 
-export function UserSummary (props) {
 
-    return (
-        <div className="userSummaryCtn">
-            <UserCard userURL={props.userData.html_url} avatarURL={props.userData.avatar_url}
-                userName={props.userData.name} userLogin={props.userData.login} />
+export function UserCard (props) {
+    const { userData } = props
+    return(
+        <div className="userCardCtn">
+            <UserPhotoAndName userURL={userData.html_url} avatarURL={userData.avatar_url} userName={userData.name} userLogin={userData.login}/>
+            <div className="userCardInfoCtn">
+                { userData.name ? <h2> {userData.login} </h2> : <p> Este usuario aún no completa su nombre </p>}
+                <p>{ userData.bio }</p>
+                <p>{ userData.email }</p>
+                {props.children}
+                <div className="userCardFollowersCtn">
+                    <IconWithText leftIcon={<FontAwesomeIcon icon={faUserFriends}/>} text={`${userData.followers} seguidores`}/>
+                    <IconWithText leftIcon={<FontAwesomeIcon icon={faUser}/>} text={`${userData.following} siguiendo`}/>
+                </div>
+            </div>
         </div>
     )
 }
 
-export function UserCard (props) {
 
+export function RepoCard (props) {
+    const { repoData } = props
     return(
-        <div className="userCardCtn">
-            <a href={props.userURL} className="userCardAvatarCtn">
-                <img src={props.avatarURL} className="userCardAvatar"/>
+        <div className="repoCardCtn" >
+            <a href={repoData.html_url}>
+                <h2>{repoData.name} </h2>
             </a>
-            <div className="userCardInfoCtn">
-                <h1>{props.userName}</h1>
-                <h2>{props.userLogin} </h2>
-                <h3>{}</h3>
+            <p>{repoData.description} </p>
+            <div className="repoCardStatistics">
+                <IconWithText leftIcon={<FontAwesomeIcon icon={ repoData.private ? faLock : faLockOpen}/>} text={`${repoData.private? "privado":"público"}`}/>
+                <IconWithText leftIcon={<FontAwesomeIcon icon={faExclamationCircle}/>} text={`${repoData.open_issues_count} issues`}/>
+                <IconWithText leftIcon={<FontAwesomeIcon icon={faEye}/>} text={`${repoData.watchers} observadores`}/>
             </div>
+        </div>
+    )
+}
+
+
+export function UserPhotoAndName (props) {
+     /* i made this component to show the avatar and the name of user
+        in other sites of the webpage, because, like github, every user avatar
+        and username redirects to the profile */
+    /* Parameters:
+        - avatarURL: avatar link
+        - userURL: link to the user profile
+        - userName: name of the user
+        - userAcc: if not User Name provided, then show the username.
+        - row: if row is provided, then the name will locate next to the avatar url,
+               if not, the name will locate under it.
+     */
+    return (
+        <a href={props.userURL} className={`userPhotoAndNameCtn ${props.row && "row"}`}>
+            <img src={props.avatarURL} className="userAvatar"/>
+            {   props.userName ?
+                <h1>{props.userName}</h1>
+            :
+                <h1>{props.userLogin}</h1>
+            }
+        </a>
+    )
+}
+
+
+export function IconWithText (props) {
+    return (
+        <div className="iconWithTextCtn">
+            {props.leftIcon &&
+                <div className="iconCtn">
+                    {props.leftIcon}
+                </div>
+            }
+            <p>{props.text}</p>
+
+            {props.rightIcon &&
+                <div className ="iconCtn">
+                    {props.rightIcon}
+                </div>
+            }
         </div>
     )
 }
