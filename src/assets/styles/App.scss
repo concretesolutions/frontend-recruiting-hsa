@@ -15,22 +15,17 @@ $header-height: 60px;
 $border-radius: 0.4rem;
 
 
-@mixin titleText {
-    font-family: Monaco;
-    font-size: 60px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: $color-dark;
-}
-
 .App{
     position: relative;
     min-height: calc(100vh - 100px);
-    h1 {
-        @include titleText()
+    font-family: "Open Sans";
+    h1{
+        font-size: 30px;
+        font-weight: 900;
+    }
+    h2{
+        font-weight: 500;
+        margin-bottom: 5px;
     }
 }
 /* container to set the size of the webpage, specially for big screens */
@@ -50,13 +45,14 @@ $border-radius: 0.4rem;
     height: $header-height;
     padding: 20px;
     background-color: $color-black;
-
     .appWidth{
         display: flex;
         justify-content: space-between;
 
         .brandLogo{
             max-height: $header-height;
+            animation: moveInLeft 0.3s ease-out 0.3s;
+            animation-fill-mode: backwards;
         }
     }
 }
@@ -86,6 +82,8 @@ $border-radius: 0.4rem;
         width: 50%;
         margin: auto;
         margin-top: 30px;
+        animation: enterHomeLogo 1s ease-out 0.3s;
+        animation-fill-mode: backwards;
 
         &::after{
             content: "";
@@ -102,7 +100,7 @@ $border-radius: 0.4rem;
         }
     }
 
-    .homeSearchBar{
+    .homeSearchBarCtn{
         padding: 50px;
         background-color: $color-grey;
         margin: auto;
@@ -178,11 +176,18 @@ $border-radius: 0.4rem;
     padding: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     h1,h2,p, .iconCtn {
         color: #fff;
     }
-
+    .userCardUncompletedName{
+        margin-bottom: 10px;
+    }
+    .userCardBio{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
     .userCardInfoCtn{
         flex: 1 1 30%;
         .userCardFollowersCtn{
@@ -232,21 +237,35 @@ $border-radius: 0.4rem;
 
 .repoCardCtn{
     border: 1px solid $color-grey;
+    display: flex;
+    background-color: $color-yellow;
+    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 25px;
     padding: 15px;
     border-radius: 0.8rem;
+    height: 100px;
+    min-height: fit-content;
+    .repoCardTitleCtn{
+        font-size: 17px;
+        text-transform: uppercase;
+        color: $color-dark;
+        font-weight: 900;
+    }
     .repoCardStatistics{
         display: flex;
+        flex-wrap: wrap;
         .iconWithTextCtn{
-            flex: 1 1 30%
+            flex: 1 1 23%
         }
     }
-    a{
+    a {
         text-decoration: none;
     }
 }
 
 .userViewCtn{
+    margin-top: 40px;
     display: flex;
     .userDetailCtn{
         flex: 1 1 40%;
@@ -254,39 +273,118 @@ $border-radius: 0.4rem;
     .userReposCtn{
         flex: 1 1 50%;
         margin-left: 25px;
-        .paginationCtn{
-            display: flex;
-            justify-content: center;
-            margin: 10px 0 10px 0;
-            .paginationBtn{
-                color: $color-black;
-                background-color: $color-yellow;
-                width: 80px;
-                height: 30px;
-                border-radius: 0.8rem;
-                outline: 0;
-                &:hover{
-                    background-color: darken($color-yellow, 20%);
-                }
-            }
-            .paginationCurrentPage{
-                margin: 0 10px 0 10px;
-                font-size: 20px;
-            }
+        h1{
+            margin-bottom: 15px;
         }
     }
 }
+
+.paginationCtn{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    .paginationBtn{
+        color: $color-black;
+        background-color: $color-yellow;
+        width: 80px;
+        height: 30px;
+        border-radius: 0.8rem;
+        outline: 0;
+        cursor: pointer;
+        &:hover{
+            background-color: darken($color-yellow, 20%);
+        }
+        &:disabled{
+            background-color: lighten($color-grey, 40%);
+        }
+    }
+    .paginationCurrentPage{
+        margin: 0 10px 0 10px;
+        font-size: 20px;
+    }
+}
+
+
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
     }
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+@media only screen and (max-width: 800px) {
+    .userViewCtn {
+      flex-direction: column;
+      .userDetailCtn{
+          display: flex;
+          justify-content: center;
+          .userAvatar{
+              margin-left: 5%;
+          }
+      }
     }
-    to {
-        transform: rotate(360deg);
+}
+
+@keyframes enterHomeLogo {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px) rotate(180deg);
+    }
+    50% {
+        transform:translateX(-60px) rotate(300deg);
+    }
+    80% {
+        transform:translateX(40px) rotate(390deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    80% {
+        transform:translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80% {
+        transform:translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80% {
+        transform:translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
     }
 }

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser, faUserFriends, faEye, faExclamationCircle, faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faUser, faUserFriends, faEye, faExternalLinkAlt, faEnvelope,
+         faExclamationCircle, faLock, faLockOpen, faCode } from '@fortawesome/free-solid-svg-icons';
 
 
 export function SearchBar () {
@@ -32,9 +33,9 @@ export function UserCard (props) {
         <div className="userCardCtn">
             <UserPhotoAndName userURL={userData.html_url} avatarURL={userData.avatar_url} userName={userData.name} userLogin={userData.login}/>
             <div className="userCardInfoCtn">
-                { userData.name ? <h2> {userData.login} </h2> : <p> Este usuario aún no completa su nombre </p>}
-                <p>{ userData.bio }</p>
-                <p>{ userData.email }</p>
+                { userData.name ? <h2> {userData.login} </h2> : <p className="userCardUncompletedName"> Este usuario aún no completa su nombre </p>}
+                <IconWithText leftIcon={<FontAwesomeIcon icon={faEnvelope}/>} text={`${userData.email ? userData.email : "no específicado"}`}/>
+                <p className="userCardBio">{ userData.bio ? userData.bio: "Este usuario aún no completa su biografía" }</p>
                 {props.children}
                 <div className="userCardFollowersCtn">
                     <IconWithText leftIcon={<FontAwesomeIcon icon={faUserFriends}/>} text={`${userData.followers} seguidores`}/>
@@ -50,11 +51,12 @@ export function RepoCard (props) {
     const { repoData } = props
     return(
         <div className="repoCardCtn" >
-            <a href={repoData.html_url}>
-                <h2>{repoData.name} </h2>
+            <a href={repoData.html_url} className="repoCardTitleCtn">
+                <IconWithText leftIcon={<FontAwesomeIcon icon={faExternalLinkAlt}/>} text={repoData.name}/>
             </a>
             <p>{repoData.description} </p>
             <div className="repoCardStatistics">
+                <IconWithText leftIcon={<FontAwesomeIcon icon={ faCode}/>} text={`${repoData.language ? repoData.language: "No identificado"}`}/>
                 <IconWithText leftIcon={<FontAwesomeIcon icon={ repoData.private ? faLock : faLockOpen}/>} text={`${repoData.private? "privado":"público"}`}/>
                 <IconWithText leftIcon={<FontAwesomeIcon icon={faExclamationCircle}/>} text={`${repoData.open_issues_count} issues`}/>
                 <IconWithText leftIcon={<FontAwesomeIcon icon={faEye}/>} text={`${repoData.watchers} observadores`}/>

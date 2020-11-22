@@ -9,7 +9,7 @@ export function Home () {
             <div className="homeLogoCtn">
                 <img src={logo} className="brandLogoBig"/>
             </div>
-            <div className="homeSearchBar">
+            <div className="homeSearchBarCtn">
                 <SearchBar/>
             </div>
         </div>
