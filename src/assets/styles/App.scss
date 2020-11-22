@@ -254,6 +254,26 @@ $border-radius: 0.4rem;
     .userReposCtn{
         flex: 1 1 50%;
         margin-left: 25px;
+        .paginationCtn{
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 10px 0;
+            .paginationBtn{
+                color: $color-black;
+                background-color: $color-yellow;
+                width: 80px;
+                height: 30px;
+                border-radius: 0.8rem;
+                outline: 0;
+                &:hover{
+                    background-color: darken($color-yellow, 20%);
+                }
+            }
+            .paginationCurrentPage{
+                margin: 0 10px 0 10px;
+                font-size: 20px;
+            }
+        }
     }
 }
 @media (prefers-reduced-motion: no-preference) {

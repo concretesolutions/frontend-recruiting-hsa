@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { getUserData, getUserRepos } from './lookup'
-import { UserCard, RepoCard } from '../webcomponents'
+import { getUserData, getUserRepos } from './lookup';
+import { UserCard, RepoCard } from '../webcomponents';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 /* const userFail = {
 
@@ -12,9 +14,11 @@ export class UserDetail extends Component {
     constructor(props){
         super(props)
         this.state = {
-            userData: false,
-            userRepos:false,
+            userData: [],
+            userRepos:[],
             isFetching: true,
+            currentPage: 1,
+            reposPerPage:5,
         }
     }
 
@@ -35,12 +39,22 @@ export class UserDetail extends Component {
             this.setState({ userData:user.data, userRepos:userRepos.data, isFetching:false })
         }
         else{
-            this.setState({ userData:null, userRepos:null, isFetching:false })
+            this.setState({ userData:null, userRepos:[], isFetching:false })
         }
     }
 
+    handlePagination = (number) => {
+        this.setState({currentPage: number })
+    }
+
     render () {
-        const { userData } = this.state
+        const { userData, userRepos, currentPage, reposPerPage } = this.state
+        /* pagination logic  */
+        const indexOfLastRepo = currentPage * reposPerPage
+        const indexOfFirstRepo = indexOfLastRepo - reposPerPage
+        const currentRepos = userRepos.slice(indexOfFirstRepo, indexOfLastRepo)
+
+       /*  const lastPage = Math.ceil(userRepos.length / reposPerPage) */
 
         return (
             <div>
@@ -54,7 +68,7 @@ export class UserDetail extends Component {
                             {/* check if the user have any repo */}
                             {this.state.userRepos.length > 0 ?
                                 /* if yes, show the repos. */
-                                this.state.userRepos.map((repo, index)=> {
+                                currentRepos.map((repo, index)=> {
                                     return <RepoCard repoData={repo} key={index}/>
                                 })
                             :   /* if not, then show a message */
@@ -62,6 +76,11 @@ export class UserDetail extends Component {
                                     Este usuario aun no ha creado un repositorio
                                 </div>
                             }
+                            <div className="paginationCtn">
+                                <button className="paginationBtn decrease" onClick={()=>{this.handlePagination(currentPage-1)}}><FontAwesomeIcon icon={faArrowLeft}/></button>
+                                <div className="paginationCurrentPage">{currentPage}</div>
+                                <button className="paginationBtn increase" onClick={()=>{this.handlePagination(currentPage+1)}}><FontAwesomeIcon icon={faArrowRight}/></button>
+                            </div>
                         </div>
                     </div>
                 }
