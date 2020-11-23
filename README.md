@@ -2,9 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can see the project deploy in the following direction:
+### `https://frontend-recruiting-hsa.herokuapp.com/`
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+
+After installed, in the project directory, you can run:
 
 ### `npm start`
 
