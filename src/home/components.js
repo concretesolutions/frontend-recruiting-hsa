@@ -15,9 +15,14 @@ export function Home () {
                 <SearchBar/>
             </div>
             <div className="homeTitleCtn">
-                <h1>
-                ! Explora Github como nunca antes !
-                </h1>
+                <div className="homeTextsCtn">
+                    <h1>
+                    ! Explora Github como nunca antes !
+                    </h1>
+                    <h2>
+                        Prueba Ingresando algún nombre de perfil como por ejemplo: "Hola","fabpot","andrew", etc ...
+                    </h2>
+                </div>
             </div>
         </div>
     )

@@ -12,10 +12,14 @@ $color-white: #ffffff;
     display: flex;
     .userDetailCtn{
         flex: 1 1 40%;
+        animation: moveInLeft 0.5s ease-out 0.3s;
+        animation-fill-mode: backwards;
     }
     .userReposCtn{
         flex: 1 1 50%;
         margin-left: 25px;
+        animation: moveInRight 0.5s ease-out 0.3s;
+        animation-fill-mode: backwards;
         h1{
             margin-bottom: 15px;
         }

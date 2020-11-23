@@ -44,6 +44,19 @@ $border-radius: 0.4rem;
     bottom: -150px;
     background-color:$color-black;
     width: 100%;
+    .appWidth{
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+            color: $color-white;
+            font-size: 23px;
+        }
+        h2{
+            color: $color-yellow;
+        }
+    }
 }
 
 /* header CSS */
@@ -58,7 +71,6 @@ $border-radius: 0.4rem;
     .appWidth{
         display: flex;
         justify-content: space-between;
-
         .brandLogo{
             max-height: $header-height;
             animation: moveInLeft 0.3s ease-out 0.3s;
@@ -121,7 +133,16 @@ $border-radius: 0.4rem;
     .homeTitleCtn{
         display: flex;
         justify-content: center;
-        margin: 25px 0 20px 0;
+        margin: 25px 0 40px 0;
+        .homeTextsCtn{
+            text-align: center;
+            h1{
+                margin-bottom: 10px;
+            }
+            h2{
+                margin-bottom: 30px;
+            }
+        }
     }
 }
 
@@ -136,6 +157,17 @@ $border-radius: 0.4rem;
               margin-left: 5%;
           }
       }
+    }
+}
+@media only screen and (max-width: 560px) {
+    .headerCtn{
+        height: $header-height + 60;
+        .appWidth{
+            flex-direction: column;
+            .searchBarCtn{
+                margin-top: 10px;
+            }
+        }
     }
 }
 

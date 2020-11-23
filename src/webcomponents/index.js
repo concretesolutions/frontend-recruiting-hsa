@@ -1,11 +1,13 @@
 import {SearchBar,
         UserCard,
         UserPhotoAndName,
-        RepoCard, } from './components'
+        RepoCard,
+        IconWithText } from './components'
 
 export {
     SearchBar,
     UserCard,
     UserPhotoAndName,
     RepoCard,
+    IconWithText,
 }
