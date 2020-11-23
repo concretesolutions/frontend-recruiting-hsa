@@ -1,0 +1,221 @@
+
+* {
+    margin:0;
+    padding: 0;
+}
+/* Color Definition */
+$color-black : #202020;
+$color-dark: #3F3F3F;
+$color-grey: #707070;
+$color-yellow: #FFDF6C;
+$color-white: #ffffff;
+
+/* Size or Shape Parameters */
+$header-height: 60px;
+$border-radius: 0.4rem;
+
+
+.App{
+    position: relative;
+    min-height: calc(100vh - 100px);
+    font-family: "Open Sans";
+    h1{
+        font-size: 30px;
+        font-weight: 900;
+    }
+    h2{
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+}
+
+/* container to set the size of the webpage, specially for big screens */
+.appWidth{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Footer CSS*/
+.footerCtn{
+    bottom: 0px;
+    margin-top: 30px;
+    position: absolute;
+    height: 150px;
+    bottom: -150px;
+    background-color:$color-black;
+    width: 100%;
+    .appWidth{
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+            color: $color-white;
+            font-size: 23px;
+        }
+        h2{
+            color: $color-yellow;
+        }
+    }
+}
+
+/* header CSS */
+.headerCtn{
+    position: relative;
+    top: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: $header-height;
+    padding: 20px;
+    background-color: $color-black;
+    .appWidth{
+        display: flex;
+        justify-content: space-between;
+        .brandLogo{
+            max-height: $header-height;
+            animation: moveInLeft 0.3s ease-out 0.3s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+
+/* Home view container CSS */
+.homeViewCtn{
+    position: relative;
+    .homeYellowBackground{
+        top: -30px;
+        height: 330px;
+        width: 100%;
+        background-color: $color-yellow;
+        z-index: 0;
+        position: absolute;
+        border-bottom-right-radius: 0.8rem;
+        border-bottom-left-radius: 0.8rem;
+    }
+
+    .homeLogoCtn{
+        background-color: $color-black;
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+        min-width: 300px;
+        max-width: 600px;
+        width: 50%;
+        margin: auto;
+        margin-top: 30px;
+        animation: enterHomeLogo 1s ease-out 0.3s;
+        animation-fill-mode: backwards;
+
+        &::after{
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        .brandLogoBig{
+            max-width: 70%;
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+
+    .homeSearchBarCtn{
+        padding: 50px;
+        background-color: $color-grey;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        max-width: 60%;
+    }
+    .homeTitleCtn{
+        display: flex;
+        justify-content: center;
+        margin: 25px 0 40px 0;
+        .homeTextsCtn{
+            text-align: center;
+            h1{
+                margin-bottom: 10px;
+            }
+            h2{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* Display Fixes into variation of Media Size */
+@media only screen and (max-width: 800px) {
+    .userViewCtn {
+      flex-direction: column;
+      .userDetailCtn{
+          display: flex;
+          justify-content: center;
+          .userAvatar{
+              margin-left: 5%;
+          }
+      }
+    }
+}
+@media only screen and (max-width: 560px) {
+    .headerCtn{
+        height: $header-height + 60;
+        .appWidth{
+            flex-direction: column;
+            .searchBarCtn{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/* Animations CSS */
+@keyframes enterHomeLogo {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px) rotate(180deg);
+    }
+    50% {
+        transform:translateX(-60px) rotate(300deg);
+    }
+    80% {
+        transform:translateX(40px) rotate(390deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80% {
+        transform:translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80% {
+        transform:translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}

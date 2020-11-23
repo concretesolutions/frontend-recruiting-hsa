@@ -1,85 +1,78 @@
-# Desafío Front End
+# Getting Started with Create React App
 
-## Propuesta
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Implemente una aplicación cliente, visualice la API de GitHub y vea los repositorios de un usuario específico.
+You can see the project deploy in the following direction:
+### `https://frontend-recruiting-hsa.herokuapp.com/`
 
-Esta aplicación debe funcionar en los navegadores más recientes del mercado.
+## Available Scripts
 
-### API
+In the project directory, you can run:
 
-https://developer.github.com/v3/
+### `npm install`
 
-Puntos de Detalles de un usuario:
 
-https://api.github.com/users/{username}
+After installed, in the project directory, you can run:
 
-Repositorios de un usuario:
+### `npm start`
 
-https://api.github.com/users/{username}/repos
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Disposición
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Home
-<img src="./img/home.png">
+### `npm test`
 
-Details
-<img src="./img/details.png">
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Not Found
-<img src="./img/notfound.png">
+### `npm run build`
 
-### Navegación
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Al buscar un usuario por el login de búsqueda de github, acceda a la página de resultados de la búsqueda con los detalles del usuario, de lo contrario, mostrará la página de Not Found (Layout NotFound).
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Requisitos
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Yo, como usuario, quiero buscar un usuario de GitHub;
-- Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, imagen del avatar, e-mail y bio);
-- Yo, como usuario, en la pantalla de detalhes puedo hacer una nueva busca;
-- Yo, como usuario, deseo ver la lista de repositorios de aquel usuario que fue buscado, ordenada por el número decreciente de estrellas;
-- Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre de repositorio e ir para pantalla del repositorio en github;
-- Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre usuariio y imagem del perfil, y ir para pantalla de perfil en github;
+### `npm run eject`
 
-**Definición de listo**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-El proyecto debe ser implementado de acuerdo con las especificaciones de Zeplin, no es obligatorio usar una estructura, pero recomendamos el React.js, Angular, Vue, o algún FW más actual. El uso de rutas es obligatorio (Ex: / users / {username} / repos).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Criterios de evaluación
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Buscamos personas que buscan siempre aprender cosas nuevas y estar actualizadas con el Mercado, disfrutar de buenas prácticas y calidad.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- Organización del proyecto: La estructura del proyecto, documentación y uso del control de versión;
-- Innovación tecnológica: el uso de nuevas tecnologías, siempre que sean estables;
-- Consistencia: Si se cumplen los requisitos;
-- Buenas prácticas: Si el proyecto sigue buenas prácticas de desarrollo, incluyendo seguridad, optimización, código limpio y reutilizable, etc;
-- Control de Calidad: Si el proyecto tiene calidad asegurada por pruebas unitarias (por ejemplo, Jasmine, Mocha, Chai, Jest, etc).
-- No utilice Frameworks CSS (Boostrap, Material Angular, etc). Queremos entender cuál es su conocimiento con CSS.
-- El uso de preprocesador es muy bienvenido (Sass, Less) y ganará puntos.
-- El layout propuesto es bastante simple, pero tiene puntos que pueden ser reutilizados, reflexione sobre lo que se puede crear como componente. Analice bien el diseño y lo que se repite. Monte su biblioteca de componentes. Sugerencia, un término muy utilizado es webcomponent.
-- Documentación del proyecto, en el README.md debe ser creado y explicadar como se puede levantar la aplicacion en ambiente local, ejecutar pruebas unitarias, etc.
-- Git, el control de versión se analizará también, por lo que los commits, descripciones que se hizo en aquel commit también contará en el análisis.
-- Nomenclatura, el idioma para el código base debe estar en inglés y el idioma dirigido para el usuario en Español.
-- Requerimiento obligatorio: la página de busqueda debe pertenecer a un modulo diferente de la página de detalle.
-- El layout que esta en Zeplin se comparte cuando nuestro Recursos Humanos entran en contacto, y el css que es generado por él no debe ser utilizado. El foco es crear algo de cero y pensando en los webcomponentes reutilizables.
+## Learn More
 
-Cada ítem arriba será evaluado y contará puntos en la evaluación final, por lo tanto aplique todo su conocimiento.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Entrega
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Siga los siguientes pasos para implementar y enviar este desafío:
-- Haga un **Fork** a este repositorio. Puedes mirar esta guía para mayores informaciones: [Como hacer fork de un repositorio](https://help.github.com/en/articles/fork-a-repo).
-- Implemente el desafío.
-- Después de completar el desafío, realice un **Pull Request** a este repositorio, utilizando la interface de **Github**. [Creando un Pull Request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).
-- Si es posible, deja tu repositorio publico para hacer la revisión de código más sencilla.
+### Code Splitting
 
-Ademas de eso, la aplicación debe alojarse (Heroku, Netlify, Firebase, Plunker, etc.) y cumplir con los requerimientos. Las direcciones URL deben ser agregadas a el README del proyecto.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Plazo
+### Analyzing the Bundle Size
 
-El tiempo de entrega de 7 días.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Si el equipo de Recursos Humanos no te ha contactado, escribe a trabajeconnosotros@concrete.com.br
+### Making a Progressive Web App
 
-¡Buena suerte!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

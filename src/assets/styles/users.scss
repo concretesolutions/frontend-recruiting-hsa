@@ -1,0 +1,52 @@
+/* this file contains all the CSS for the User module components */
+
+/* Color Definition */
+$color-black : #202020;
+$color-dark: #3F3F3F;
+$color-grey: #707070;
+$color-yellow: #FFDF6C;
+$color-white: #ffffff;
+
+.userViewCtn{
+    margin-top: 40px;
+    display: flex;
+    .userDetailCtn{
+        flex: 1 1 40%;
+        animation: moveInLeft 0.5s ease-out 0.3s;
+        animation-fill-mode: backwards;
+    }
+    .userReposCtn{
+        flex: 1 1 50%;
+        margin-left: 25px;
+        animation: moveInRight 0.5s ease-out 0.3s;
+        animation-fill-mode: backwards;
+        h1{
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.paginationCtn{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    .paginationBtn{
+        color: $color-black;
+        background-color: $color-yellow;
+        width: 80px;
+        height: 30px;
+        border-radius: 0.8rem;
+        outline: 0;
+        cursor: pointer;
+        &:hover{
+            background-color: darken($color-yellow, 20%);
+        }
+        &:disabled{
+            background-color: lighten($color-grey, 40%);
+        }
+    }
+    .paginationCurrentPage{
+        margin: 0 10px 0 10px;
+        font-size: 20px;
+    }
+}
