@@ -65,9 +65,7 @@ export class UserDetail extends Component {
     getUser = async () => {
         /* function to fetch the user data and his repositories */
         const user = await getUserData(this.props.match.params.id)
-        console.log(user)
-        const userRepos = await getUserRepos(this.props.match.params.id)
-        console.log(userRepos)
+        const userRepos = await getUserRepos(this.props.match.params.id) 
         /* User gotten */
         if (user.status === 200 && userRepos.status === 200){
             if (userRepos.data.length > 0){
