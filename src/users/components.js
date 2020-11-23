@@ -3,17 +3,39 @@ import { getUserData, getUserRepos } from './lookup';
 import { UserCard, RepoCard } from '../webcomponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import '../assets/styles/users.scss';
 
+
+/* In Case of status 404, use this dictionary to show a default user Card */
 const userNotFound = {
     name: "No encontrado",
     login: "No encontrado",
-    avatar_url: "https://i.kym-cdn.com/profiles/icons/big/000/071/040/404%20is%20not%20found.jpg",
+    avatar_url: "https://i.pinimg.com/originals/3f/e3/b5/3fe3b511759c7e7db2e4ffaeeac6f5f7.png",
     html_url: "https://frontend-recruiting-hsa.herokuapp.com",
     email: "?",
     bio: "?",
     followers: "?",
     following: "?"
 }
+
+
+/* Function that sorts a list by it's stars, decreasently*/
+export function SortListByStarts (list) {
+    function SortLogic(repo1, repo2){
+        if (repo1.stargazers_count > repo2.stargazers_count){
+            return -1
+        }
+        else if ( repo1.stargazers_count < repo2.stargazers_count){
+            return 1
+        }
+        else{
+            return 0
+        }
+    }
+    return list.sort(SortLogic)
+}
+
+
 export class UserDetail extends Component {
 
     /* Component that requests and contains the elements that display user information */
@@ -43,9 +65,14 @@ export class UserDetail extends Component {
     getUser = async () => {
         /* function to fetch the user data and his repositories */
         const user = await getUserData(this.props.match.params.id)
+        console.log(user)
         const userRepos = await getUserRepos(this.props.match.params.id)
+        console.log(userRepos)
         /* User gotten */
         if (user.status === 200 && userRepos.status === 200){
+            if (userRepos.data.length > 0){
+                SortListByStarts(userRepos.data)
+            }
             this.setState({ userData:user.data, userRepos:userRepos.data, isFetching:false, rateLimitExceedeed:false })
         }
         /* if the API rate limit by the ip has been exceeded, then the API will response this error. */

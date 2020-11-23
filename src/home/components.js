@@ -2,6 +2,8 @@ import React from 'react';
 import logo from "../assets/images/brandbig.png";
 import { SearchBar } from "../webcomponents"
 
+/* Home Component Module */
+
 export function Home () {
     return (
         <div className="homeViewCtn">
@@ -11,6 +13,11 @@ export function Home () {
             </div>
             <div className="homeSearchBarCtn">
                 <SearchBar/>
+            </div>
+            <div className="homeTitleCtn">
+                <h1>
+                ! Explora Github como nunca antes !
+                </h1>
             </div>
         </div>
     )

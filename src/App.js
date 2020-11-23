@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { Home } from "./home"
-import { UserDetail } from "./users"
 import { Header, Footer } from "./layouts"
+import { UserDetail } from "./users"
+
 import './assets/styles/App.scss';
 import "font-awesome/css/font-awesome.min.css";
+
 
 function App() {
   return (
