@@ -1,0 +1,24 @@
+.searchbox__container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .searchbox__input {
+    padding: 10px;
+    padding-left: 300px;
+    border-radius: 3px;
+    border: solid 2px rgba(185, 182, 182, 0.5);
+  }
+
+  .searchbox__button {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: rgb(172, 83, 242);
+
+    .searchbox__icon {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
