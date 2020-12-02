@@ -19,7 +19,6 @@ const Card = ({
 }) => {
   console.log("PROPS: ", bio);
 
-  let correoPrueba = "correoprueba@gmail.com";
   return (
     <div className={styles.card__container}>
       <div className={styles.image__container}>
@@ -35,7 +34,7 @@ const Card = ({
           <p>{username}</p>
         </div>
         <div className={styles.card__userInfo}>
-          {followers && (
+          {followers !== "" && (
             <p>
               <FontAwesomeIcon
                 icon={faUserFriends}
@@ -45,14 +44,14 @@ const Card = ({
               {followers}
             </p>
           )}
-          {correoPrueba && (
+          {email && (
             <p>
               <FontAwesomeIcon
                 icon={faEnvelope}
                 size="lg"
                 className={styles.card__icon}
               />
-              {correoPrueba}
+              {email}
             </p>
           )}
           {bio && (

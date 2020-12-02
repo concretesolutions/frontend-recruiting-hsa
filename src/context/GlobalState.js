@@ -2,7 +2,9 @@ import React, { createContext, useReducer, useEffect } from "react";
 import AppReducer from "./AppReducer";
 //initial state
 const initialState = {
-  user: "",
+  user: localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : "",
 };
 
 //create context
@@ -11,6 +13,10 @@ export const GlobalContext = createContext(initialState);
 //provider components
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(state.user));
+  }, [state]);
 
   //actions
   const userInfo = (user) => {
