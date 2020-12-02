@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import SearchBox from "../../components/SearchBox";
+import Logo from "../../components/Logo";
 
 const Home = () => {
   return (
     <div>
-      <SearchBox />
+      <Logo />
     </div>
   );
 };
