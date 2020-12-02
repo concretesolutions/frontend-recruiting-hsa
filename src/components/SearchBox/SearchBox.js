@@ -2,15 +2,30 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SearchBox.module.scss";
-const SearchBox = (props) => {
-  const [usernameState, setUsernameState] = useState("");
+import { fetchUser } from "../../webservices";
+
+const SearchBox = () => {
+  const [userState, setUserState] = useState("");
   const onChange = (e) => {
-    e.preventDefault();
-    props.fetchUsername(usernameState);
+    // e.preventDefault();
+    try {
+      fetchUser(userState)
+        .then((res) => {
+          console.log("res.data: ", res.data);
+        })
+        .finally(() => {
+          // setIsLoading(false);
+          console.log("finally");
+        });
+    } catch (err) {
+      // setError(err);
+      // setIsLoading(false);
+      console.log("error: ", err);
+    }
   };
 
   const handleInputChange = (event) => {
-    setUsernameState(event.target.value);
+    setUserState(event.target.value);
     console.log(event.target.value);
   };
   return (

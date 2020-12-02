@@ -7,7 +7,7 @@ export function configureAxios() {
   // Here also we can add default headers content type
 }
 
-export function fetchUsername(username) {
+export function fetchUser(username) {
   const url = `users/${username}`;
   console.log("url: ", url);
   return axios.get(url);
