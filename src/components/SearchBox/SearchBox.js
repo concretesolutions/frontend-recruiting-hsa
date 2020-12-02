@@ -16,11 +16,10 @@ const SearchBox = () => {
     fetchUser(userState)
       .then((res) => {
         userInfo(res.data);
-        res.data && history.push(routes.details(userState));
+        res.data && history.push(routes.details(res.data.login));
       })
-      .catch((error) => error && history.push("/notfound"))
+      .catch((error) => error && history.push(routes.notfound()))
       .finally(() => {
-        // setIsLoading(false);
         console.log("finally");
       });
   };
