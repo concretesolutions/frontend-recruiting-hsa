@@ -3,25 +3,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SearchBox.module.scss";
 import { fetchUser } from "../../webservices";
+import { useHistory } from "react-router-dom";
 
 const SearchBox = () => {
   const [userState, setUserState] = useState("");
+  const history = useHistory();
   const onChange = (e) => {
     // e.preventDefault();
-    try {
-      fetchUser(userState)
-        .then((res) => {
-          console.log("res.data: ", res.data);
-        })
-        .finally(() => {
-          // setIsLoading(false);
-          console.log("finally");
-        });
-    } catch (err) {
-      // setError(err);
-      // setIsLoading(false);
-      console.log("error: ", err);
-    }
+    fetchUser(userState)
+      .then((res) => {
+        console.log("res.data: ", res.data);
+      })
+      .catch((error) => error && history.push("/notfound"))
+      .finally(() => {
+        // setIsLoading(false);
+        console.log("finally");
+      });
   };
 
   const handleInputChange = (event) => {
