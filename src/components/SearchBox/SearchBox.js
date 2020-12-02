@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SearchBox.module.scss";
 import { fetchUser } from "../../webservices";
 import { useHistory } from "react-router-dom";
+import { GlobalContext } from "../../context/GlobalState";
+import { routes } from "../../Routes";
 
 const SearchBox = () => {
+  const { userInfo } = useContext(GlobalContext);
   const [userState, setUserState] = useState("");
   const history = useHistory();
   const onChange = (e) => {
     // e.preventDefault();
     fetchUser(userState)
       .then((res) => {
-        console.log("res.data: ", res.data);
+        userInfo(res.data);
+        res.data && history.push(routes.details(userState));
       })
       .catch((error) => error && history.push("/notfound"))
       .finally(() => {

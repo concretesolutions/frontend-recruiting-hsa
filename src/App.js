@@ -4,14 +4,17 @@ import { Router } from "react-router-dom";
 import Routes, { routes } from "./Routes";
 import history from "./config/historyRouter";
 import { configureAxios } from "./webservices";
+import { GlobalProvider } from "./context/GlobalState";
 
 configureAxios();
 
 function App() {
   return (
-    <Router history={history}>
-      <Routes />
-    </Router>
+    <GlobalProvider>
+      <Router history={history}>
+        <Routes />
+      </Router>
+    </GlobalProvider>
   );
 }
 

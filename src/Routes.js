@@ -10,9 +10,6 @@ const Routes = () => (
     <Route
       path="/users/:user"
       render={({ match }) => {
-        // Utilizar render nos permite abstraer el routing fuera del componente
-        // de esta manera Detail recibe el movieId en lugar de recibir el
-        // match del router, con lo que reducimos su acoplamiento.
         const { user } = match.params;
         return <Details user={user} />;
       }}
