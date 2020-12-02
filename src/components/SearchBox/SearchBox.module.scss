@@ -1,11 +1,10 @@
 .searchbox__container {
-  padding: 20px;
   display: flex;
   flex-direction: row;
 
   .searchbox__input {
     padding: 10px;
-    padding-left: 300px;
+    padding-left: 400px;
     border-radius: 3px;
     border: solid 2px rgba(185, 182, 182, 0.5);
   }
@@ -19,6 +18,50 @@
 
     .searchbox__icon {
       color: rgb(255, 255, 255);
+    }
+  }
+}
+
+// @media (max-width: 480px) {
+//   .searchbox__container {
+//     .searchbox__input {
+//       padding-left: 100px;
+//     }
+
+//     .searchbox__button {
+//       padding: 10px 25px;
+//     }
+//   }
+// }
+
+@media (max-width: 480px) {
+  .searchbox__container {
+    .searchbox__input {
+      padding-left: 110px;
+    }
+
+    .searchbox__button {
+      padding: 10px 20px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .searchbox__container {
+    .searchbox__input {
+      padding-left: 180px;
+    }
+
+    .searchbox__button {
+      padding: 10px 25px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .searchbox__container {
+    .searchbox__input {
+      padding-left: 300px;
     }
   }
 }

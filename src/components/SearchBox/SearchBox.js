@@ -14,7 +14,7 @@ const SearchBox = () => {
         className={styles.searchbox__input}
         // placeholder="search..."
       />
-      <a href="#" onClick={handleClick} className={styles.searchbox__button}>
+      <a href="/#" onClick={handleClick} className={styles.searchbox__button}>
         <FontAwesomeIcon
           icon={faSearch}
           size="lg"
