@@ -7,13 +7,31 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+    margin-left: 0;
 
     .details__logo {
       // margin-top: -40px;
+      display: flex;
+      justify-content: left;
       flex: 3;
     }
 
     .details__searchbox {
+      flex: 7;
+    }
+  }
+
+  .details__user__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .details__user_card {
+      flex: 3;
+    }
+
+    .details__user_repository {
       flex: 7;
     }
   }

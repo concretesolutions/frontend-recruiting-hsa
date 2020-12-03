@@ -1,0 +1,40 @@
+.card__container {
+  width: 100%;
+  overflow: hidden;
+
+  .card__content {
+    margin: 1rem;
+    margin-top: 0.5rem;
+
+    h3,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      font-weight: lighter;
+      font-size: 30px;
+      color: rgb(172, 83, 242);
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .card__content__score {
+      display: flex;
+      flex-direction: row;
+
+      .card__icon {
+        margin-right: 6px;
+        font-size: 20px;
+      }
+
+      p {
+        font-weight: 200;
+      }
+    }
+  }
+}
