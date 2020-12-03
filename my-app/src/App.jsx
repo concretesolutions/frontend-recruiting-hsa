@@ -1,13 +1,27 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Home from './View/Home.jsx';
 
 function App() {
   return (
-    <div className="Title">
-      <h1>
-        GitHub Search
-      </h1>
-    </div>
+    <Router>
+      <Switch>
+
+        <Route path="/" exact>
+            <Home />
+        </Route>
+
+        <Route path="/results">
+          
+        </Route>
+
+      </Switch>
+    </Router>
   );
 }
 
