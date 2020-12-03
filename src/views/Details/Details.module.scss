@@ -34,7 +34,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .details__container {
     .details__searchbox__container {
       display: flex;
@@ -51,8 +51,18 @@
       align-items: center;
       margin-top: 20px;
 
-      .details__user_repository {
-        margin-top: 20px;
+      .details__user_card {
+        margin-left: 45px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .details__container {
+      .details__user__container {
+        .details__user_repository {
+          margin-top: 20px;
+        }
       }
     }
   }
@@ -68,6 +78,12 @@
       }
       .details__searchbox {
         width: 80%;
+      }
+    }
+
+    .details__user__container {
+      .details__user_repository {
+        margin-left: 30px;
       }
     }
   }
