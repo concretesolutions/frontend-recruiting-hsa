@@ -1,16 +1,14 @@
 .details__container {
-  margin: 5px 30px;
+  margin: 20px 30px;
 
   .details__searchbox__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
-    margin-left: 0;
+    margin-bottom: 25px;
 
     .details__logo {
-      // margin-top: -40px;
       display: flex;
       justify-content: left;
       flex: 3;
@@ -33,6 +31,45 @@
 
     .details__user_repository {
       flex: 7;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .details__container {
+    .details__searchbox__container {
+      display: flex;
+      flex-direction: column;
+
+      .details__searchbox {
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+    .details__user__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+
+      .details__user_repository {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .details__container {
+    .details__searchbox__container {
+      margin-bottom: 5px;
+      .details__logo {
+        margin-right: 10px;
+        margin-bottom: 17px;
+      }
+      .details__searchbox {
+        width: 80%;
+      }
     }
   }
 }
