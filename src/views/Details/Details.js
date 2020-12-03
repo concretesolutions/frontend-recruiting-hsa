@@ -2,6 +2,8 @@ import React, { useEffect, useContext } from "react";
 import styles from "./Details.module.scss";
 import { GlobalContext } from "../../context/GlobalState";
 import Card from "../../components/Card";
+import Searchbox from "../../components/SearchBox";
+import Logo from "../../components/Logo";
 
 const Details = () => {
   const { user } = useContext(GlobalContext);
@@ -9,8 +11,15 @@ const Details = () => {
 
   return (
     <div className={styles.details__container}>
-      {/* Details */}
-      {user.length != 0 && (
+      <div className={styles.details__searchbox__container}>
+        <div className={styles.details__logo}>
+          <Logo />
+        </div>
+        <div className={styles.details__searchbox}>
+          <Searchbox />
+        </div>
+      </div>
+      {user.length !== 0 && (
         <Card
           name={user.name || user.login}
           username={user.login}
