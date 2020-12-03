@@ -12,13 +12,19 @@
       padding: 0;
     }
 
-    h3 {
-      font-weight: lighter;
-      font-size: 30px;
-      color: rgb(172, 83, 242);
+    a:link,
+    a:visited,
+    a:active {
+      text-decoration: none;
+
+      h3 {
+        font-weight: lighter;
+        font-size: 30px;
+        color: rgb(172, 83, 242);
+      }
     }
     p {
-      font-weight: 400;
+      font-weight: 300;
       font-size: 16px;
       margin-bottom: 12px;
     }

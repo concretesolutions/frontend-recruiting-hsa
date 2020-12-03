@@ -4,6 +4,11 @@ export default (state, action) => {
       return {
         user: action.payload,
       };
+    case "USER_REPO":
+      return {
+        ...state,
+        userRepository: action.payload,
+      };
     default:
       return state;
   }

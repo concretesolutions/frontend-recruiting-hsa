@@ -5,6 +5,7 @@ const initialState = {
   user: localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user"))
     : "",
+  userRepository: [],
 };
 
 //create context
@@ -21,14 +22,20 @@ export const GlobalProvider = (props) => {
   //actions
   const userInfo = (user) => {
     dispatch({ type: "USER_INFO", payload: user });
-    console.log("dispatch ", user);
+  };
+
+  const userRepo = (userRepository) => {
+    dispatch({ type: "USER_REPO", payload: userRepository });
+    console.log("dispatch ", userRepository);
   };
 
   return (
     <GlobalContext.Provider
       value={{
         user: state.user,
+        userRepository: state.userRepository,
         userInfo,
+        userRepo,
       }}
     >
       {props.children}
