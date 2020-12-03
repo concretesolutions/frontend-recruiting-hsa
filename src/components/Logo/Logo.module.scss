@@ -5,9 +5,15 @@
   font-size: 60px;
   text-align: center;
 
-  div span {
-    font-weight: lighter;
-    font-style: italic;
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: black;
+    div span {
+      font-weight: lighter;
+      font-style: italic;
+    }
   }
 
   &.logo__size--default {

@@ -6,9 +6,11 @@ const Logo = ({ size }) => {
     <div
       className={`${styles.logo__container} ${styles[`logo__size--${size}`]}`}
     >
-      <div>
-        Github <span>Search</span>
-      </div>
+      <a href="/">
+        <div>
+          Github <span>Search</span>
+        </div>
+      </a>
     </div>
   );
 };
