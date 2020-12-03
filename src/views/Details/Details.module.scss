@@ -56,13 +56,14 @@
       }
     }
   }
+}
 
-  @media (max-width: 640px) {
-    .details__container {
-      .details__user__container {
-        .details__user_repository {
-          margin-top: 20px;
-        }
+@media (max-width: 640px) {
+  .details__container {
+    .details__searchbox__container {
+      .details__searchbox {
+        margin-right: 40px;
+        width: 100%;
       }
     }
   }
