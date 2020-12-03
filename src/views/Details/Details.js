@@ -5,10 +5,16 @@ import Card from "../../components/Card";
 import Searchbox from "../../components/SearchBox";
 import Logo from "../../components/Logo";
 import CardRepository from "../../components/CardRepository";
+import { fetchUserRepo } from "../../webservices";
 
 const Details = () => {
   const { user } = useContext(GlobalContext);
   console.log("recibido: ", user.avatar_url);
+  useEffect(() => {
+    fetchUserRepo(user.login).then((res) => {
+      console.info("repos", res.data);
+    });
+  }, [user]);
 
   return (
     <div className={styles.details__container}>
