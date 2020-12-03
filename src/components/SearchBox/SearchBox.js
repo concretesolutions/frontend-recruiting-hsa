@@ -11,12 +11,12 @@ const SearchBox = () => {
   const { userInfo } = useContext(GlobalContext);
   const [userState, setUserState] = useState("");
   const history = useHistory();
-  const onChange = (e) => {
-    // e.preventDefault();
+  const onChange = () => {
     fetchUser(userState)
       .then((res) => {
         userInfo(res.data);
         res.data && history.push(routes.details(res.data.login));
+        setUserState("");
       })
       .catch((error) => error && history.push(routes.notfound()))
       .finally(() => {
@@ -28,14 +28,21 @@ const SearchBox = () => {
     setUserState(event.target.value);
     console.log(event.target.value);
   };
+
+  const onKeyEnter = (event) => {
+    if (event.key === "Enter") {
+      onChange();
+    }
+  };
   return (
     <div className={styles.searchbox__container}>
       <input
         type="text"
         name="search"
+        value={userState}
         onChange={handleInputChange}
+        onKeyPress={onKeyEnter}
         className={styles.searchbox__input}
-        // placeholder="search..."
       />
       <button
         href="/#"

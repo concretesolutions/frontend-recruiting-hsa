@@ -11,6 +11,8 @@ sketch
 *.sass.map
 *.scss.map
 
+.eslintcache
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/tasks.json
