@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 
   .searchbox__input {
     padding: 10px;
-    width: 550px;
-    margin: 8px 0;
+    width: 100%;
     outline: none;
     border-radius: 3px;
     border: solid 2px rgba(185, 182, 182, 0.5);

@@ -1,13 +1,20 @@
 import React from "react";
 import styles from "./Logo.module.scss";
 
-const Logo = () => {
+const Logo = ({ size }) => {
   return (
-    <div className={styles.logo__container}>
-      <h1>
+    <div
+      className={`${styles.logo__container} ${styles[`logo__size--${size}`]}`}
+    >
+      <div>
         Github <span>Search</span>
-      </h1>
+      </div>
     </div>
   );
 };
+
+Logo.defaultProps = {
+  size: "default",
+};
+
 export default Logo;

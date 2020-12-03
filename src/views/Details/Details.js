@@ -13,7 +13,7 @@ const Details = () => {
     <div className={styles.details__container}>
       <div className={styles.details__searchbox__container}>
         <div className={styles.details__logo}>
-          <Logo />
+          <Logo size="small" />
         </div>
         <div className={styles.details__searchbox}>
           <Searchbox />
