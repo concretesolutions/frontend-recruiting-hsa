@@ -2,6 +2,8 @@
 
 This project was developed to fulfill the Accenture HSA team recruitment challenge, was developed in Angular.
 
+You can find the original challenge [here](https://github.com/concretesolutions/frontend-recruiting-hsa).
+
 ## Installation
 
 Open a Terminal and create a new directory in your home directory, For example 'angular-project' and goto there.

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 //Services
-import { SearchService } from './components/search/search.service';
+import { UserDetailService } from './services/user-detail/user-detail.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ResultComponent } from './components/result/result.component';
 import { DetailComponent } from './components/detail/detail.component';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -28,10 +29,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [
-    SearchService
+    UserDetailService
   ],
   bootstrap: [AppComponent]
 })

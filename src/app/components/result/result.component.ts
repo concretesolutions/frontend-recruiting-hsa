@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UserDetailService } from './../../services/user-detail/user-detail.service';
+
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
   userExist: boolean = true;
-  constructor() { }
+  constructor(
+    private userDetailService: UserDetailService
+  ) { }
 
   ngOnInit(): void {
+    this.userDetailService.userExist.subscribe(res => {
+      this.userExist = res;
+    });
   }
 
 }
