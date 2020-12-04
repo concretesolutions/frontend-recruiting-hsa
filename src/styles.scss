@@ -1,0 +1,28 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333333;
+    font-size: 16px;
+    word-spacing: 2px;
+}
+
+.githubTitle {
+    font-family: 'Monaco', sans-serif;
+}
+
+.searchTitle {
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Monaco';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/Monaco.woff') format('woff');
+}

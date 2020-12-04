@@ -1,0 +1,7 @@
+<app-header></app-header>
+<section *ngIf="!userExist; else whenExist">
+    <app-page-not-found></app-page-not-found>
+</section>
+<ng-template #whenExist>
+    <app-detail></app-detail>
+</ng-template>

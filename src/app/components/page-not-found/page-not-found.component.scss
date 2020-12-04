@@ -1,0 +1,13 @@
+.not-found-text {
+    font-family: Raleway;
+    font-size: 40px;
+    color:#ac53f2;
+    text-align: center; 
+    margin-top: 80px;  
+}
+
+@media screen and (max-width:400px){
+    .not-found-text {
+        font-size: 30px;
+    }
+}
