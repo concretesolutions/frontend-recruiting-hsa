@@ -10,7 +10,6 @@ const CardRepository = ({ title, description, score, url }) => {
         <a href={url}>
           <h3>{title}</h3>
         </a>
-        {/* <p>{username}</p> */}
         <p>{description}</p>
         <div className={styles.card__content__score}>
           <p>

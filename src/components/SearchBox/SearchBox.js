@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import styles from "./SearchBox.module.scss";
-import { fetchUser } from "../../webservices";
 import { useHistory } from "react-router-dom";
+import { fetchUser } from "../../webservices";
 import { GlobalContext } from "../../context/GlobalState";
 import { routes } from "../../Routes";
+import styles from "./SearchBox.module.scss";
 
 const SearchBox = () => {
   const { userInfo } = useContext(GlobalContext);

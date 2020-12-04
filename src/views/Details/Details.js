@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
-import styles from "./Details.module.scss";
-import { GlobalContext } from "../../context/GlobalState";
 import Card from "../../components/Card";
 import Searchbox from "../../components/SearchBox";
 import Logo from "../../components/Logo";
 import CardRepository from "../../components/CardRepository";
 import { fetchUserRepo } from "../../webservices";
+import { GlobalContext } from "../../context/GlobalState";
+import styles from "./Details.module.scss";
 
 const Details = () => {
   const { user, userRepository, userRepo } = useContext(GlobalContext);
