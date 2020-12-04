@@ -15,18 +15,14 @@ const SearchBox = () => {
     fetchUser(userState)
       .then((res) => {
         userInfo(res.data);
-        res.data && history.push(routes.details(res.data.login));
         setUserState("");
+        res.data && history.push(routes.details(res.data.login));
       })
-      .catch((error) => error && history.push(routes.notfound()))
-      .finally(() => {
-        console.log("finally");
-      });
+      .catch((error) => error && history.push(routes.notfound()));
   };
 
   const handleInputChange = (event) => {
     setUserState(event.target.value);
-    console.log(event.target.value);
   };
 
   const onKeyEnter = (event) => {

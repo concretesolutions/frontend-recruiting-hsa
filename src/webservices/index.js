@@ -13,6 +13,5 @@ export function fetchUser(username) {
 
 export function fetchUserRepo(username) {
   const url = `users/${username}/repos`;
-  console.log("url: ", url);
   return axios.get(url);
 }

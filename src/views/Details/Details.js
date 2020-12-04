@@ -19,7 +19,7 @@ const Details = () => {
 
   useEffect(() => {
     let repository = [];
-    if (userRepository && userRepository.length !== 0) {
+    if (userRepository && Array.isArray(userRepository)) {
       repository = userRepository.sort(
         (a, b) => b.stargazers_count - a.stargazers_count
       );

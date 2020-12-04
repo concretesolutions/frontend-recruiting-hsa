@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserFriends,
-  faAt,
   faBookOpen,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
@@ -17,8 +16,6 @@ const Card = ({
   avatar,
   urlProfile,
 }) => {
-  console.log("PROPS: ", bio);
-
   return (
     <div className={styles.card__container}>
       <div className={styles.image__container}>

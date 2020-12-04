@@ -26,7 +26,6 @@ export const GlobalProvider = (props) => {
 
   const userRepo = (userRepository) => {
     dispatch({ type: "USER_REPO", payload: userRepository });
-    console.log("dispatch ", userRepository);
   };
 
   return (
