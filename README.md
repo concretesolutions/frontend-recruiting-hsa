@@ -27,6 +27,8 @@ $ npm install
 $ npm start
 ```
 
-## License
+### Demo
 
-ISC - [More here](https://www.isc.org/licenses/)
+-The project was deployed on Netlify
+
+- [Click here](https://quizzical-snyder-ac1456.netlify.app)
