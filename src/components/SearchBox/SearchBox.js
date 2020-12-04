@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SearchBox.module.scss";
@@ -9,20 +9,23 @@ import { routes } from "../../Routes";
 
 const SearchBox = () => {
   const { userInfo } = useContext(GlobalContext);
-  const [userState, setUserState] = useState("");
+  const [search, setSearch] = useState("");
   const history = useHistory();
+
   const onChange = () => {
-    fetchUser(userState)
-      .then((res) => {
-        userInfo(res.data);
-        setUserState("");
-        res.data && history.push(routes.details(res.data.login));
-      })
-      .catch((error) => error && history.push(routes.notfound()));
+    if (search) {
+      fetchUser(search)
+        .then((res) => {
+          userInfo(res.data);
+          setSearch("");
+          res.data && history.push(routes.details(res.data.login));
+        })
+        .catch((error) => error && history.push(routes.notfound()));
+    }
   };
 
   const handleInputChange = (event) => {
-    setUserState(event.target.value);
+    setSearch(event.target.value);
   };
 
   const onKeyEnter = (event) => {
@@ -30,18 +33,18 @@ const SearchBox = () => {
       onChange();
     }
   };
+
   return (
     <div className={styles.searchbox__container}>
       <input
         type="text"
         name="search"
-        value={userState}
+        value={search}
         onChange={handleInputChange}
         onKeyPress={onKeyEnter}
         className={styles.searchbox__input}
       />
       <button
-        href="/#"
         type="submit"
         onClick={onChange}
         className={styles.searchbox__button}
@@ -55,4 +58,5 @@ const SearchBox = () => {
     </div>
   );
 };
+
 export default SearchBox;

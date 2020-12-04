@@ -8,7 +8,7 @@
     padding: 10px;
     width: 100%;
     outline: none;
-    border-radius: 3px;
+    border-radius: 3px 0 0 3px;
     border: solid 2px rgba(185, 182, 182, 0.5);
     transition: 0.3s;
   }
@@ -24,10 +24,10 @@
     justify-content: center;
     align-items: center;
     width: 70px;
-    height: 40px;
+    height: 39px;
     outline: none;
     border: none;
-    border-radius: 3px;
+    border-radius: 0 3px 3px 0;
     background-color: rgb(172, 83, 242);
     cursor: pointer;
 
@@ -43,10 +43,6 @@
 
 @media (max-width: 480px) {
   .searchbox__container {
-    .searchbox__input {
-      width: 70px;
-    }
-
     .searchbox__button {
       padding: 10px 25px;
     }
@@ -55,20 +51,8 @@
 
 @media (max-width: 640px) {
   .searchbox__container {
-    .searchbox__input {
-      width: 200px;
-    }
-
     .searchbox__button {
       width: 60px;
-    }
-  }
-}
-
-@media (max-width: 960px) {
-  .searchbox__container {
-    .searchbox__input {
-      width: 500px;
     }
   }
 }
