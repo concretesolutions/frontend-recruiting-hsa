@@ -55,13 +55,15 @@ const Details = () => {
         <div className={styles.details__user_repository}>
           {repositoryState.length !== 0 &&
             repositoryState.map((repo) => (
-              <CardRepository
-                key={repo.id}
-                title={repo.name}
-                description={repo.description !== null}
-                score={repo.stargazers_count}
-                url={repo.html_url}
-              />
+              <div className={styles.details__repository_item}>
+                <CardRepository
+                  key={repo.id}
+                  title={repo.name}
+                  description={repo.description !== null}
+                  score={repo.stargazers_count}
+                  url={repo.html_url}
+                />
+              </div>
             ))}
         </div>
       </div>
