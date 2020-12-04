@@ -1,0 +1,86 @@
+.notfound__container {
+  margin: 20px 30px;
+
+  .notfound__searchbox__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .notfound__logo {
+      display: flex;
+      justify-content: left;
+      flex: 3;
+    }
+
+    .notfound__searchbox {
+      flex: 7;
+    }
+  }
+
+  .notfound__message {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    span {
+      font-size: 70px;
+      font-weight: lighter;
+      color: rgb(172, 83, 242);
+      margin-top: 100px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound__container {
+    .notfound__searchbox__container {
+      display: flex;
+      flex-direction: column;
+
+      .notfound__searchbox {
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+    }
+
+    .notfound__message {
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .notfound__container {
+    .notfound__searchbox__container {
+      .notfound__searchbox {
+        margin-right: 40px;
+      }
+    }
+
+    .notfound__message {
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .notfound__container {
+    .notfound__searchbox__container {
+      margin-bottom: 5px;
+      .notfound__logo {
+        margin-right: 10px;
+        margin-bottom: 17px;
+      }
+      .notfound__searchbox {
+        width: 80%;
+      }
+    }
+  }
+}

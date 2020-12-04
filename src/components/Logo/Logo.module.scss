@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,300&display=swap");
+
+.logo__container {
+  font-family: "Lato", sans-serif;
+  font-size: 60px;
+  text-align: center;
+
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: black;
+    div span {
+      font-weight: lighter;
+      font-style: italic;
+    }
+  }
+
+  &.logo__size--default {
+    font-size: 60px;
+  }
+
+  &.logo__size--small {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo__container {
+    text-align: center;
+    font-size: 25px;
+  }
+}

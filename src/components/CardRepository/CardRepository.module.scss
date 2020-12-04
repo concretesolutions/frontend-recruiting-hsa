@@ -1,0 +1,43 @@
+.card__container {
+  width: 100%;
+  overflow: hidden;
+
+  .card__content {
+    h3,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+      text-decoration: none;
+
+      h3 {
+        font-weight: lighter;
+        font-size: 30px;
+        color: rgb(172, 83, 242);
+      }
+    }
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .card__content__score {
+      display: flex;
+      flex-direction: row;
+
+      .card__icon {
+        margin-right: 6px;
+        font-size: 20px;
+      }
+
+      p {
+        font-weight: 200;
+      }
+    }
+  }
+}
