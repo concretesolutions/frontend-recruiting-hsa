@@ -37,7 +37,9 @@ export class UserDetailService {
       this.userInfoSubject.next(res);
 
       this.callReposUser(username)
-      .subscribe(repos => {
+      .subscribe(data => {
+        // Order by update date
+        let repos = data.sort((a,b) => (new Date(a.updated_at) > new Date(b.updated_at) ? -1 : 1)); 
         this.repoUserSubject.next(repos);
       })
     },
