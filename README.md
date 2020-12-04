@@ -11,7 +11,7 @@ The main functionalities developed were:
 This test project uses a number of open source library to work properly:
 
 - [React](https://es.reactjs.org/) - Javascript library
-- [Axios](https://react-icons.netlify.com/) - Icons Package
+- [Axios](https://www.npmjs.com/package/axios) - Axios
 - [Sass](https://sass-lang.com/) - A CSS preprocessor
 - [React-router](https://reactrouter.com/) - React-router
 
