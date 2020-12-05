@@ -1,3 +1,5 @@
+@import '_variables';
+
 .header {
     text-align: center;  
     margin-top: 5vh; 
@@ -10,7 +12,7 @@
     display: inline-block;
 }
 .title {
-    font-size: 40px;
+    font-size: $headerTitleFontSize;
     word-spacing: -20px;
 }
 
@@ -24,7 +26,7 @@
         margin-right: 30px; 
     }
     .title {
-        font-size: 50px;
+        font-size: $headerTitleFontSize550;
     }  
 }
 @media screen and (min-width:400px) and (max-width:550px){
@@ -32,7 +34,7 @@
         margin-right: 0px; 
     } 
     .title {
-        font-size: 40px;
+        font-size: $headerTitleFontSize400;
     } 
 }
 @media screen and (max-width:400px){
@@ -40,6 +42,6 @@
         margin-right: 0px; 
     } 
     .title {
-        font-size: 35px;
+        font-size: $headerTitleFontSize300;
     }
 }

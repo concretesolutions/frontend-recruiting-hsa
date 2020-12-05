@@ -15,6 +15,7 @@ export class DetailComponent implements OnInit {
   reposUser: Repositorie[];
   totalStarts: number = 0;
   username: string = '';
+  existsRepos: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -34,6 +35,9 @@ export class DetailComponent implements OnInit {
             this.reposUser = res;
             if (this.reposUser.length > 0) {
               this.totalStarts = this.reposUser.reduce((a,b) => a + b.stargazers_count, 0);
+              this.existsRepos = '';
+            } else {
+              this.existsRepos = 'No repositories found';
             }
           });
     

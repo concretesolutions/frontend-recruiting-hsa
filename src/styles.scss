@@ -1,3 +1,5 @@
+@import '_variables';
+
 * {
     margin: 0%;
     padding: 0%;
@@ -5,19 +7,24 @@
 }
 
 body {
-    color: #333333;
+    color: $bodyColor;
     font-size: 16px;
     word-spacing: 2px;
 }
 
 .githubTitle {
-    font-family: 'Monaco', sans-serif;
+    font-family: $fontGithubTitle;
 }
 
 .searchTitle {
-    font-family: Raleway;
+    font-family: $fontSearchTitle;
     font-style: italic;
     font-weight: 200;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
 }
 
 @font-face {

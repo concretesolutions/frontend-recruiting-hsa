@@ -1,6 +1,9 @@
+@import '_variables';
+
 .search {
   text-align: center;   
 }
+
 .searchInput {
   width: 650px;
   height: 50px;
@@ -9,23 +12,23 @@
   border:none;
   border-radius: 3px 0px 0px 3px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.19);
-  font-family: Raleway;
-  font-size: 20px;
+  font-family: $fontSearchTitle;
+  font-size: $searchInputFontSize;
   display: inline-block;
 }
 .searchBtn {
   width: 100px;
   height: 50px;
   border-radius: 0px 3px 3px 0px;
-  background-color: #ac53f2;
-  border: #ac53f2;
+  background-color: $styleColor;
+  border: $styleColor;
   padding: 0;
   margin:0;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
 }
 .searchBtn:hover {
-  background-color: #481670;
+  background-color: $searchBtnHoverColor;
 }
 .icon {
   height: 30px;

@@ -1,6 +1,8 @@
+@import '_variables';
+
 a {
     text-decoration: none;
-    color:#333333;
+    color: $linkColor;
 }
 .profile-icons {
     margin-bottom: 5px;
@@ -16,10 +18,10 @@ a {
     border-radius: 3px;
 }
 .user-name {
-    font-size: 35px;
+    font-size: $userNameFontSize;
 }
 .user-login {
-    font-size: 20px;
+    font-size: $userLoginFontSize;
 }
 .user-email {
     max-width: 280px;
@@ -31,11 +33,11 @@ a {
 }
 
 .repo-name {
-    font-size: 35px;
-    color:#ac53f2;
+    font-size: $repoNameFontSize;
+    color: $styleColor;
 }
 .repo-description {
-    font-size: 20px; 
+    font-size: $repoDescriptionFontSize; 
 }
 .repo-container {
     margin-bottom: 30px;
@@ -44,7 +46,7 @@ a {
 @media (min-width:765px){
     .main {
         margin-top: 50px;
-        font-family: Raleway;
+        font-family: $fontSearchTitle;
         display: flex;
         margin: 6%;
     }
@@ -58,7 +60,7 @@ a {
 }
 @media screen and (min-width:400px) and (max-width:765px){
     .main {
-        font-family: Raleway;
+        font-family: $fontSearchTitle;
         margin: 6%;
     }
     .details {
@@ -70,7 +72,7 @@ a {
 }
 @media (max-width:400px){
     .main {
-        font-family: Raleway;
+        font-family: $fontSearchTitle;
         margin: 6%;
     }
     .details {

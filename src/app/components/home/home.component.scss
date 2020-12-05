@@ -1,9 +1,10 @@
+@import '_variables';
 
 .home{
     text-align: center;
 }
 .title {
-    font-size: 60px;
+    font-size: $homeTitleFontSize;
     letter-spacing: normal;
 }
 
@@ -17,16 +18,16 @@ p {
 
 @media screen and (min-width:550px) and (max-width:995px){
     .title {
-        font-size: 60px;
+        font-size: $homeTitleFontSize550;
     }
 }
 @media screen and (min-width:400px) and (max-width:550px){
     .title {
-        font-size: 40px;
+        font-size: $homeTitleFontSize400;
     }
 }
 @media screen and (max-width:400px){
     .title {
-        font-size: 35px;
+        font-size: $homeTitleFontSize300;
     }
 }

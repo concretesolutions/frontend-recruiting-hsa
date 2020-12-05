@@ -1,13 +1,15 @@
+@import '_variables';
+
 .not-found-text {
-    font-family: Raleway;
-    font-size: 40px;
-    color:#ac53f2;
+    font-family: $fontSearchTitle;
+    font-size: $notFoundFontSize;
+    color:$styleColor;
     text-align: center; 
     margin-top: 80px;  
 }
 
 @media screen and (max-width:400px){
     .not-found-text {
-        font-size: 30px;
+        font-size: $notFoundFontSize400;
     }
 }
