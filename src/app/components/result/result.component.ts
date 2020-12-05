@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserDetailService } from './../../services/user-detail/user-detail.service';
+import { UserDetailService } from '@services/user-detail/user-detail.service';
 
 @Component({
   selector: 'app-result',

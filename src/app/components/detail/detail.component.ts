@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import { UserDetailService } from './../../services/user-detail/user-detail.service';
-import { UserDetail } from './../../models/userDetail';
-import { Repositorie } from './../../models/repositories';
+import { UserDetailService } from '@services/user-detail/user-detail.service';
+import { UserDetail } from '@models/userDetail';
+import { Repositorie } from '@models/repositories';
 
 @Component({
   selector: 'app-detail',
@@ -13,8 +13,7 @@ import { Repositorie } from './../../models/repositories';
 export class DetailComponent implements OnInit {
   userInfo: UserDetail;
   reposUser: Repositorie[];
-  urlTest: string = "https://www.github.com";
-  avatarUrl: string = "https://avatars1.githubusercontent.com/u/15023840?v=4";
+  totalStarts: number = 0;
   username: string = '';
 
   constructor(
@@ -33,6 +32,9 @@ export class DetailComponent implements OnInit {
     
           this.userDetailService.reposUser.subscribe(res => {
             this.reposUser = res;
+            if (this.reposUser.length > 0) {
+              this.totalStarts = this.reposUser.reduce((a,b) => a + b.stargazers_count, 0);
+            }
           });
     
           this.userDetailService.getUserInfo(this.username);

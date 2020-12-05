@@ -2,30 +2,31 @@
     <section class="details">
         <div *ngIf="userInfo">
             <a [href]="userInfo.url" target="_blank"><img [src]="userInfo.avatar_url" class="user-avatar"></a>
-            <a [href]="userInfo.url" target="_blank">
+            <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.name">
                 <p class="user-name">{{ userInfo.name }}</p>
             </a>
-            <a [href]="userInfo.url" target="_blank"><p class="user-login">{{ userInfo.login }}</p></a>
-            <a [href]="userInfo.url" target="_blank"><p class="user-email">{{ userInfo.email }}</p></a>
-            <a [href]="userInfo.url" target="_blank"><p class="user-bio">{{ userInfo.bio }}</p></a>
-            <div class="profile-icons" style="margin-top: 25px">
-                <img src="../../../assets/img/icons/organization.png" class="icon">
+            <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.login"><p class="user-login">{{ userInfo.login }}</p></a>
+            <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.email"><p class="user-email">{{ userInfo.email }}</p></a>
+            <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.bio"><p class="user-bio">{{ userInfo.bio }}</p></a>
+            <br />
+            <div class="profile-icons" style="margin-top: 25px" *ngIf="userInfo.company">
+                <img src="assets/img/icons/organization.png" class="icon">
                 <span>{{ userInfo.company }}</span>
             </div>
-            <div class="profile-icons">
-                <img src="../../../assets/img/icons/location.png" class="icon">
+            <div class="profile-icons" *ngIf="userInfo.location">
+                <img src="assets/img/icons/location.png" class="icon">
                 <span>{{ userInfo.location }}</span>
             </div>
             <div class="profile-icons">
-                <img src="../../../assets/img/icons/star.png" class="icon">
-                <span>10</span>
+                <img src="assets/img/icons/star.png" class="icon">
+                <span>{{ totalStarts }}</span>
             </div>
-            <div class="profile-icons">
-                <img src="../../../assets/img/icons/repositorie.png" class="icon">
+            <div class="profile-icons" *ngIf="userInfo.public_repos">
+                <img src="assets/img/icons/repositorie.png" class="icon">
                 <span>{{ userInfo.public_repos }}</span>
             </div>
-            <div class="profile-icons">
-                <img src="../../../assets/img/icons/followers.png" class="icon">
+            <div class="profile-icons" *ngIf="userInfo.followers">
+                <img src="assets/img/icons/followers.png" class="icon">
                 <span>{{ userInfo.followers }}</span>
             </div>
         </div>
@@ -35,7 +36,7 @@
             <a [href]="repo.html_url" target="_blank"><h1 class="repo-name">{{ repo.name }}</h1></a>
             <a [href]="repo.html_url" target="_blank"><p class="repo-description">{{ repo.description }}</p></a>
             <div style="margin-top: 5px">
-                <img src="../../../assets/img/icons/star.png" class="icon">
+                <img src="assets/img/icons/star.png" class="icon">
                 <span> {{ repo.stargazers_count }} </span>
             </div>
         </div>
