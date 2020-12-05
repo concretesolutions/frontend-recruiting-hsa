@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './cssComponents/search.css'
+
+
 const Search = () => {
 
     const [data, setData] = useState({});
@@ -12,14 +14,12 @@ const Search = () => {
 
     const submitHandler = async e => {
         e.preventDefault();
-
-        const user = await fetch(`https://api.github.com/users/${userName}`); //Calling GitHub API
+        //Calling GitHub API
+        const user = await fetch(`https://api.github.com/users/${userName}`); 
         const userJson = await user.json();
-        console.log(userJson);
-
+        //Fetching repo from user
         const repos = await fetch(userJson.repos_url);
         const repoJson = await repos.json();
-        //console.log(repoJson);
 
         if (userJson) {
             setData(userJson);
@@ -34,24 +34,21 @@ const Search = () => {
                 <h3 className="titleTwo">Search</h3>
             </div>
             <div className="searchInput">
-            <input 
-            type="text" 
-            className="searchName" 
-            placeholder="Buscar nombre de usuario"
-            value={userName}
-            onChange={onChangeHandler}
-            />
-            <button
-            className="searchBtn"
-            type="submit"
-            onClick={submitHandler}
-            >
-                Buscar  
-            </button>
-            </div>
-            
-
-            
+                <input 
+                type="text" 
+                className="searchName" 
+                placeholder="Buscar nombre de usuario"
+                value={userName}
+                onChange={onChangeHandler}
+                />
+                <button
+                className="searchBtn"
+                type="submit"
+                onClick={submitHandler}
+                >
+                <i className="fas fa-search"></i>  
+                </button>
+            </div>                        
         </div>
     )
 }

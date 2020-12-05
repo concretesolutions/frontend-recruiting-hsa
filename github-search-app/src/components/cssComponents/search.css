@@ -3,64 +3,51 @@
     flex-direction: column;
     margin: 30px 50px 20px 50px;
     box-sizing: border-box;
-   /* background-color: red; */
 }
 .title{
-    /*background-color: antiquewhite; */
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100%;
-        /*padding-right: 20px;*/
 }
 .titleOne{
-    
-    /*background-color: blue; */
-    /*margin: 0 68px 0 167px; */
     font-family: Monaco;
     font-size: 60px;
-    font-weight: normal;
-
-    
-    
-    
+    font-weight: normal;   
     color: #000000;
 
 }
 .titleTwo{
-    /*background-color: brown;*/
     font-family: Raleway;
     font-size: 60px;
-
-  font-weight: 200;
-  font-style: italic;
+    font-weight: 200;
+    font-style: italic;
 }
 .searchInput{
-    /*background-color: aqua; */
-    
-
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
 }
 .searchName{
     width: 80%;
-    height: 50px;
-    
-    -webkit-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.48); 
+    height: 47px;
     box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.48);
     border: 1px;
 }
 .searchBtn{
     width: 100px;
-  height: 50px;
-  /*margin: 81px 0 0;*/
+    height: 50px;
     border-radius: 2px;
-
-   background-color:  #ac53f2;
-   border: none;
-
-
-
+    background-color:  #ac53f2;
+    border: none;
+}
+.fa-search{
+    color: white;
+    font-size: 20px;
 }
 
+/*MEDIA QUERIES*/
 @media all and (max-width: 1180px){
     .tittle { 
         width: 30%; 
@@ -76,8 +63,16 @@
         width: 100%; 
         justify-content: start; 
     }
-    .tittle{
-        flex-direction: column;
-        margin: 30px;
+    .searchInput{
+        width: 100%;
+        flex-direction: column;    
+    }
+    .searchBtn{
+        width: 100%;
+        height: 50px;      
+    }
+    .searchName{
+        width: 99%;
+        height: 50px;
     }
 }
