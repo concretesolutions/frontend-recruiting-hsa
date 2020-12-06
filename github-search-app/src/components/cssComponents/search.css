@@ -1,0 +1,67 @@
+.searchContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px 20px 50px;
+    box-sizing: border-box;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+.titleOne{
+    font-family: Monaco;
+    font-size: 60px;
+    font-weight: normal;   
+    color: #000000;
+
+}
+.titleTwo{
+    font-family: Raleway;
+    font-size: 60px;
+    font-weight: 200;
+    font-style: italic;
+}
+.searchInput{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.searchName{
+    width: 80%;
+    height: 47px;
+    box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.48);
+    border: 1px;
+}
+.searchBtn{
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+    background-color:  #ac53f2;
+    border: none;
+}
+.fa-search{
+    color: white;
+    font-size: 20px;
+}
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 650px){
+    
+    .searchInput{
+        width: 100%;
+        flex-direction: column;    
+    }
+    .searchBtn{
+        width: 100%;
+        height: 50px;
+      
+    }
+    .searchName{
+        width: 99%;
+        height: 50px;
+    }
+}
