@@ -1,10 +1,19 @@
 import React from 'react'
 import './cssComponents/resultProfile.css'
+import NotFound from './NotFound'
 
 
 const ResultProfile = (props) => {
-    
+    //Order by count of stars
+    props.repos.sort((a,b) => (
+        a.stargazers_count  > b.stargazers_count  ? -1 : a.stargazers_count  < b.stargazers_count  ? 1 : 0
+    )) 
+
     return (
+        <>
+        { props.userName !== props.data.login ? 
+            <NotFound/>
+        :
         <div className="resultContainer">
             <div className="resultProfile">
                 <div className="resultProfileNameImage">
@@ -69,8 +78,10 @@ const ResultProfile = (props) => {
                     ))
                 }
             </div>
-           
+              
         </div>
+        }
+        </>
     )
 }
 

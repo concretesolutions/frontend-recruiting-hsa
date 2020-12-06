@@ -18,7 +18,7 @@ const Search = () => {
         //Calling GitHub API
         const user = await fetch(`https://api.github.com/users/${userName}`); 
         const userJson = await user.json();
-        console.log(userJson);
+        
         //Fetching repo from user
         const repos = await fetch(userJson.repos_url);
         const repoJson = await repos.json();
@@ -54,7 +54,7 @@ const Search = () => {
                 
             </div>                        
         </div>
-            <ResultProfile data={data} repos={repos}/>
+            <ResultProfile data={data} repos={repos} userName={userName}/>
         </>
     )
 }
