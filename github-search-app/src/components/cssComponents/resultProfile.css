@@ -14,7 +14,6 @@ a{
 .resultProfileImage{
     width: 100%;
 }
-
 .resultProfileNameText{
     text-align: start;
     margin: 15px 0 0 0;
@@ -29,14 +28,12 @@ a{
     color: #5c5c5c;
 }
 .resultProfileIcons{
-    margin-top: 30px;
-    
+    margin-top: 30px;    
 }
 .profileIcons{
     display: flex;
     margin-top: 0px;
     margin-right: 5px;
-
 }
 .resultIcons{
     height: 25px;
@@ -47,8 +44,7 @@ a{
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 10px 10px 10px 100px;
-    
+    margin: 10px 10px 10px 200px;    
 }
 .resultProfileRepo{
     margin-bottom: 40px;
@@ -79,6 +75,11 @@ a{
 
 /*MEDIA QUERIES*/
 
+@media all and (max-width: 1024px){    
+    .resultProfileRepo{
+        margin-left: 120px;
+    }
+}
 @media all and (max-width: 768px){
     .resultProfileNameImage{
         width: 200px;
@@ -88,16 +89,17 @@ a{
         align-items: center;
     }
     .resultProfileRepo{
-        margin-left: 15px;
+        margin-left: 100px;
     }
 }
 @media all and (max-width: 650px){
     .resultContainer{
         flex-direction: column;
         align-items: center;
-        margin-left: -50px;
+        margin-left: -140px;
     }
     .resultProfileIcons{
         width: 100%;
+        flex-direction: row;
     }
 }

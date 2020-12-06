@@ -9,6 +9,14 @@ const ResultProfile = (props) => {
         a.stargazers_count  > b.stargazers_count  ? -1 : a.stargazers_count  < b.stargazers_count  ? 1 : 0
     )) 
 
+    //Count total stars
+    let stars=0;
+    const countStars = () => {
+        props.repos.map((item) => {
+            return stars += item.stargazers_count
+        })
+    } 
+    countStars();
     return (
         <>
         { props.userName !== props.data.login ? 
@@ -45,7 +53,7 @@ const ResultProfile = (props) => {
                 <div className="resultProfileIcons">
                     <div className="profileIcons">
                         <img className="resultIcons" src="https://i.ibb.co/svyC4pB/star.png" alt="Icono Estrella"/>
-                        <p className="resultProfileLogin">{props.data.stars}</p>
+                        <p className="resultProfileLogin">{stars}</p>
                     </div>
                 </div>
                 <div className="resultProfileIcons">
