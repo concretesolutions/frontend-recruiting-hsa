@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ResultProfile from './ResultProfile'
 import './cssComponents/search.css'
 
 
@@ -17,6 +18,7 @@ const Search = () => {
         //Calling GitHub API
         const user = await fetch(`https://api.github.com/users/${userName}`); 
         const userJson = await user.json();
+        console.log(userJson);
         //Fetching repo from user
         const repos = await fetch(userJson.repos_url);
         const repoJson = await repos.json();
@@ -28,6 +30,7 @@ const Search = () => {
     };
 
     return (
+        <>
         <div className="searchContainer">
             <div className="title">
                 <h3 className="titleOne">Github</h3>
@@ -48,8 +51,11 @@ const Search = () => {
                 >
                 <i className="fas fa-search"></i>  
                 </button>
+                
             </div>                        
         </div>
+            <ResultProfile data={data} repos={repos}/>
+        </>
     )
 }
 

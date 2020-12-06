@@ -1,0 +1,103 @@
+a{
+    text-decoration: none;
+}
+.resultContainer{
+    display: flex;
+    margin: 0 40px 40px 40px;
+}
+.resultProfile{
+    margin: 10px 10px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.resultProfileImage{
+    width: 100%;
+}
+
+.resultProfileNameText{
+    text-align: start;
+    margin: 15px 0 0 0;
+    font-family: Raleway;
+    font-size: 35px;
+}
+.resultProfileLogin{
+    text-align: start;
+    margin: 15px 0 0 2px;
+    font-family: Raleway;
+    font-size: 25px;
+    color: #5c5c5c;
+}
+.resultProfileIcons{
+    margin-top: 30px;
+    
+}
+.profileIcons{
+    display: flex;
+    margin-top: 0px;
+    margin-right: 5px;
+
+}
+.resultIcons{
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
+}
+.resultProfileRepos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 100px;
+    
+}
+.resultProfileRepo{
+    margin-bottom: 40px;
+    margin-left: 10px;
+    text-align: start;
+}
+.resultProfileRepoName{
+    margin: 0;
+    font-family: Raleway;
+    font-size: 35px;
+    color: #ac53f2;    
+}
+.resultProfileRepoDesc{
+    margin: 0px;
+    font-family: Raleway;
+    font-size: 20px;
+    
+}
+.resultProfileStars{
+    display: flex;
+    align-items: center;
+}
+.resultProfileRepoImg{
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 768px){
+    .resultProfileNameImage{
+        width: 200px;
+    }
+    .resultProfile { 
+        flex-direction: column; 
+        align-items: center;
+    }
+    .resultProfileRepo{
+        margin-left: 15px;
+    }
+}
+@media all and (max-width: 650px){
+    .resultContainer{
+        flex-direction: column;
+        align-items: center;
+        margin-left: -50px;
+    }
+    .resultProfileIcons{
+        width: 100%;
+    }
+}

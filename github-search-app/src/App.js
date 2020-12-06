@@ -6,8 +6,7 @@ import ResultProfile from './components/ResultProfile';
 function App() {
   return (
     <div className="App">
-      <Search/>
-      <ResultProfile/>
+      <Search/>  
     </div>
   );
 }
