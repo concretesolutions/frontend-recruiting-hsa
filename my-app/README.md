@@ -31,8 +31,8 @@ ya que una de ellas no estaba disponible para descarga. Ante esa pequeña proble
 
 ## 5. Historias de usuario
 
-![imagen](/src/img/chincheta) Yo, como usuario, quiero buscar un usuario de GitHub;
-![imagen](/src/img/chincheta) Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, imagen del avatar, e-mail y bio);
+![imagen](/src/img/chincheta.png) Yo, como usuario, quiero buscar un usuario de GitHub;
+![imagen](/src/img/chincheta.png) Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, imagen del avatar, e-mail y bio);
 ![imagen](/src/img/chincheta) Yo, como usuario, en la pantalla de detalhes puedo hacer una nueva busca;
 ![imagen](/src/img/chincheta) Yo, como usuario, deseo ver la lista de repositorios de aquel usuario que fue buscado, ordenada por el número decreciente de estrellas;
 ![imagen](/src/img/chincheta) Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre de repositorio e ir para pantalla del repositorio en github;
@@ -42,15 +42,15 @@ ya que una de ellas no estaba disponible para descarga. Ante esa pequeña proble
 
 Acá una vista previa de la aplicacion en modo computador
 
-![imagenDesktop](/src/img/home)
-![imagenDesktop](/src/img/resultdesk)
-![imagenDesktop](/src/img/notfoundDesk)
+![imagenDesktop](/src/img/home.jpg)
+![imagenDesktop](/src/img/resultdesk.jpg)
+![imagenDesktop](/src/img/notfoundDesk.jpg)
 
 Vista adaptada para la visualización de dispositivos móviles
 
-![imagenResponsive](/src/img/homeresponsive)
-![imagenResponsive](/src/img/resultresponsive)
-![imagenResponsive](/src/img/notfoundresponsive)
+![imagenResponsive](/src/img/homeresponsive.jpg)
+![imagenResponsive](/src/img/resultresponsive.jpg)
+![imagenResponsive](/src/img/notfoundresponsive.jpg)
 
 
 ## 7. Tecnologías usadas
