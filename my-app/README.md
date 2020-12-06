@@ -31,11 +31,16 @@ ya que una de ellas no estaba disponible para descarga. Ante esa pequeña proble
 
 ## 5. Historias de usuario
 
-![imagen](http://imgfz.com/i/INPoCya.png) Yo, como usuario, quiero buscar un usuario de GitHub;
+<img src = "http://imgfz.com/i/INPoCya.png"> Yo, como usuario, quiero buscar un usuario de GitHub;
+
 ![imagen](http://imgfz.com/i/INPoCya.png) Yo, como usuario, deseo ver los detalles de aquel usuario que fue buscado (número de seguidores, imagen del avatar, e-mail y bio);
+
 ![imagen](http://imgfz.com/i/INPoCya.png) Yo, como usuario, en la pantalla de detalhes puedo hacer una nueva busca;
+
 ![imagen](http://imgfz.com/i/INPoCya.png) Yo, como usuario, deseo ver la lista de repositorios de aquel usuario que fue buscado, ordenada por el número decreciente de estrellas;
+
 ![imagen](http://imgfz.com/i/INPoCya.png) Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre de repositorio e ir para pantalla del repositorio en github;
+
 ![imagen](http://imgfz.com/i/INPoCya.png) Yo, como usuario, en la pantalla de detalhes puedo hacer click en nombre usuariio y imagem del perfil, y ir para pantalla de perfil en github;
 
 ## 6. Vista previa
