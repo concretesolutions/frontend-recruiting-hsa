@@ -5,7 +5,7 @@
             <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.name">
                 <p class="user-name">{{ userInfo.name }}</p>
             </a>
-            <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.login"><p class="user-login">{{ userInfo.login }}</p></a>
+            <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.login"><p id="userLogin" class="user-login">{{ userInfo.login }}</p></a>
             <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.email"><p class="user-email">{{ userInfo.email }}</p></a>
             <a [href]="userInfo.url" target="_blank" *ngIf="userInfo.bio"><p class="user-bio">{{ userInfo.bio }}</p></a>
             <br />
