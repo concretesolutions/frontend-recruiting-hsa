@@ -47,17 +47,18 @@ ya que una de ellas no estaba disponible para descarga. Ante esa pequeña proble
 
 Acá una vista previa de la aplicacion en modo computador
 
-![imagen]("http://imgfz.com/i/SqEiTL6.jpeg")
-![imagen]("http://imgfz.com/i/WwhCYdu.jpeg")
-![imagen]("http://imgfz.com/i/01pWnyt.jpeg")
+![imagen](http://imgfz.com/i/SqEiTL6.jpeg)
+![imagen](http://imgfz.com/i/WwhCYdu.jpeg)
+![imagen](http://imgfz.com/i/01pWnyt.jpeg)
+
 
 
 
 Vista adaptada para la visualización de dispositivos móviles
 
-![imagen]("http://imgfz.com/i/RhFLjUt.jpeg")
-![imagen]("http://imgfz.com/i/zEHdR0r.jpeg")
-![imagen]("http://imgfz.com/i/GTwz5CB.jpeg")
+![imagen](http://imgfz.com/i/RhFLjUt.jpeg)
+![imagen](http://imgfz.com/i/zEHdR0r.jpeg)
+![imagen](http://imgfz.com/i/GTwz5CB.jpeg)
 
 
 
