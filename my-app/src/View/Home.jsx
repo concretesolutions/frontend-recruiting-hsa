@@ -1,36 +1,31 @@
-import React from 'react';
-import { consumerUse } from '../ConsumerUser/consumerUse.js';
-import { withRouter } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { ConsumerContext } from '../Context/ConsumerContext'
+import { withRouter } from "react-router-dom";
 
 const Home = (props) => {
-    let { setFound, found, foundUser } = []
+    let { setSearch, search, searchUser } = useContext(ConsumerContext)
 
-    //Para buscar usuarios y cambiar la ruta
-
-    const search = () => { 
-        foundUser ()
+//  Búsqueda y cambio en la ruta
+    const searchRoute = () => {
+        searchUser()
         props.history.push('/results')
-
     }
+
     return (
-        <div className="homeView">
-            <div className= "homeTitle">
-                <h1 className="titleGitHub">Github</h1>
-                <h1 className="titleSearch">Search</h1>
+        <div className="homeContain">
+            <div className="homeTitle">
+                <h3 className="homeTitleGithub">Github</h3>
+                <h3 className="HomeTitleSearch">Search</h3>
             </div>
             <div className="homeInputBar">
-                <div className="homeInputBorder">
-                    <input className="homeInput" value={found} type="text" onChange={ (e)  => setFound(e.target.value)}/>
-                    <button className ="homeButtonSearch" onClick={() => search} >
-                        <img className="SearchImage" src="https://img.icons8.com/pastel-glyph/64/000000/search--v3.png" alt ="Lupa" />
+                <div className="homeBorderInput">
+                    <input className="homeInput" value={search} type="text" onChange={ (e) => setSearch(e.target.value)}/>
+                    <button className="homeInputBtn" onClick={() => searchRoute() }>
+                        <img className="imgSearch" src="https://www.flaticon.es/svg/static/icons/svg/1617/1617460.svg" alt="Lupa de búsqueda"/>
                     </button>
-
                 </div>
             </div>
         </div>
-            
-            
-        
     )
 }
 
