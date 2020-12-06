@@ -34,7 +34,7 @@ También puedes ingresar a través de un celular.
 • Puedes probar la aplicación [aquí](link)
 ***    
 ## 5. INSTALACION :pencil:
-• Paso 1: Clone el repositorio
-• Paso 2: En la terminal, ingrese a la carpeta github-search-app
-• Paso 3: Ejecute npm install para instalar dependencias
+• Paso 1: Clone el repositorio <br>
+• Paso 2: En la terminal, ingrese a la carpeta github-search-app <br>
+• Paso 3: Ejecute npm install para instalar dependencias <br>
 
