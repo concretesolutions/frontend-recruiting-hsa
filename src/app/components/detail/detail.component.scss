@@ -1,5 +1,9 @@
 @import '_variables';
 
+.main {
+    font-family: $fontSearchTitle;
+    margin: 6%;
+}
 a {
     text-decoration: none;
     color: $linkColor;
