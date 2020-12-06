@@ -35,6 +35,11 @@ The unit tests were implemented with Jasmine and Karma, to execute them you just
 npm run test
 ```
 
+## Deploying the application in Netlify
+
+The application was hosted on Netlify, you can access it at the following link: 
+https://lucid-pike-9c17a3.netlify.app
+
 ## Autor
 
 [Luis Cruz](https://github.com/luiscruzga/)
