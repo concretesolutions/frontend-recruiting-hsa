@@ -59,7 +59,6 @@ Esta aplicación fue realizada con React.js, CSS
 
 ## 8. Deploy
 
-El deploy de la aplicación lo podrás ver en el siguiente link
-[click aqui](https://)
+El deploy de la aplicación lo podrás ver en el siguiente [link](https://)
 
 
