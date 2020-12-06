@@ -47,15 +47,18 @@ ya que una de ellas no estaba disponible para descarga. Ante esa pequeña proble
 
 Acá una vista previa de la aplicacion en modo computador
 
-![imagenDesktop](/src/img/home.jpg)
-![imagenDesktop](/src/img/resultdesk.jpg)
-![imagenDesktop](/src/img/notfoundDesk.jpg)
+<img src= "http://imgfz.com/i/SqEiTL6.jpeg">
+<img src= "http://imgfz.com/i/WwhCYdu.jpeg">
+<img src= "http://imgfz.com/i/01pWnyt.jpeg">
+
+
 
 Vista adaptada para la visualización de dispositivos móviles
 
-![imagenResponsive](/src/img/homeresponsive.jpg)
-![imagenResponsive](/src/img/resultresponsive.jpg)
-![imagenResponsive](/src/img/notfoundresponsive.jpg)
+<img src= "http://imgfz.com/i/RhFLjUt.jpeg">
+<img src= "http://imgfz.com/i/zEHdR0r.jpeg">
+<img src= "http://imgfz.com/i/GTwz5CB.jpeg">
+
 
 
 ## 7. Tecnologías usadas
