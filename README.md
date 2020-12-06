@@ -22,13 +22,13 @@ También puedes ingresar a través de un celular.
 ***  
 ## 3. VISTAS :pencil:
 • Usuario encontrado
-![vista1](/src/img/userFound1.PNG)
-![vista2](/src/img/userFound1.PNG) 
+![vista1](img/userFound1.PNG)
+![vista2](img/userFound1.PNG) 
 • Usuario encontrado en celular
-![vista3](/src/img/userFoundCellphone1.PNG)
-![vista4](/src/img/userFoundCellphone2.PNG) 
+![vista3](img/userFoundCellphone1.PNG)
+![vista4](img/userFoundCellphone2.PNG) 
 • Usuario no encontrado 
-![vista5](/src/img/userNotFound.PNG) 
+![vista5](img/userNotFound.PNG) 
 *** 
 ## 4. DEPLOY :pencil:
 • Puedes probar la aplicación [aquí](link)
