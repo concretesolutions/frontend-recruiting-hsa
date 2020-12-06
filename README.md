@@ -22,6 +22,19 @@ npm start
 ```
 NOTE: Node 10.15.0+ is required
 
+## Documentation
+
+For the documentation the [compodoc](https://compodoc.app) module was used.
+You can find all documentation of this project in the next [Link](https://luiscruzga.github.io/frontend-recruiting-hsa/)
+
+## Running Test
+
+The unit tests were implemented with Jasmine and Karma, to execute them you just have to run the following command:
+
+```js
+npm run test
+```
+
 ## Autor
 
 [Luis Cruz](https://github.com/luiscruzga/)
