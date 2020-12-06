@@ -23,11 +23,11 @@ También puedes ingresar a través de un celular.
 ## 3. VISTAS :pencil:
 • Usuario encontrado
 ![vista1](img/userFound1.PNG)
-![vista2](img/userFound1.PNG) 
-• Usuario encontrado en celular
-![vista3](img/userFoundCellphone1.PNG)
-![vista4](img/userFoundCellphone2.PNG) 
-• Usuario no encontrado 
+![vista2](img/userFound2.PNG) 
+• Usuario encontrado en celular <br>
+![vista3](img/userFoundCellphone1.PNG) <br>
+![vista4](img/userFoundCellphone3.PNG) <br>
+• Usuario no encontrado <br>
 ![vista5](img/userNotFound.PNG) 
 *** 
 ## 4. DEPLOY :pencil:
