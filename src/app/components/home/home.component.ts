@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * Home component containing a title and search component
+ */
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

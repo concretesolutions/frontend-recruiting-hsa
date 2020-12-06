@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-
+/**
+ * Search component in charge of triggering the search for user information and their repositories
+ */
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',

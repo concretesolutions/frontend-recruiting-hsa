@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * Header containing the title and search component
+ */
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

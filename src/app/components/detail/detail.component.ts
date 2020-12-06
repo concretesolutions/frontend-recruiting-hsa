@@ -5,6 +5,9 @@ import { UserDetailService } from '@services/user-detail/user-detail.service';
 import { UserDetail } from '@models/userDetail';
 import { Repositorie } from '@models/repositories';
 
+/**
+ * User detail and repositories component
+ */
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',

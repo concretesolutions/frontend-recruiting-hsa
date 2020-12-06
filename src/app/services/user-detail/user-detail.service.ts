@@ -4,7 +4,9 @@ import { Subject } from 'rxjs';
 
 import { UserDetail } from '@models/userDetail';
 import { Repositorie } from '@models/repositories';
-
+/**
+ * Service in charge of searching for user information and its repositories
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -21,15 +23,23 @@ export class UserDetailService {
   constructor(
     private http:HttpClient
   ) { }
-
+  /**
+  * @ignore
+  */
   callUserInfo(username: string){
     return this.http.get<UserDetail>(`${this.baseUrl}${username}`);
   }
-  
+  /**
+  * @ignore
+  */
   callReposUser(username: string){
     return this.http.get<Repositorie[]>(`${this.baseUrl}${username}/repos`);
   }
-
+  /**
+  * Method that obtains the information of a specific user and their repositories if it exists, otherwise, it is indicated that the user does not exist
+  * @param {string} username
+  * @memberof UserDetailService
+  */
   getUserInfo(username: string){
     this.callUserInfo(username)
     .subscribe(res => {
