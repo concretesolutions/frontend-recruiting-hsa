@@ -31,3 +31,37 @@ thead th:nth-child(1) {
     justify-content: center;
     height: 100%;
   }
+  #title{
+   height: 45%; 
+   width: 50%;
+  }
+  #searcher{
+    text-align: center; 
+    letter-spacing: 3px;
+    line-height: 3;
+   width: 550px;
+   height: 40px;
+   cursor: pointer;
+   border-style: hidden ;
+   
+   }  
+   #buttonColor{
+    
+    cursor: pointer;
+   background-color: rgb(83, 132, 206);
+   height: 40px;
+   border-style: inset;
+   border-width: medium;
+   border: 2px;
+  border-radius: 5px;
+  padding-left: 20px;
+  border-radius: 2px;
+  }
+  #user{
+    width: 30px;
+  
+    
+  }
+  #userRepos{
+    width: 70px;
+  }

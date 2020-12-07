@@ -1,12 +1,12 @@
-<table>
+<table style="table-layout:fixed;">
     <tr>
-        <th colspan="2">
-            <input type="search" [(ngModel)]="nickName">
-            <button (click)='newNickName()'> Buscar </button>
+        <th colspan="2" id='title'>
+            <input id='searcher' type="search" [(ngModel)]="nickName">
+            <button id='buttonColor' (click)='newNickName()'> Buscar </button>
         </th>
     </tr>
     <tr>
-        <td>
+        <td id='user' >  
             <div *ngIf='existence== false'>El usuario no existe :( </div>
             <div *ngIf='existence'>
                 <p>{{user.name}}</p>
@@ -18,7 +18,7 @@
                 <img src="{{user.avatar_url}}" alt="">
             </div>
         </td>
-        <td>
+        <td id="userRepos" width='100px'>
             <div *ngIf='existenceRepos==false'> Usuario sin repositorio</div>
             <div *ngIf='existenceRepos'>
                 <div *ngFor='let repositories of repos'>
