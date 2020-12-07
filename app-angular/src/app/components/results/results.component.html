@@ -1,24 +1,32 @@
-<input type="search" [(ngModel)]="nickName">
-<button (click)='newNickName()'> Buscar </button>
-
-<div *ngIf='existence== false'>El usuario no existe :( </div>
-<div *ngIf='existence'>
-    <p>{{user.name}}</p>
-    <p>{{user.login}}</p>
-    <p>{{user.email}}</p>
-    <p>Biografía {{user.bio}}</p>
-    <p>Seguidores {{user.followers}}</p>
-    <p>Siguiendo {{user.following}}</p>
-    <img src="{{user.avatar_url}}" alt="">
-</div>
-
-<div *ngIf='existenceRepos==false'> Usuario sin repositorio</div>
-<div *ngIf='existenceRepos'>
-    <div *ngFor='let repositories of repos'>
-        <p>{{repositories.name}} </p>
-        <p>{{repositories.description}} </p>
-        <p>{{repositories.stargazers_count}} </p>
-
-
-    </div>
-</div>
+<table>
+    <tr>
+        <th colspan="2">
+            <input type="search" [(ngModel)]="nickName">
+            <button (click)='newNickName()'> Buscar </button>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <div *ngIf='existence== false'>El usuario no existe :( </div>
+            <div *ngIf='existence'>
+                <p>{{user.name}}</p>
+                <p>{{user.login}}</p>
+                <p>{{user.email}}</p>
+                <p>Biografía {{user.bio}}</p>
+                <p>Seguidores {{user.followers}}</p>
+                <p>Siguiendo {{user.following}}</p>
+                <img src="{{user.avatar_url}}" alt="">
+            </div>
+        </td>
+        <td>
+            <div *ngIf='existenceRepos==false'> Usuario sin repositorio</div>
+            <div *ngIf='existenceRepos'>
+                <div *ngFor='let repositories of repos'>
+                    <p>{{repositories.name}} </p>
+                    <p>{{repositories.description}} </p>
+                    <p>{{repositories.stargazers_count}} </p>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

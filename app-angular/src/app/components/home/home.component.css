@@ -1,17 +1,51 @@
+#Name{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
 #Buscar { 
 margin: left;
 display: flex;
 align-items: center;
 justify-content: center;
-color: blueviolet;
+height: 85%;
+
 }
 
 #searcher{
-width: 650px;
+ text-align: center; 
+ letter-spacing: 3px;
+ line-height: 3;
+width: 550px;
 height: 50px;
+cursor: pointer;
+border-style: hidden ;
+
 }  
 
-h1{
- text-decoration-skite: ;
-
+#buttonColor{
+    
+    cursor: pointer;
+   background-color: rgb(179, 133, 77);
+   height: 50px;
+   border-style: inset;
+   border-width: medium;
+   border: 2px;
+  border-radius: 5px;
+  padding-left: 20px;
+  border-radius: 2px;
+  
 }
+
+h1 {
+    color: white;
+    text-align: center;
+    font-style: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+  }
+  image{
+  font-size: 50px;
+   padding: 1px;
+  }
+    

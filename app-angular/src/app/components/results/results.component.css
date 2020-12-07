@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 20px;
+}
+thead th:nth-child(1) {
+    width: 30%;
+  }
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  #newNickName{
+      width: 100%;
+    margin: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }

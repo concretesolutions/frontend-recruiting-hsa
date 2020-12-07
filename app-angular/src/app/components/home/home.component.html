@@ -1,12 +1,16 @@
-
-<div class="box" id="Buscar"> 
+<div class="box" id="BoxSearcher">
     <div class="container-1">
 
-<h1>Buscar usuarios en Github</h1> 
-<span class="icon"><i class="fa fa-search"></i></span>
+        <h1 id='Name'>Github usuarios</h1>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-<input type="search" [(ngModel)]="nickName" id="search" placeholder="Search..." id="searcher" />
-    
-    <button (click)='button()' > Buscar usuarios </button>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <i id='image' class="fab fa-github"></i>
+
+        <input type="search" [(ngModel)]="nickName" placeholder="Búsqueda de usuario.." id="searcher" />
+
+        <button (click)='button()' id='buttonColor'> Buscar  </button>
     </div>
-  </div>
+</div>
