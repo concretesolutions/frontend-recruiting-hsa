@@ -11,8 +11,7 @@ export class GithubService {
 
   constructor(private http: HttpClient) { }
   url = 'https://api.github.com/users/'
-  nickName: string=''
-
+  nickName: string
   getNickName() { return this.nickName }
   setNickName(nickName: string) { this.nickName = nickName }
 
