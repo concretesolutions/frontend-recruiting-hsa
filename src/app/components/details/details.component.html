@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+
+<main class="home">
+	<div>
+		<img src="{{ pictureUser }}" class="user-avatar" />
+		<h1 class="user-name">{{ nameUser }}</h1>
+		<h1 class="user-login">{{ userLogin }}</h1>
+		<section class="home-2">
+			<div>
+				<img
+					src="../../../assets/organization icon.svg"
+					class="organization-icon"
+					alt=""
+				/>
+			</div>
+			<div class="organization-name">{{ userOrganization }}</div>
+			<div class="">
+				<img
+					src="../../../assets/location icon.svg"
+					class="location-icon"
+					alt=""
+				/>
+			</div>
+			<div class="location-name">{{ userLocation }}</div>
+			<div>
+				<img
+					src="../../../assets/star icon.svg"
+					class="star-icon"
+					alt=""
+				/>
+			</div>
+			<div class="star-count">{{ userStar }}</div>
+
+			<div>
+				<img
+					src="../../../assets/repositorie icon.svg"
+					class="repositorie-icon"
+					alt=""
+				/>
+			</div>
+			<div class="repositories-count">{{ userPublicRepos }}</div>
+			<div>
+				<img
+					src="../../../assets/followers icon.svg"
+					alt=""
+					class="followers-icon"
+				/>
+			</div>
+			<div class="followers-count">{{ userFollowers }}</div>
+		</section>
+	</div>
+	<div>
+		<section class="home-3">
+			<ul>
+				<li *ngFor="let r of repositories" style="list-style: none">
+					<p class="repo-name">
+						<a
+							href="{{ r.html_url }}"
+							style="text-decoration: none"
+							>{{ r.name }}</a
+						>
+					</p>
+					<p class="repo-description">
+						{{ r.description }}
+					</p>
+					<img
+						src="../../../assets/star icon.svg"
+						class="star-icon"
+					/>
+
+					<p class="star-count-1">
+						{{ r.stargazers_count }}
+					</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+</main>

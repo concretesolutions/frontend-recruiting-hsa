@@ -1,0 +1,17 @@
+.Not-found-message {
+	width: 315px;
+	height: 41px;
+	margin: 118px 292px 0 113px;
+	font-family: Raleway;
+	font-size: 40px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #ac53f2;
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	transform: translateX(-50%) translateY(-50%);
+}
