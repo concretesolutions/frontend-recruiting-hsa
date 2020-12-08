@@ -1,0 +1,53 @@
+.grid_title {
+	display: grid;
+}
+.row {
+	grid-template-rows: 1fr 1fr;
+}
+div.row .grid_search {
+	margin-bottom: 10rem;
+}
+.title {
+	text-align: center;
+	font-size: 60px;
+	margin: 244px 369px 0 368px;
+	font-family: Raleway;
+	font-weight: 200;
+	font-style: italic;
+}
+.title_span {
+	font-family: Monaco;
+	font-size: 60px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
+.grid_search {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.input_search {
+	width: 650px;
+	height: 46px;
+	margin-left: 18rem;
+	margin-top: 0.5rem;
+	font-family: Raleway;
+	font-size: 20px;
+	padding-left: 15px;
+}
+.btn {
+	width: 100px;
+	height: 50px;
+	padding: 10px 35px 9.9px 35px;
+	margin-top: 0.5rem;
+	border-radius: 2px;
+	background-color: #ac53f2;
+	border: none;
+}
+.loupe {
+	width: 30px;
+	height: 30px;
+}

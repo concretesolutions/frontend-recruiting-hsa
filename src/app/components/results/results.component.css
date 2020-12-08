@@ -1,0 +1,124 @@
+.grid {
+	display: grid;
+}
+.column {
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+	padding: 0;
+}
+.user-img {
+	width: 280px;
+	height: 280px;
+	margin: 0 0 0 25px;
+	border-radius: 50%;
+	box-shadow: 0 0 4px #00000040;
+}
+.user-name {
+	height: 40px;
+	margin: 12px 67px 0.5px 25px;
+	font-family: Raleway;
+	font-size: 35px;
+	color: #000000;
+}
+.user-login {
+	width: 280px;
+	height: 25px;
+	margin: 7px 67px 28px 25px;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #5c5c5c;
+}
+.company-icon {
+	width: 24px;
+	height: 24px;
+	margin: 5px 8px -4px -15px;
+}
+.company-name {
+	width: 240px;
+	height: 22px;
+	margin: 33px 76px 12px 7px;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #5c5c5c;
+}
+.location-name {
+	width: 240px;
+	height: 22px;
+	margin: 14px 76px 13px 7px;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #5c5c5c;
+}
+.location-icon {
+	width: 24px;
+	height: 24px;
+	margin: 5px 8px -4px -15px;
+}
+.star-icon {
+	width: 24px;
+	height: 24px;
+	margin: 5px 8px -4px -15px;
+}
+.star-count {
+	width: 240px;
+	height: 22px;
+	margin: 2.7px 76px 13px 7px;
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #5c5c5c;
+}
+.repositories-icon {
+	width: 24px;
+	height: 24px;
+	margin: 5px 8px -4px -15px;
+}
+.repositories-count {
+	width: 240px;
+	height: 22px;
+	margin: 4px 76px 14px 7px;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #5c5c5c;
+}
+.followers-icon {
+	width: 24px;
+	height: 24px;
+	margin: 5px 8px -4px -15px;
+}
+.followers-count {
+	width: 240px;
+	height: 22px;
+	margin: 12px 76px 22.8px 7px;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #5c5c5c;
+}
+.repository-name {
+	height: 40.8px;
+	margin: 44px 269.5px 0 72px;
+	font-family: Raleway;
+	font-size: 35px;
+	color: #ac53f2;
+}
+.repository-description {
+	width: 600px;
+	height: 100%;
+	margin: 8px 45px 9.2px 72px;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #000000;
+}
+.star-repos {
+	padding: 0 0 0 85px;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
