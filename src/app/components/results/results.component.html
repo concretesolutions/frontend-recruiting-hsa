@@ -32,7 +32,7 @@
                 <div id='noExistence' *ngIf='existenceRepos==false'> Usuario sin repositorio</div>
                 <div *ngIf='existenceRepos'>
                     <div *ngFor='let repositories of repos'>
-                        <a href="{{repositories.html_url}}">
+                        <a href="{{repositories.html_url}}" target="_blank">
                             <p id='reposName'>{{repositories.name}}
                             </p>
                         </a>
