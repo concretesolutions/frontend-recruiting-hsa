@@ -1,4 +1,5 @@
-# Desafío Front End Narela Müller (https://compassionate-turing-f2b97f.netlify.app)
+# Desafío Front End Narela Müller 
+## Plataforma Netlify deployed: (https://compassionate-turing-f2b97f.netlify.app) 
 
 Este proyecto es un desafío Front End de postulación a la empresa Accenture, en donde crearemos una aplicación web que cumple la búsqueda de usuarios de Github, brindándonos los repositorios de cada uno, junto con información de su perfíl. Además, si no hemos podido encontrar un usuario podremos realizar una nueva búsqueda desde la misma página.
 - Este proyecto ha sido desarrollado con Angular y Node.js.
