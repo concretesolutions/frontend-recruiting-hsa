@@ -1,0 +1,33 @@
+@import '_variables';
+
+.home{
+    text-align: center;
+}
+.title {
+    font-size: $homeTitleFontSize;
+    letter-spacing: normal;
+}
+
+p {
+    margin-top: 35vh;
+}
+
+.search-bar {
+    display: inline-block;
+}
+
+@media screen and (min-width:550px) and (max-width:995px){
+    .title {
+        font-size: $homeTitleFontSize550;
+    }
+}
+@media screen and (min-width:400px) and (max-width:550px){
+    .title {
+        font-size: $homeTitleFontSize400;
+    }
+}
+@media screen and (max-width:400px){
+    .title {
+        font-size: $homeTitleFontSize300;
+    }
+}

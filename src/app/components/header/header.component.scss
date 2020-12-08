@@ -1,0 +1,47 @@
+@import '_variables';
+
+.header {
+    text-align: center;  
+    margin-top: 5vh; 
+}
+.title-container {
+    display: inline-block; 
+    margin-right: 150px; 
+}
+.search-bar {
+    display: inline-block;
+}
+.title {
+    font-size: $headerTitleFontSize;
+    word-spacing: -20px;
+}
+
+@media screen and (min-width:995px) and (max-width:1024px){
+    .title-container {
+        margin-right: 80px; 
+    }         
+}
+@media screen and (min-width:550px) and (max-width:995px){
+    .title-container {
+        margin-right: 30px; 
+    }
+    .title {
+        font-size: $headerTitleFontSize550;
+    }  
+}
+@media screen and (min-width:400px) and (max-width:550px){
+    .title-container {
+        margin-right: 0px; 
+    } 
+    .title {
+        font-size: $headerTitleFontSize400;
+    } 
+}
+@media screen and (max-width:400px){
+    .title-container {
+        margin-right: 0px; 
+    } 
+    .title {
+        font-size: $headerTitleFontSize300;
+    }
+}
