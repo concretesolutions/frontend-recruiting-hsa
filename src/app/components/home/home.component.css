@@ -22,20 +22,24 @@ width: 550px;
 height: 50px;
 cursor: pointer;
 border-style: hidden ;
+border-radius: 5px 0px 0px 5px;
 
 }  
 
 #buttonColor{
     
     cursor: pointer;
-   background-color: rgb(83, 132, 206);
+    background-color: rgb(185, 183, 152);
    height: 50px;
    border-style: inset;
    border-width: medium;
    border: 2px;
-  border-radius: 5px;
-  padding-left: 20px;
-  border-radius: 2px;
+  padding-left: 10px;
+ border-radius: 0px 5px 5px 0px;
+ background-image: url(../../../assets/zoom_in_64px.png);
+    background-size: 60%;
+    background-repeat:no-repeat;
+    background-position: center center;
   
 }
 
@@ -43,7 +47,7 @@ h1 {
     text-shadow: 0 0 6px rgb(248, 248, 248);
   -moz-text-shadow: 0 0 6px rgb(248, 242, 242);
   -webkit-text-shadow: 0 0 px rgb(252, 252, 252);
-    color:black;
+    color:rgb(255, 255, 255);
     text-align: center;
     font-style: normal;
     font-family: 'Source Sans Pro', sans-serif;

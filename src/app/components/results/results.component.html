@@ -1,0 +1,48 @@
+<table style="table-layout:fixed;">
+    <thead>
+        <th colspan="2" id='title'>
+            <input id='searcher' type="search" [(ngModel)]="nickName" (keyup.enter)='newNickName()'>
+            <button id='buttonColor' (click)='newNickName()'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        </th>
+    </thead>
+    <tr>
+        <td id='user'>
+            <div id="infoUser">
+                <div *ngIf='existence== false' id='noExistence'>El usuario no existe :( </div>
+                <div *ngIf='existence'>
+
+                    <a href="{{user.html_url}}" target="_blank"><img id='picture' src="{{user.avatar_url}}" alt=""></a>
+                    <a href="{{user.html_url}}" target="_blank">
+                        <p id='userName'>{{user.name}}</p>
+                    </a>
+                    <a href="{{user.html_url}}" target="_blank">
+                        <p id='userLogin'>{{user.login}}</p>
+                    </a>
+
+                    <p id='userEmail'>{{user.email}}</p>
+                    <p id='bio'>Biografía {{user.bio}}</p>
+                    <p id='followers'>Seguidores: {{user.followers}}</p>
+                    <p id='following'>Siguiendo: {{user.following}}</p>
+
+                </div>
+            </div>
+        </td>
+        <td id="userRepos" width='100px'>
+            <div id='infoRepos'>
+                <div id='noExistence' *ngIf='existenceRepos==false'> Usuario sin repositorio</div>
+                <div *ngIf='existenceRepos'>
+                    <div *ngFor='let repositories of repos'>
+                        <a href="{{repositories.html_url}}">
+                            <p id='reposName'>{{repositories.name}}
+                            </p>
+                        </a>
+                        <p id='reposDescript' >{{repositories.description}} </p>
+                        <p id='repoStars'><img src="../../../assets/star_64px.png" alt="" id='imageStar'>:  {{repositories.stargazers_count}} </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </td>
+
+    </tr>
+</table>
