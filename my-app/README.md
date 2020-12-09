@@ -58,6 +58,7 @@ Vista adaptada para la visualización de dispositivos móviles
 
 ![imagen](http://imgfz.com/i/RhFLjUt.jpeg)
 ![imagen](http://imgfz.com/i/zEHdR0r.jpeg)
+
 ![imagen](http://imgfz.com/i/GTwz5CB.jpeg)
 
 
@@ -68,6 +69,6 @@ Esta aplicación fue realizada con React.js, CSS
 
 ## 8. Deploy
 
-El deploy de la aplicación lo podrás ver en el siguiente [link](https://barbaramv.github.io/frontend-recruiting-hsa/my-app/public/index.html)
+El deploy de la aplicación lo podrás ver en el siguiente [link](https://githubsearchbarbaramadariaga.netlify.app)
 
 
