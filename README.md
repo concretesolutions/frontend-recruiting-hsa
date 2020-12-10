@@ -3,8 +3,6 @@
 Soy Sebastian Valencia Lasprilla y esta es mi propuesta de aplicación web que cumple con el Desafío Front End de Accenture.
 
 ## :bookmark_tabs: Indice
-
--
 - 1. ¿Qué desarrollé?
 - 2. Características
 - 3. Ejecutar la aplicación en un ambiente local
@@ -43,6 +41,8 @@ Esta aplicación fue desarrollada para exploradores de escritorio, a pesar de no
 
 - Avatar, nombre, nickname, locación, numero de repositorios, cantidad de seguidores, cantidad de seguidos y biografía.
 - Nombre de repositorios, descripción y estrellas de calificación.
+- La busqueda de usuarios usa la Url como parametro de busqueda en donde Usuario = {username} y Url = AppRoute/user/{username}
+- Cuenta con un spinner que se muestra hasta que se obtiene la información, para dar a entender a el usuario los tiempos de carga.
 
 ### :small_orange_diamond: Un layout para usuario inexistente
 
