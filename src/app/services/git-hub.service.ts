@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user.model';
 import { Observable } from 'rxjs';
-import { Repositorie } from '../models/repositorie.model';
+import { Repository } from '../models/repository.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class GitHubService {
     return this.httpClient.get<User>(`${this.apiUrl}/${userNickName}`, this.httpOptions)
   }
 
-  getRepositories(userNickName: string): Observable<Repositorie[]> {
-    return this.httpClient.get<Repositorie[]>(`${this.apiUrl}/${userNickName}/repos`, this.httpOptions)
+  getRepositories(userNickName: string): Observable<Repository[]> {
+    return this.httpClient.get<Repository[]>(`${this.apiUrl}/${userNickName}/repos`, this.httpOptions)
   }
 }
