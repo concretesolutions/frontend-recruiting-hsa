@@ -1,12 +1,11 @@
-const express = require('express');
 const path = require('path');
-
+const express = require('express');
 const app = express();
 
-app.use(express.static('./dist/desafio-accenture-svl'));
+app.use(express.static(__dirname + '/dist/desafio-accenture-svl'));
 
-app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/desafio-accenture-svl/'}),
-);
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/desafio-accenture-svl/index.html'));
+});
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 5000);
