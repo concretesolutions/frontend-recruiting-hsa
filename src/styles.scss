@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+$font-stack: 'Courier New', Courier, monospace;
+
+* {
+  font-family: $font-stack;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
