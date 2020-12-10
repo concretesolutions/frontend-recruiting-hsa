@@ -30,6 +30,10 @@
             <br>
             <p class="text1"><img class="icon1" src="../../../assets/email-icon.png" alt="email-icon">
                 {{userInfo.email}}<span *ngIf="!userInfo.email" class="muted">Email no disponible</span></p>
+            <p class="text1"><img class="icon1" src="../../../assets/location-icon.png" alt="email-icon"> {{userInfo.location}}<span *ngIf="!userInfo.location" class="muted">Locación no disponible</span></p>
+            <p class="text1"><img class="icon1" src="../../../assets/inbox-icon.png" alt="email-icon"><strong> {{userInfo.public_repos}}</strong> Repositorios</p>
+            <p class="text1"><img class="icon1" src="../../../assets/people-icon.png" alt="email-icon"><strong> {{userInfo.followers}}</strong> Seguidores</p>
+            <p class="text1"><img class="icon1" src="../../../assets/people-icon.png" alt="email-icon"><strong> {{userInfo.following}}</strong> Seguidos</p>
             <p class="text1"><img class="icon1" src="../../../assets/info-icon.png" alt="info-icon">
                 {{userInfo.bio}}<span *ngIf="!userInfo.bio" class="muted">Bio no disponible</span></p>
         </div>
