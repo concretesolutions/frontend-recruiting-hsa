@@ -1,0 +1,360 @@
+.homeInputBtn,.titleContain, .inputContain, .btnSearch, .notFound, .homeTitle, .homeInputBar {
+  display: flex;
+  justify-content: center; 
+}
+
+.titleGithub, .homeTitleGithub {
+  padding-right: 8px;
+  font-family: 'JetBrains Mono', monospace;  
+  margin: 0; 
+}
+
+.titleSearch, .HomeTitleSearch {
+  padding-right: 8px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0; 
+}
+
+.borderInput, .homeBorderInput {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px; 
+}
+
+.input, .homeInput {
+  border: 0px;
+  padding-left: 10px; 
+}
+
+.btnSearch, .homeInputBtn {
+  background: #AB5AEF;
+  border: 0;
+  align-items: center;
+  outline: none;
+  cursor: pointer; 
+}
+
+.contain {
+  display: flex;
+  margin: 30px 50px 20px 50px;
+  justify-content: space-between;
+  box-sizing: border-box; 
+}
+
+.titleContain {
+  width: 20%;
+  padding-right: 20px; 
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: black; 
+}
+
+.titleGithub {
+  font-size: 35px; 
+}
+
+.titleSearch {
+  font-size: 35px; 
+}
+
+.inputContain {
+  width: 100%; 
+}
+
+.borderInput {
+  width: 100%; 
+  height: 35px;
+}
+
+.input {
+  width: 100%; 
+}
+
+.btnSearch {
+  width: 20%; 
+}
+
+.imgSearch {
+  height: 30px; 
+}
+
+/* MEDIA QUERIES */
+
+/* Mobile */
+@media all and (max-width: 500px) {
+  .homeTitleGithub {
+    font-size: 50px; 
+  }
+
+  .HomeTitleSearch {
+    font-size: 48px;
+  } 
+}
+
+@media all and (max-width: 420px) {
+  .homeTitleGithub {
+    font-size: 38px; 
+  }
+  
+  .HomeTitleSearch {
+    font-size: 36px; 
+  } 
+}
+
+/* Tablet */
+
+@media all and (max-width: 650px) {
+  .resultUserContain {
+    display: flex;
+    margin: 0px 30px 50px 30px; 
+  } 
+}
+
+.notFound {
+  margin: 130px 50px 0px 50px; 
+}
+
+.notFoundTitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  color: #ac53f2;
+  margin-top: 15px;
+  text-align: center; 
+}
+
+.homeContain {
+  display: flex;
+  flex-direction: column;
+  margin: 220px 50px 50px 50px;
+  box-sizing: border-box; 
+}
+
+.homeTitleGithub {
+  font-size: 60px; 
+}
+
+.HomeTitleSearch {
+  font-size: 58px; 
+}
+
+.homeBorderInput {
+  width: 700px;
+  height: 40px; 
+}
+
+.homeInput {
+  width: 80%; 
+}
+
+.homeInputBtn {
+  width: 20%; 
+}
+
+.imgSearch {
+  height: 30px; 
+}
+
+/* HD */
+@media all and (max-width: 1024px) {
+  .resultUserContain {
+    flex-direction: column; 
+  }
+
+  .resultUsers-repository {
+    width: 100%;
+    margin: 0px; 
+  }
+
+  .resultUsers-user {
+    flex-direction: row;
+    width: 100%; 
+  }
+
+  .resultUserContain-infoIcons {
+    margin-top: 65px;
+    margin-left: 25px;
+    width: 50%; 
+  }
+
+  .resultUserContain-user {
+    display: flex;
+    flex-direction: column-reverse; 
+  }
+
+  .resultUsers-userName {
+    margin-top: 0px; 
+  }
+
+  .resultUsers-userLogin {
+    margin-bottom: 20px; 
+  }
+
+  .separation {
+    background: #ac53f2;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0px 40px 0px; 
+  } 
+}
+
+@media all and (max-width: 725px) {
+  .resultUsers-user {
+    flex-direction: column; 
+  }
+
+  .resultUserContain-infoIcons {
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 100%; 
+  } 
+}
+
+
+
+/* FHD */ 
+@media all and (max-width: 1180px) {
+  .titleContain {
+    width: 30%; 
+  } 
+}
+
+@media all and (max-width: 830px) {
+  .titleContain {
+    width: 40%; 
+  } 
+}
+
+@media all and (max-width: 650px) {
+  .titleContain {
+    width: 100%;
+    justify-content: start; 
+  }
+  .contain {
+    flex-direction: column;
+    margin: 30px; 
+  } 
+}
+
+.resultUserContain {
+  display: flex;
+  margin: 0px 50px 50px 50px; 
+}
+
+.resultUsers-user a {
+  text-decoration: none; 
+}
+
+.resultUsers-user {
+  display: flex;
+  flex-direction: column;
+  width: 21%;
+  margin: 10px 10px 10px 0px; 
+}
+
+.resultUsers-userImgProfile {
+  width: 100%; 
+}
+
+.resultUsers-userName {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  margin: 0px;
+  margin-top: 15px; 
+}
+
+.resultUsers-userLogin {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin: 0px; 
+}
+
+.resultUserContain-infoIcons {
+  margin-top: 25px; 
+}
+
+.resultUsers-icons {
+  display: flex;
+  margin-top: 10px; 
+}
+
+.resultUsers-userImg {
+  height: 23px;
+  width: 23px;
+  margin-right: 8px; 
+}
+
+.resultUsers-repository {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10px 10px 10px 60px; 
+}
+
+.resultUsers-oneRepo {
+  margin-bottom: 45px; 
+}
+
+.resultUsers-oneRepo a {
+  text-decoration: none; 
+}
+
+.resultUsers-repositoryName {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: #ac53f2;
+  margin: 0px; 
+}
+
+.resultUsers-repositoryDescription {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin: 0px; 
+}
+
+.resultUserContain-Stars {
+  display: flex;
+  align-items: center;
+  margin-top: 5px; 
+}
+
+.resultUsers-userImg-repos {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px; 
+}
+
+.resultUsers-numberStart {
+  margin: 0px; 
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
