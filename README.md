@@ -15,6 +15,8 @@ ejecutar el comando
 
 
 
-# links del hosting donde el proyecto esta subido
+# link del hosting donde el proyecto esta subido
 
+la app ha sido subida a vercel
 
+https://proyecto-recruting-robert-sepulveda.vercel.app/
