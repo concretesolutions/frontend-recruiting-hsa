@@ -1,0 +1,19 @@
+.title-container{
+        display: flex;
+
+}
+
+.title{
+    font-size: 3.6em;
+    font-family: monospace;
+    font-weight: lighter;
+}
+
+.title2{
+    font-size: 3.3em;
+    font-weight: lighter;
+   font-style: italic;
+}
+h1{
+    margin: 0;
+}
