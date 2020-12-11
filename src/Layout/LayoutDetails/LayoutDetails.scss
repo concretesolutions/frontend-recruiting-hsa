@@ -1,0 +1,35 @@
+
+@import '../../sass/index.scss';
+
+
+.header{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    column-gap: 3%;
+
+   >.box:first-of-type{
+       text-align: center;
+   }
+   >.box:last-of-type{
+    text-align: center;
+    padding-top: 17px;
+    }
+    
+    h1{
+        color:$color-black;
+        font-family: $font-monaco;
+        font-weight: 700;
+        font-size: 60px;
+        margin-block-start: 0.10em;
+    
+       }
+    
+       h1::after{
+        content:" Search";
+        font-family: $font-raleway;
+        font-weight: 200;
+        font-style: italic;
+       }
+
+   
+}

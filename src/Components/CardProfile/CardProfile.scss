@@ -1,0 +1,49 @@
+@import '../../sass/index.scss';
+
+.card{
+
+  
+    display: grid;
+   
+    width: 82%;
+    .profile-image{
+        width: 100%;
+    }
+
+    &-content{
+        text-align: justify;
+        padding-top: 15px;
+       a{
+        text-decoration: none;
+        font-family: $font-raleway;
+        color: black;
+        font-weight: 300;
+        font-size: 35px;
+   
+       }
+
+       p {
+        font-family: $font-raleway;
+        font-weight: 300;
+        color: $color-gray;
+        
+       }
+
+       ul{
+           list-style: none;
+           font-family: $font-raleway;
+           color: $color-gray;
+           padding-inline-start: 2px;
+          
+          li{
+            display: flex;
+             
+             .icon{
+               
+                 margin-right: 12px;
+             }
+          }
+       }
+    }
+}
+

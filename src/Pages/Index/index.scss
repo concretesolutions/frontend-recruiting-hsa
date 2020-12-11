@@ -1,0 +1,26 @@
+@import '../../sass/index.scss';
+
+.container{
+    
+    display: grid;
+    text-align: center;
+    position: relative;
+    top: 200px;
+
+  h1{
+    color:$color-black;
+    font-family: $font-monaco;
+    font-weight: 700;
+    font-size: 70px;
+    margin-block-end: 0.20em;
+  
+   }
+
+   h1::after{
+    content:" Search";
+    font-family: $font-raleway;
+    font-weight: 200;
+    font-style: italic;
+   }
+
+}
