@@ -1,0 +1,45 @@
+@import '../../sass/index.scss';
+
+.content{
+    display: grid;
+    grid-template-columns: 2.5fr 4.5fr;
+    column-gap: 2%;
+    height: 100vh;
+    &_profile{
+      
+      padding-left: 9.1%;
+      padding-top: 16px;
+    }
+
+    &_repo{
+        padding-top: 6px;
+    
+        a{
+          text-decoration: none;
+          font-family: $font-raleway;
+          font-size: 50px;
+          color: $color-purple;
+        }
+        p {
+          color: #000;
+          font-size: 20px;
+          font-family: $font-raleway;
+          margin-block-start: 0.3em;
+          margin-block-end: 0.3em;
+        }
+        .stars{
+          display: flex;
+           p {
+            color:$color-gray;
+            font-size: 20px;
+            font-family: $font-raleway;
+            margin-block-start: 0.6em;
+            margin-left: 0.4em;
+           }
+        }
+    }
+
+    .repos{
+      margin-bottom: 25px;
+    }
+}

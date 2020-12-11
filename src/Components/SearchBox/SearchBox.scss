@@ -1,0 +1,42 @@
+@import '../../sass/index.scss';
+
+.form {
+
+
+
+ .search-box{
+    width: 800px;
+    height: 48px;
+    border: 1px solid $color-shadow;
+    font-size: 50px;
+    border-radius: 3px;
+    -webkit-box-shadow: 5px 6px 8px -3px $color-shadow;
+    -moz-box-shadow: 5px 6px 8px -3px $color-shadow;
+    box-shadow: 5px 6px 8px -3px $color-shadow;
+   
+    
+  }
+
+  .search-button{
+    width: 100px;
+    height: 50px;
+    background: $color-purple;
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 5px 6px 8px -3px $color-shadow;
+    -moz-box-shadow: 5px 6px 8px -3px $color-shadow;
+    box-shadow: 5px 6px 8px -3px $color-shadow;
+    cursor: pointer;
+   
+  }
+
+}
+
+.alert{
+  color:$color-purple;
+  font-family: $font-raleway;
+  font-style: italic;
+  width: 400;
+  font-size: 30px;
+
+}
