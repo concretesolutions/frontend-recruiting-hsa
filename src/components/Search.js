@@ -38,12 +38,14 @@ class Search extends React.Component{
                  value={this.state.user}
                  onChange={this.onChange}
                   />
+                <Link to={`/user?${ this.state.user}`}>
                 <button
-                   onClick={()=>{this.searchU()}}
+                   
                   className="search"
                   >
-                     <Link to="/user"><img src={search} /> </Link>
+                     <img src={search} /> 
                 </button>
+                </Link>
                 
             </div>
         )                 

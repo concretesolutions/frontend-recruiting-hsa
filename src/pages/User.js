@@ -7,7 +7,23 @@ import star from './../assets/img/star.svg';
 import repositorie from './../assets/img/repositorie.svg';
 import followers from './../assets/img/followers.png';
 class User extends React.Component {
+  state ={
+    userName:window.location.search.slice(1),
+    user:{}
+}
 
+  
+componentDidMount(){
+  fetch(`https://api.github.com/users/${this.state.userName}`)
+  .then(response => {
+      return response.json();
+    })
+    .then(response => {
+      console.log(response); 
+    })
+}
+  
+  
   render() {
     return (
       <div>
@@ -19,11 +35,11 @@ class User extends React.Component {
            </div>
            <h1> Nombre </h1>
            <h2> biography</h2>
-           <h4><img src={organization}/> &nbsp; blabla </h4>
-           <h4><img src={location} />&nbsp; blabla </h4>
-           <h4><img src= {star} /> &nbsp; blabla </h4>
-           <h4><img src={repositorie} /> &nbsp; blabla </h4>
-           <h4><img src={followers} /> &nbsp; blabla </h4>
+           <h4><img src={organization}/> &nbsp; Organización</h4>
+           <h4><img src={location} />&nbsp; Localización </h4>
+           <h4><img src= {star} /> &nbsp; Estrellas </h4>
+           <h4><img src={repositorie} /> &nbsp; 0 </h4>
+           <h4><img src={followers} /> &nbsp; seguidores </h4>
             </div>
         <div className="repos-container">
             <div className="repos"> 
