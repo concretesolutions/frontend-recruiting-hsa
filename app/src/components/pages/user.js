@@ -16,8 +16,8 @@ const User = ({ props }) =>
   const [ error, setError ] = React.useState(null);
   React.useEffect(() =>
   {
-    fetchUser(term);
-    fetchUserRepos(term);
+    fetchUser(username);
+    fetchUserRepos(username);
   }, [ username ]);
 
 

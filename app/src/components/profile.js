@@ -4,8 +4,8 @@ const Profile = ({ profile }) =>
 {
     return (
         <div className="relative flex flex-col">
-            <a rel="noreferrer" target="_blank" href={ profile.html_url } className="absolute top-0 left-0 w-full h-full"></a>
-            <img src={ profile.avatar_url } width="300px" height="300px" />
+            <a rel="noreferrer" target="_blank" href={ profile.html_url } className="absolute top-0 left-0 w-full h-full text-transparent">Go to profile</a>
+            <img alt="profile-picture" title="profile picture" src={ profile.avatar_url } width="300px" height="300px" />
             <h2 className="text-3xl font-thin">{ profile.name }</h2>
             <p className="mb-2">{ profile.bio }</p>
             <p className>Followers: <span className="font-bold">{ profile.followers }</span></p>
