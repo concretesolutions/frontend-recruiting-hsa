@@ -1,0 +1,27 @@
+  
+.info-container{ 
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    margin-left: 3%;
+    margin-right: 3%;
+    grid-gap: 20px;
+
+}
+
+.avatar img{
+    width: 90%;
+}
+h1{
+    font-size: 40px;
+    margin: 0;
+    font-weight: 400;
+}
+h4{
+    margin: 0;
+    font-weight: lighter;
+}
+
+h2{
+    margin-top:0;
+    font-weight: lighter;
+}

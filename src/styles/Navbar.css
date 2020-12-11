@@ -1,0 +1,14 @@
+.container{
+    display: grid;
+    grid-template-columns:2fr 5fr;
+    height: 4em;
+    margin: 3em;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+
+Search{
+    width: 100%;
+}
+ 

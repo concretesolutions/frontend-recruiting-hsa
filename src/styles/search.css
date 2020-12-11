@@ -1,0 +1,20 @@
+.search{
+     background-color:#ac53f2 ;
+     border: whitesmoke;
+     box-shadow: 2px 2px 5px #999;
+     width: 170%;
+     height: 5.3em;
+    }
+.search-input{
+    width: 100%;
+    box-shadow: 1px 1px 3px #999;
+    border:gray;
+    font-size: 1.5em;
+    color: #5c5c5c;
+    font-weight: 100;
+  
+}
+.search-container{
+   width: 95%;
+    display: flex;
+}
