@@ -24,6 +24,6 @@ https://github.com/InSight1910/testAccenture
 
 ## URL del proyecto
 
-https://stoic-nobel-90a6ef.netlify.app/
-https://stoic-nobel-90a6ef.netlify.app/detail/<username>
-https://stoic-nobel-90a6ef.netlify.app/notFound
+https://stoic-nobel-90a6ef.netlify.app/  
+https://stoic-nobel-90a6ef.netlify.app/detail/<username>  
+https://stoic-nobel-90a6ef.netlify.app/notFound  
