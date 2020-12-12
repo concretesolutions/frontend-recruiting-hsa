@@ -1,0 +1,66 @@
+/* Estilos general del componente */
+.github-card{
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  color:#555;
+  position: relative;
+}
+/* Estilo del fondo de la barra de busqueda */
+.header{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 150px;
+    border-radius: 4px 4px 0 0;
+    background: rgb(75, 16, 143);
+}
+/* Estilos de imagenes */
+.avatar{
+    display: inline-block;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.3);
+    text-decoration: none;
+    margin-top: -40px;
+    border: 3px solid #fff;
+    position: relative;
+}
+.avatar > img {
+  width: 150px;
+  height: 150px;
+}
+/* Estilo nombre del usuario */
+h1{
+    color: #111;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}
+/* Estilos De los status Repos, gits y followers */
+.status{
+  display: flex;
+  list-style: none;
+}
+.status > li{
+  flex: 1;
+  margin-top: 50px;
+}
+.status > li > a{
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+#icon{
+  color: rgb(44, 179, 107);
+  margin-left: 20px;
+}
+span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+  color: black;
+}
+
+
+

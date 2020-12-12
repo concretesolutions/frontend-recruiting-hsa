@@ -1,0 +1,15 @@
+ .error-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+p{
+    text-align: center;
+    font-size: 30px;
+}
