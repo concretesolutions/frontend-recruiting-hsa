@@ -1,0 +1,38 @@
+/* Estilo de la barra buscadora */
+.main-container{
+    width: 100%;
+    background-color: rgb(75, 16, 143);
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Estilos de la barra de busqueda */
+#searcher{
+    border: none;
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+/* Estilos del boton de busqueda */
+#search{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(228, 116, 228);
+    color: white;
+}
+#search:hover{
+    background-color: rgb(182, 97, 182);
+}

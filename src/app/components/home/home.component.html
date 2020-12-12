@@ -1,0 +1,11 @@
+<div class="main-container">
+    <h1>Buscador de Perfiles</h1>
+    <div class="container">
+        <input id="searcher" [(ngModel)]="data" [formControl]="findControl" type="text" class="box" placeholder="Introduzca un usuario...">    
+        <button (click)='search($event)' id="search">Buscar</button>
+    </div>
+    <app-user *ngIf="user" [user]="user"></app-user>
+    <!-- <app-user [user]="user"></app-user> -->
+</div>
+<app-not-found *ngIf="error"></app-not-found>
+<!-- <app-not-found></app-not-found> -->
