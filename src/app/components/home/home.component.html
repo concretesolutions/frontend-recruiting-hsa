@@ -1,0 +1,24 @@
+<div class="grid_title">
+	<div class="row">
+		<h1 class="title"><span class="title_span">Github</span> Search</h1>
+	</div>
+
+	<div class="row">
+		<form class="grid_search" (submit)="onSubmit(search.value)">
+			<input
+				type="text"
+				class="input_search"
+				placeholder="Usuario"
+				autofocus
+				#search
+			/>
+			<button type="text" class="btn">
+				<img
+					src="../../../assets/Search Icon.svg"
+					class="loupe"
+					alt=""
+				/>
+			</button>
+		</form>
+	</div>
+</div>

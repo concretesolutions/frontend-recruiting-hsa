@@ -1,0 +1,29 @@
+<div class="grid">
+	<div class="column">
+		<h1 (click)="redirectHome()" class="title">
+			<span class="title-span">Github</span> Search
+		</h1>
+	</div>
+	<div class="column">
+		<form
+			class="grid_search"
+			(submit)="onSubmit(Search.value); Search.value = ''"
+		>
+			<input
+				type="text"
+				name="search"
+				class="input_search"
+				placeholder="Usuario"
+				#Search
+				autofocus
+			/>
+			<button type="button" class="btn">
+				<img
+					src="../../../assets/Search Icon.svg"
+					alt=""
+					class="loupe-icon"
+				/>
+			</button>
+		</form>
+	</div>
+</div>

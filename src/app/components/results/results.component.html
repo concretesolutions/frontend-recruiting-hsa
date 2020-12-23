@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="grid">
+	<div class="column">
+		<div class="">
+			<a href="{{ link_user }}" target="_blank">
+				<img src="{{ avatar }}" alt="" class="user-img" />
+			</a>
+			<a href="{{ link_user }}" target="_blank">
+				<h2 class="user-name">{{ name }}</h2>
+			</a>
+			<h3 class="user-login">{{ login }}</h3>
+			<ul>
+				<li class="company-name" *ngIf="company">
+					<img
+						src="../../../assets/organization icon.svg"
+						class="company-icon"
+						alt=""
+					/>
+					{{ company }}
+				</li>
+				<li class="location-name" *ngIf="location">
+					<img
+						class="location-icon"
+						src="../../../assets/location icon.svg"
+						alt=""
+					/>
+					{{ location }}
+				</li>
+				<li class="star-count">
+					<img
+						class="star-icon"
+						src="../../../assets/star icon.svg"
+						alt=""
+					/>
+					{{ star }}
+				</li>
+				<li class="repositories-count">
+					<img
+						class="repositories-icon"
+						src="../../../assets/repositorie icon.svg"
+						alt=""
+					/>
+					{{ public_repos }}
+				</li>
+				<li class="followers-count">
+					<img
+						class="followers-icon"
+						src="../../../assets/followers icon.svg"
+						alt=""
+					/>
+					{{ followers }}
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<ul>
+				<li
+					*ngFor="let repository of repositoriesList"
+					style="padding-bottom: 2rem"
+				>
+					<p class="repository-name">
+						<a href="{{ repository.html_url }}" target="_blank">
+							{{ repository.name }}
+						</a>
+					</p>
+					<p
+						class="repository-description"
+						*ngIf="repository.description"
+					>
+						{{ repository.description }}
+					</p>
+					<p class="star-repos star-count">
+						<img
+							src="../../../assets/star icon.svg"
+							alt=""
+							class="star-icon"
+							style="padding-top: 25px"
+						/>
+						{{ repository.star }}
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

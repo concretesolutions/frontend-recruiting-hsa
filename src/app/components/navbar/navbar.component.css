@@ -1,0 +1,55 @@
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	padding: 1rem 0 0 0;
+	margin: 0;
+	width: 1152px;
+}
+.title {
+	font-family: Raleway;
+	font-weight: 200;
+	font-style: italic;
+	margin: 0;
+	text-decoration: none;
+	cursor: pointer;
+}
+.column h1 {
+	padding: 12px 27px;
+}
+
+.title-span {
+	height: 53px;
+	font-family: Monaco;
+	font-size: 40px;
+	color: #000000;
+}
+.input_search {
+	width: 50rem;
+	height: 44px;
+	padding: 0 0 0 10px;
+	border-style: solid;
+	font-family: Raleway;
+	font-size: 20px;
+	color: #5c5c5c;
+}
+
+.btn {
+	width: 100px;
+	height: 48px;
+	margin: 0 0 124px;
+	padding: 10px 35px 9.9px 35px;
+	border-radius: 2px;
+	background-color: #ac53f2;
+	border: none;
+}
+
+.grid_search {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 14px -10rem 0 0;
+}
+
+.loupe-icon {
+	width: 30px;
+	height: 30px;
+}
