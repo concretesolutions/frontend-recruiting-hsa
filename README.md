@@ -1,6 +1,6 @@
 # :grin: ¡Hola!
 
-Soy Sebastian Valencia Lasprilla y esta es mi propuesta de aplicación web que cumple con el Desafío Front End de Accenture.
+Soy Sebastian Valencia Lasprilla y esta es mi propuesta de aplicación web que cumple con el desafío de utilizar la api de busqueda de usuarios oficial de github.
 
 ## :bookmark_tabs: Indice
 - 1. ¿Qué desarrollé?
@@ -12,7 +12,7 @@ Soy Sebastian Valencia Lasprilla y esta es mi propuesta de aplicación web que c
 
 ## :red_circle: ¿Qué desarrollé?
 
-Aplicación desplegada: https://desafio-accenture-svl.herokuapp.com/
+Aplicación desplegada: https://github-search-tool-svl.herokuapp.com/
 
 Esta es una aplicación desarrollada con:
 - Visual Studio Code
