@@ -1,12 +1,16 @@
-const express = require('express');
-const path = require('path');
-
+const express = require("express");
+const router = express.Router();
+const path = require("path");
 const app = express();
 
-app.use(express.static('./dist/desafio-accenture-svl'));
+const port = process.env.PORT || 8080;
 
-app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/desafio-accenture-svl/'}),
+app.use(express.json());
+app.use("/", router);
+
+app.use(express.static(path.join(__dirname, "/dist/desafio-accenture-svl")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/dist/desafio-accenture-svl/index.html"))
 );
 
-app.listen(process.env.PORT || 8080);
+app.listen(port, () => console.log("Server Running"));
